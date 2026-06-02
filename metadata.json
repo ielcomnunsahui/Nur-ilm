@@ -1,0 +1,10 @@
+{
+  "name": "Nur al-Ilm",
+  "description": "Voice-First Hausa-to-English PWA language learning platform with Ustaz Nur, an interactive AI tutor.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
