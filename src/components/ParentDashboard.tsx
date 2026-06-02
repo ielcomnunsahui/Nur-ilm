@@ -69,44 +69,80 @@ export const ParentDashboard: React.FC<ParentDashboardProps> = ({
 
       {/* Children switch overlay and streak panel */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div className="bg-white p-4 rounded-xl border border-emerald-900/5 shadow-sm flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xl">
-            👧
+        <div className="bg-white p-4 rounded-xl border border-emerald-900/5 shadow-sm flex items-center justify-between gap-3 relative group">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xl">
+              👧
+            </div>
+            <div>
+              <p className="text-[10px] text-gray-400 font-semibold uppercase leading-tight">Yaro (Selected Child):</p>
+              <p className="text-sm font-bold text-emerald-950">{selectedChild}</p>
+            </div>
           </div>
-          <div>
-            <p className="text-[10px] text-gray-400 font-semibold uppercase leading-tight">Yaro (Selected Child):</p>
-            <p className="text-sm font-bold text-emerald-950">{selectedChild}</p>
-          </div>
+          <button 
+            onClick={() => speakText(`Sunan yaro, ${selectedChild}`, 'ha-NG')}
+            className="p-1.5 text-[#0F6B4B] hover:bg-emerald-50 rounded-full"
+            title="Saurari Sauti"
+          >
+            <Icons.Volume2 className="w-4 h-4" />
+          </button>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-emerald-900/5 shadow-sm flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-amber-50 border border-amber-150 flex items-center justify-center text-yellow-600">
-            <Trophy className="w-6 h-6" />
+        <div className="bg-white p-4 rounded-xl border border-emerald-900/5 shadow-sm flex items-center justify-between gap-3 relative group">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-full bg-amber-50 border border-amber-150 flex items-center justify-center text-yellow-600">
+              <Trophy className="w-6 h-6" />
+            </div>
+            <div>
+              <p className="text-[10px] text-gray-400 font-semibold uppercase leading-tight">Maki (XP Balance):</p>
+              <p className="text-sm font-bold text-emerald-950">{progress.xp} XP</p>
+            </div>
           </div>
-          <div>
-            <p className="text-[10px] text-gray-400 font-semibold uppercase leading-tight">Maki (XP Balance):</p>
-            <p className="text-sm font-bold text-emerald-950">{progress.xp} XP</p>
-          </div>
+          <button 
+            onClick={() => speakText(`Maki kwanan nan, ${progress.xp} maki`, 'ha-NG')}
+            className="p-1.5 text-[#0F6B4B] hover:bg-emerald-50 rounded-full"
+            title="Saurari Sauti"
+          >
+            <Icons.Volume2 className="w-4 h-4" />
+          </button>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-emerald-900/5 shadow-sm flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-red-50 border border-red-100 flex items-center justify-center text-red-500">
-            <Flame className="w-6 h-6" />
+        <div className="bg-white p-4 rounded-xl border border-emerald-900/5 shadow-sm flex items-center justify-between gap-3 relative group">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-full bg-red-50 border border-red-100 flex items-center justify-center text-red-500">
+              <Flame className="w-6 h-6" />
+            </div>
+            <div>
+              <p className="text-[10px] text-gray-400 font-semibold uppercase leading-tight">Kwanaki jere (Streak):</p>
+              <p className="text-sm font-bold text-emerald-950">{progress.streak} Days</p>
+            </div>
           </div>
-          <div>
-            <p className="text-[10px] text-gray-400 font-semibold uppercase leading-tight">Kwanaki jere (Streak):</p>
-            <p className="text-sm font-bold text-emerald-950">{progress.streak} Days</p>
-          </div>
+          <button 
+            onClick={() => speakText(`Kwanaki jere darasi, kwana ${progress.streak}`, 'ha-NG')}
+            className="p-1.5 text-[#0F6B4B] hover:bg-emerald-50 rounded-full"
+            title="Saurari Sauti"
+          >
+            <Icons.Volume2 className="w-4 h-4" />
+          </button>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-emerald-900/5 shadow-sm flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-yellow-50 border border-yellow-100 flex items-center justify-center text-yellow-600">
-            <Coins className="w-6 h-6" />
+        <div className="bg-white p-4 rounded-xl border border-emerald-900/5 shadow-sm flex items-center justify-between gap-3 relative group">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-full bg-yellow-50 border border-yellow-100 flex items-center justify-center text-yellow-600">
+              <Coins className="w-6 h-6" />
+            </div>
+            <div>
+              <p className="text-[10px] text-gray-400 font-semibold uppercase leading-tight">Kuɗi (Coins Shop):</p>
+              <p className="text-sm font-bold text-emerald-950">{progress.coins} Coins</p>
+            </div>
           </div>
-          <div>
-            <p className="text-[10px] text-gray-400 font-semibold uppercase leading-tight">Kuɗi (Coins Shop):</p>
-            <p className="text-sm font-bold text-emerald-950">{progress.coins} Coins</p>
-          </div>
+          <button 
+            onClick={() => speakText(`Adadin tsabar kudi kuɗi, ${progress.coins} kudin shiga`, 'ha-NG')}
+            className="p-1.5 text-[#0F6B4B] hover:bg-emerald-50 rounded-full"
+            title="Saurari Sauti"
+          >
+            <Icons.Volume2 className="w-4 h-4" />
+          </button>
         </div>
       </div>
 

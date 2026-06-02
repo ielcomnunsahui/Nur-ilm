@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Volume2, HelpCircle, Eye, Info } from 'lucide-react';
 import { motion } from 'motion/react';
 import { speakText } from './AudioVoiceHelper';
@@ -19,6 +19,8 @@ export const ZeroLiteracyToggle: React.FC<ZeroLiteracyToggleProps> = ({
   onToggle,
   currentPageContext = 'home'
 }) => {
+
+  const justEnabledRef = useRef(false);
 
   const triggerAudioHelp = () => {
     let textToSpeak = "";
@@ -40,6 +42,11 @@ export const ZeroLiteracyToggle: React.FC<ZeroLiteracyToggleProps> = ({
 
   useEffect(() => {
     if (enabled) {
+      if (justEnabledRef.current) {
+        // Skip playing the welcome message immediately on enabling to let the activation message speak fully in the gorgeous female voice.
+        justEnabledRef.current = false;
+        return;
+      }
       // Short delay for natural transition
       const timer = setTimeout(() => {
         triggerAudioHelp();
@@ -86,6 +93,7 @@ export const ZeroLiteracyToggle: React.FC<ZeroLiteracyToggleProps> = ({
             const nextVal = !enabled;
             onToggle(nextVal);
             if (nextVal) {
+              justEnabledRef.current = true;
               speakText("An kunna muryar taimako ta Hausa. Ba kwa bukatar karatu.", 'ha-NG');
             } else {
               speakText("Voice guide disabled.", 'en-US');

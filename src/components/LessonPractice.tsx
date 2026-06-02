@@ -186,7 +186,16 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
             📖
           </div>
           <div className="space-y-2">
-            <h2 className="text-xl font-bold text-emerald-950 font-sans">{lesson.titleHausa}</h2>
+            <h2 className="text-xl font-bold text-emerald-950 font-sans flex items-center justify-center gap-1.5">
+              <span>{lesson.titleHausa}</span>
+              <button 
+                onClick={() => speakText(lesson.titleHausa, 'ha-NG')}
+                className="p-1 text-[#0F6B4B] hover:text-[#D4A017] rounded"
+                title="Saurari Sauti"
+              >
+                <Volume2 className="w-4 h-4" />
+              </button>
+            </h2>
             <p className="text-gray-500 text-sm max-w-md mx-auto">{lesson.descriptionHausa}</p>
             <p className="text-xs text-emerald-800 italic font-mono font-medium max-w-xs mx-auto border border-emerald-900/10 p-2 rounded-lg bg-emerald-500/5 mt-3">
               {lesson.description}
@@ -196,9 +205,16 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
           <div className="pt-4 flex flex-col gap-3 max-w-xs mx-auto">
             {onDownload && (
               isDownloaded ? (
-                <div className="flex items-center justify-center gap-2 text-xs text-green-700 bg-green-50 border border-green-200 py-2.5 px-4 rounded-full font-bold shadow-sm">
+                <div className="flex items-center justify-center gap-1 text-xs text-green-700 bg-green-50 border border-green-200 py-2.5 px-4 rounded-full font-bold shadow-sm">
                   <Check className="w-4 h-4 text-green-600 shrink-0" />
-                  Wannan darasin yana kan wayoyinku (Offline Ready)
+                  <span>Wannan darasin yana kan wayoyinku (Offline Ready)</span>
+                  <button 
+                    onClick={() => speakText("Wannan darasin yana kan wayoyinku ta offline.", 'ha-NG')}
+                    className="p-0.5 hover:bg-green-150 rounded"
+                    title="Saurari Sauti"
+                  >
+                    <Volume2 className="w-3.5 h-3.5" />
+                  </button>
                 </div>
               ) : (
                 <button
@@ -433,7 +449,16 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
           </motion.div>
 
           <div className="space-y-1">
-            <h2 className="text-2xl font-black text-emerald-950">Masha Allah, Gwarzo!</h2>
+            <h2 className="text-2xl font-black text-emerald-950 flex items-center justify-center gap-2">
+              <span>Masha Allah, Gwarzo!</span>
+              <button 
+                onClick={() => speakText("Masha Allah, Gwarzo! Muna taya ka murna da kammala darasin gaba daya!", 'ha-NG')}
+                className="p-1 text-[#0F6B4B] hover:text-[#D4A017] rounded"
+                title="Saurari Sauti"
+              >
+                <Volume2 className="w-5 h-5" />
+              </button>
+            </h2>
             <p className="text-sm text-gray-500">Muna taya ka murna da kammala darasin gaba daya!</p>
           </div>
 

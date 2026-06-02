@@ -32,75 +32,113 @@ export function speakText(text: string, lang: 'en-US' | 'ha-NG' = 'en-US') {
     }
   }
 
-  // Detect if a native Hausa voice is locally available on the learner's browser
-  let hasLocalHausaVoice = false;
-  if ('speechSynthesis' in window) {
-    const voices = window.speechSynthesis.getVoices();
-    const found = voices.find(v => {
-      const vLang = v.lang.toLowerCase();
-      const vName = v.name.toLowerCase();
-      return vLang === 'ha-ng' || vLang === 'ha' || vName.includes('hausa') || vName.includes('ha_ng');
-    });
-    if (found) {
-      hasLocalHausaVoice = true;
-    }
-  }
-
-  // If the browser natively supports Hausa voices, or if we are speaking English, use local SpeechSynthesis
-  if (lang.startsWith('en') || hasLocalHausaVoice) {
-    if ('speechSynthesis' in window) {
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = lang;
-      const voices = window.speechSynthesis.getVoices();
-
-      if (lang.startsWith('ha')) {
-        let hausaVoice = voices.find(v => {
-          const vLang = v.lang.toLowerCase();
-          const vName = v.name.toLowerCase();
-          return vLang === 'ha-ng' || vLang === 'ha' || vName.includes('hausa') || vName.includes('ha_ng');
-        });
-        if (!hausaVoice) {
-          hausaVoice = voices.find(v => v.lang.toLowerCase().startsWith('ha'));
-        }
-        if (hausaVoice) {
-          utterance.voice = hausaVoice;
-        }
-        utterance.rate = 0.81; // Soft and clear tutor rate
-        utterance.pitch = 1.0;
-      } else {
-        let englishVoice = voices.find(v => v.lang.toLowerCase() === 'en-us' && v.name.toLowerCase().includes('google'));
-        if (!englishVoice) {
-          englishVoice = voices.find(v => v.lang.toLowerCase().startsWith('en'));
-        }
-        if (englishVoice) {
-          utterance.voice = englishVoice;
-        }
-        utterance.rate = 0.82; // Safe beginner rate
-        utterance.pitch = 1.05;
-      }
-
-      window.speechSynthesis.speak(utterance);
-    }
-  } else {
-    // Elegant fallback: Stream fluent native-speaker Hausa audio from our server proxy
+  if (lang.startsWith('ha')) {
+    // ELEGANT: For Hausa, ALWAYS prefer our streamed female native Hausa TTS proxy as the primary strategy.
+    // This streams a gorgeous, crystal-clear, native-speaking female voice that is highly clear, fluent, and professional.
     try {
       const audioUrl = `/api/tts?lang=ha&text=${encodeURIComponent(text)}`;
       const audio = new Audio(audioUrl);
       activeAudioElement = audio;
-      audio.play().catch((err) => {
-        console.warn("Audio stream playback failed, running core browser TTS fallback:", err);
-        // Desperate system fallback: read anyway (will sound robotic if voice pack is missing, but guarantees compliance)
-        if ('speechSynthesis' in window) {
-          const utterance = new SpeechSynthesisUtterance(text);
-          utterance.lang = 'ha-NG';
-          utterance.rate = 0.80;
-          window.speechSynthesis.speak(utterance);
-        }
+      
+      audio.play().catch((res) => {
+        console.warn("Hausa audio stream playback failed/prevented. Falling back to browser local TTS:", res);
+        playLocalBackupTTS(text, lang);
       });
     } catch (e) {
-      console.error("Failed to play streamed voice guide, falling back:", e);
+      console.error("Failed to construct audio stream for Hausa, falling back:", e);
+      playLocalBackupTTS(text, lang);
     }
+  } else {
+    // English speech synthesis
+    playLocalBackupTTS(text, lang);
   }
+}
+
+/**
+ * High-quality female-first local speech synthesis fallback
+ */
+function playLocalBackupTTS(text: string, lang: string) {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = lang;
+  const voices = window.speechSynthesis.getVoices();
+
+  if (lang.startsWith('ha')) {
+    // Find dynamic local Hausa voice
+    let hausaVoice = voices.find(v => {
+      const vLang = v.lang.toLowerCase();
+      const vName = v.name.toLowerCase();
+      return vLang === 'ha-ng' || vLang === 'ha' || vName.includes('hausa') || vName.includes('ha_ng');
+    });
+    if (!hausaVoice) {
+      hausaVoice = voices.find(v => v.lang.toLowerCase().startsWith('ha'));
+    }
+    if (hausaVoice) {
+      utterance.voice = hausaVoice;
+    } else {
+      // If no local Hausa voice is found, DO NOT speak in default (often male) robotic voice.
+      // Fallback to a high quality female voice with slightly slower rate and adjusted pitch for a clear tutor feel.
+      const femaleVoiceNames = [
+        'zira',               // Microsoft Zira
+        'samantha',           // MacOS Samantha
+        'karen',              // Australian Female
+        'hazel',              // UK Female
+        'susan',              // Windows Susan
+        'female',             // Name includes female
+        'en-us-x-sfg',        // Android high-quality female
+        'en-us-x-tpf'         // Android high-quality female
+      ];
+      let backupFemaleVoice = null;
+      for (const nameKey of femaleVoiceNames) {
+        backupFemaleVoice = voices.find(v => v.name.toLowerCase().includes(nameKey.toLowerCase()));
+        if (backupFemaleVoice) break;
+      }
+      if (backupFemaleVoice) {
+        utterance.voice = backupFemaleVoice;
+      }
+    }
+    utterance.rate = 0.81; // Slow, comprehensible beginner rate
+    utterance.pitch = 1.1; // Slightly pleasant pitch shift for female voice emulation
+  } else {
+    // English speech synthesis: prioritize clear female-sounding voices
+    const femaleVoiceNames = [
+      'zira',               // Microsoft Zira Desktop (crystal clear Windows female voice)
+      'samantha',           // MacOS/iOS Samantha (clear, crisp female voice)
+      'karen',              // Australian female English
+      'hazel',              // UK female English
+      'susan',              // Windows Susan
+      'female',             // Explicitly contains 'female'
+      'google us english',  // Standard Google US English
+      'en-us-x-sfg',        // Android high-quality female
+      'en-us-x-tpf',        // Android high-quality female
+      'en-us-x-iol',        // Android high-quality female
+      'en-us-x-knd'         // Android high-quality female
+    ];
+    
+    let foundVoice = null;
+    const englishVoices = voices.filter(v => v.lang.toLowerCase().startsWith('en'));
+    
+    for (const nameKey of femaleVoiceNames) {
+      foundVoice = englishVoices.find(v => v.name.toLowerCase().includes(nameKey.toLowerCase()));
+      if (foundVoice) break;
+    }
+    
+    if (!foundVoice) {
+      foundVoice = englishVoices.find(v => v.lang.toLowerCase() === 'en-us' && v.name.toLowerCase().includes('google'));
+    }
+    if (!foundVoice) {
+      foundVoice = englishVoices.find(v => v.lang.toLowerCase().startsWith('en'));
+    }
+    
+    if (foundVoice) {
+      utterance.voice = foundVoice;
+    }
+    utterance.rate = 0.82; // Warm tutor rate
+    utterance.pitch = 1.05; // Slightly pleasant pitch shift
+  }
+
+  window.speechSynthesis.speak(utterance);
 }
 
 // Check voice recognition support

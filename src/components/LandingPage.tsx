@@ -74,11 +74,26 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           </div>
 
           <div className="space-y-3">
-            <h1 className="text-3xl md:text-5xl font-extrabold text-emerald-950 tracking-tight leading-none">
-              Koyi Turanci Cikin Sauki Ta Saurare <span className="text-[#0F6B4B]">(Learn English Through Hausa)</span>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-emerald-950 tracking-tight leading-none flex flex-wrap items-center gap-2">
+              <span>Koyi Turanci Cikin Sauki Ta Saurare</span>
+              <button 
+                onClick={() => speakText("Koyi Turanci Cikin Sauki Ta Saurare", 'ha-NG')}
+                className="p-1.5 bg-[#0F6B4B]/10 hover:bg-[#0F6B4B]/20 text-[#0F6B4B] rounded-full inline-flex transition-colors cursor-pointer"
+                title="Saurari Sauti"
+              >
+                <Volume2 className="w-5 h-5" />
+              </button>
+              <span className="text-[#0F6B4B] w-full block text-2xl md:text-3xl mt-1">(Learn English Through Hausa)</span>
             </h1>
             <p className="text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
               Ko da ba ka jin Turanci ko karatun boko, Nur al-Ilm (نور العلم) zai koya maka daki-daki ta hanyar saurare, furtawa da gogewa ta muryar baki tare da <strong>Ustaz Nur</strong>.
+              <button 
+                onClick={() => speakText("Ko da ba ka jin Turanci ko karatun boko, Nur al-ilm zai koya maka daki-daki ta hanyar saurare, furtawa da gogewa ta muryar baki tare da Ustaz Nur.", 'ha-NG')}
+                className="ml-2 p-1 bg-amber-500/10 hover:bg-amber-500/20 text-[#D4A017] rounded inline-flex align-middle"
+                title="Saurari dukkan bayani"
+              >
+                <Volume2 className="w-3.5 h-3.5" />
+              </button>
             </p>
           </div>
 
@@ -166,22 +181,49 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       {/* Trust elements feature icons summaries lists */}
       <section className="bg-white py-12 border-t border-emerald-900/5">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="space-y-2">
+          <div className="space-y-2 bg-gray-50/50 p-4 rounded-xl border border-gray-100 relative">
             <span className="h-10 w-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-lg">🎙️</span>
-            <h4 className="font-bold text-sm text-emerald-950">Muryar Taimako (Zero Literacy Mode)</h4>
-            <p className="text-xs text-gray-400 leading-relaxed">Ba kwa bukatar karanta haruffan Hausa ko Turanci. Rumbun makirufo zai gaya muku dukkan shafuka da murya a bayyane.</p>
+            <div className="flex items-center gap-2">
+              <h4 className="font-bold text-sm text-emerald-950">Muryar Taimako (Zero Literacy Mode)</h4>
+              <button 
+                onClick={() => speakText("Muryar Taimako. Ba kwa bukatar karanta haruffan Hausa ko Turanci. Rumbun makirufo zai gaya muku dukkan shafuka da murya a bayyane.", 'ha-NG')}
+                className="p-1 text-[#0F6B4B] hover:bg-emerald-100 rounded-full"
+                title="Saurari Sauti"
+              >
+                <Volume2 className="w-4 h-4" />
+              </button>
+            </div>
+            <p className="text-xs text-gray-500 leading-relaxed">Ba kwa bukatar karanta haruffan Hausa ko Turanci. Rumbun makirufo zai gaya muku dukkan shafuka da murya a bayyane.</p>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 bg-gray-50/50 p-4 rounded-xl border border-gray-100 relative">
             <span className="h-10 w-10 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-lg">🏅</span>
-            <h4 className="font-bold text-sm text-emerald-950">Shaidar Karatu da Satifiket</h4>
-            <p className="text-xs text-gray-400 leading-relaxed">Sami shaidar musamman bayan ka kammala dukkan darussa, tare da lambar tabbatarwa na sirri da QR Code don neman aiki.</p>
+            <div className="flex items-center gap-2">
+              <h4 className="font-bold text-sm text-emerald-950">Shaidar Karatu da Satifiket</h4>
+              <button 
+                onClick={() => speakText("Shaidar Karatu da Satifiket. Sami shaidar musamman bayan ka kammala dukkan darussa, tare da lambar tabbatarwa na sirri da QR Code don neman aiki.", 'ha-NG')}
+                className="p-1 text-[#0F6B4B] hover:bg-emerald-100 rounded-full"
+                title="Saurari Sauti"
+              >
+                <Volume2 className="w-4 h-4" />
+              </button>
+            </div>
+            <p className="text-xs text-gray-500 leading-relaxed">Sami shaidar musamman bayan ka kammala dukkan darussa, tare da lambar tabbatarwa na sirri da QR Code don neman aiki.</p>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 bg-gray-50/50 p-4 rounded-xl border border-gray-100 relative">
             <span className="h-10 w-10 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-lg">🌐</span>
-            <h4 className="font-bold text-sm text-emerald-950">Aiki Offline (Offline Learning)</h4>
-            <p className="text-xs text-gray-400 leading-relaxed font-sans">Koyon Turanci kowane lokaci ba tare da internet ba. Saukar da darussa cikin sauki don guje wa asarar data na 3G network.</p>
+            <div className="flex items-center gap-2">
+              <h4 className="font-bold text-sm text-emerald-950">Aiki Offline (Offline Learning)</h4>
+              <button 
+                onClick={() => speakText("Aiki Offline. Koyon Turanci kowane lokaci ba tare da internet ba. Saukar da darussa cikin sauki don guje wa asarar data na 3G network.", 'ha-NG')}
+                className="p-1 text-[#0F6B4B] hover:bg-emerald-100 rounded-full"
+                title="Saurari Sauti"
+              >
+                <Volume2 className="w-4 h-4" />
+              </button>
+            </div>
+            <p className="text-xs text-gray-500 leading-relaxed font-sans">Koyon Turanci kowane lokaci ba tare da internet ba. Saukar da darussa cikin sauki don guje wa asarar data na 3G network.</p>
           </div>
         </div>
       </section>

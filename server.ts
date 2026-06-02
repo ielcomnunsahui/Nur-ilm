@@ -324,4 +324,8 @@ async function mountFrontend() {
   });
 }
 
-mountFrontend();
+if (!process.env.VERCEL) {
+  mountFrontend();
+}
+
+export default app;
