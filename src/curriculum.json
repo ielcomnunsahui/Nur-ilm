@@ -1,0 +1,1033 @@
+[
+  {
+    "level": "STAGE_0",
+    "levelTitle": "Orientation",
+    "levelTitleHausa": "Fara Daga Sifiri",
+    "modules": [
+      {
+        "id": "m0_1",
+        "title": "Orientation & Confidence",
+        "titleHausa": "Tabbacin Zuciya Da Gidauniya",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "Welcome to Nur al-Ilm",
+            "learningObjective": "Build immediate confidence and remove the fear of learning English.",
+            "vocabulary": [
+              {
+                "word": "Welcome",
+                "hausa": "Barka da zuwa",
+                "ipa": "/ˈwel.kəm/",
+                "syllableBreakdown": "Wel-come",
+                "slowPronunciation": "Wel-kom",
+                "commonHausaMistake": "Dropping the 'w' or saying 'Kwam' incorrectly instead of 'kom'.",
+                "correctionTip": "Round your lips for 'Wel' like blowing a kiss, then release nicely to 'kom'."
+              }
+            ],
+            "hausaExplanation": "Assalamu Alaikum! Wannan dandalin na Nur al-Ilm an gina shi ne don ya koya muku tattaunawa cikin sauƙi ba tare da wahalar jarrabawa ko hadaddiyar nahawu ba. Kowa zai iya koya!",
+            "englishExplanation": "Assalamu Alaikum! Introduce the friendly learning framework and remove traditional fears associated with academic language training.",
+            "pronunciationGuide": "Relax your throat, say 'Wel' with rounded lips, followed by a warm and simple 'come'.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Barka da zuwa dandalin Nur al-Ilm! Kada ka damu, koya Turanci ba shi da wuya idan za mu yi shi daki-daki ta hanyar saurare da maimaitawa. Sannunka da zuwa!",
+              "encouragement": "Wannan shi ne gatan farko! Muna jin dadin yadda kake saurare.",
+              "corrections": "Maimaita bayanmu muryar da ragaɗi: 'Welcome'.",
+              "achievements": "Madalla! Yanzu ka fara takawa akan hanyar hasken ilimi.",
+              "motivation": "Yau an bude kofa, gobe kuma za a zama zakaran tattaunawa."
+            },
+            "listeningExercise": "Saurari muryar Ustaz Nur lokacin da yake maraba da ku zuwa dakin karatu daki-daki.",
+            "repeatAfterMeExercise": "Repeat after the chime: 'Welcome'.",
+            "speakingPractice": "Say 'Welcome' clearly to register your first active learning action.",
+            "conversationPractice": "Ustaz Nur: 'Welcome!' Learner: 'Welcome!'",
+            "visualLearningSuggestions": "A smiling, friendly teacher welcoming a student warm heartedly.",
+            "quiz": [
+              {
+                "question": "What is 'Welcome' in Hausa?",
+                "hausaQuestion": "Mene ne ma'anar 'Welcome' da yaren Hausa?",
+                "options": [
+                  "Barka da zuwa / Maraba",
+                  "Sai an jima",
+                  "Aiki yana tafiya",
+                  "Na gode"
+                ],
+                "answerIndex": 0,
+                "explanation": "'Welcome' is used to warmly receive and greet people as they arrive."
+              }
+            ],
+            "assessment": "Verify that the learner is listening and repeats 'Welcome' with a friendly tone.",
+            "homework": "Ka fada wa bako ko kowa da ya zo gidanka yau kalmar 'Welcome'.",
+            "masteryCriteria": "Pronounce the main welcoming syllables correctly.",
+            "estimatedDuration": "10 minutes",
+            "difficultyRating": "1/5"
+          },
+          {
+            "lessonNumber": 2,
+            "title": "You Can Learn English",
+            "learningObjective": "Reinforce that anyone, regardless of background, can speak English.",
+            "vocabulary": [
+              {
+                "word": "I can",
+                "hausa": "Zan iya",
+                "ipa": "/aɪ kæn/",
+                "syllableBreakdown": "I can",
+                "slowPronunciation": "Ai kan",
+                "commonHausaMistake": "Saying 'Ah kan' instead of a clear 'Ai'.",
+                "correctionTip": "Smile and pull the corners of your mouth back for 'can' so it sounds active."
+              }
+            ],
+            "hausaExplanation": "Turanci ba na gwanaye kadai ba ne. Matukar kana magana da Hausa, za ka iya magana da Turanci cikin sauki. Fada wa kanka: Zan iya!",
+            "englishExplanation": "Empower the learner mentally by teaching 'I can', aligning with positive self-affirmation.",
+            "pronunciationGuide": "Ensure 'I' is fully released as 'Ai', followed by a short crisp 'can'.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Wannan babba ne: yau za mu koyi cewa ba za mu ji tsoro ba. Kalmar yau ita ce 'I can' wato za ka iya!",
+              "encouragement": "Haka muke so! Muryarka cike take da kyakkyawan kwarin gwiwa.",
+              "corrections": "Kar kace 'Ah kan'. Ce 'Ai... can' cikin dadi da kwarin gwiwa.",
+              "achievements": "Yanzu ka fara gaskata cewa Turanci na kowa ne!",
+              "motivation": "Idan wani ya ce maka Turanci yana da wahala, gaya masa: I can!"
+            },
+            "listeningExercise": "Listen to a confident learner saying 'I can speak English' in a warm audio prompt.",
+            "repeatAfterMeExercise": "Chime... 'I can'. Now you say it.",
+            "speakingPractice": "Say 'I can' out loud to start your active speech practice.",
+            "conversationPractice": "Ustaz Nur: 'Can you learn?' Learner: 'I can!'",
+            "visualLearningSuggestions": "A confident person standing under blue skies raising their thumbs up.",
+            "quiz": [
+              {
+                "question": "What is the Hausa meaning of 'I can'?",
+                "hausaQuestion": "Mene ne fassarar 'I can' da Hausa?",
+                "options": [
+                  "Zan iya",
+                  "Ba zan iya ba",
+                  "Ina so",
+                  "Don Allah"
+                ],
+                "answerIndex": 0,
+                "explanation": "'I can' is the direct statement of capability, meaning 'Zan iya' in Hausa."
+              }
+            ],
+            "assessment": "Evaluate vocal energy and confidence during speech input.",
+            "homework": "Zana babban alamun doke a dandalinka sannan ka maimaita 'I can' sau uku a murya.",
+            "masteryCriteria": "Pronunciation of vowel 'I' without dropping.",
+            "estimatedDuration": "10 minutes",
+            "difficultyRating": "1/5"
+          },
+          {
+            "lessonNumber": 3,
+            "title": "How Learning Works",
+            "learningObjective": "Explain the natural method of acquisition: Listening first, then speaking.",
+            "vocabulary": [
+              {
+                "word": "Listen",
+                "hausa": "Saurara",
+                "ipa": "/ˈlɪs.ən/",
+                "syllableBreakdown": "Lis-ten",
+                "slowPronunciation": "Lis-in",
+                "commonHausaMistake": "Pronouncing the letter 't' as 'Lis-ten' with a hard 't'.",
+                "correctionTip": "The 't' is completely silent! Pronounce it as if it is written 'Lis-in'."
+              }
+            ],
+            "hausaExplanation": "Hanyar samun nasara a yaren Turanci ba farawa da kashin nahawu ba ne. Kamar yadda kuka koyi Hausa ku kuna yara, za mu fara da saurare ne tukuna kafin magana. Saurara da kyau!",
+            "englishExplanation": "Address the silence of the 't' in 'Listen' and emphasize natural acoustic absorption.",
+            "pronunciationGuide": "Keep the 't' silent. End the word with a smooth soft nasal 'n'.",
+            "aiTutorScript": {
+              "introduction": "Sannu aboki! Yadda yara kanana ke koyon magana shi ne sauraro. Don haka yau za mu koyi kalmar 'Listen' dake nufin saurara.",
+              "encouragement": "Haka ne! Kun sanya kunnuwa wajen jin sauti lafiya.",
+              "corrections": "Kada ka fadi 't' a jikin listen. Kawai fadi 'Lis-in'.",
+              "achievements": "Ka fadi ta daidai kamar yadda Baturiri zai fada!",
+              "motivation": "Wanda zai iya saurare mai kyau shi ne zai iya magana ta gari."
+            },
+            "listeningExercise": "Listen to our nature sounds or chime sequence, and then say 'Listen'.",
+            "repeatAfterMeExercise": "Repeat: 'Listen' (silent t).",
+            "speakingPractice": "Register your pronunciation of the instruction: 'Listen'.",
+            "conversationPractice": "Ustaz Nur: 'Listen!' Learner: 'Listen!'",
+            "visualLearningSuggestions": "An ear vector symbol indicating quiet attentiveness and focus.",
+            "quiz": [
+              {
+                "question": "Which letter is silent in the word 'Listen'?",
+                "hausaQuestion": "Wane harafi ne baya fita a baki (silent letter) a kalmar 'Listen'?",
+                "options": [
+                  "letter T",
+                  "letter L",
+                  "letter S",
+                  "letter N"
+                ],
+                "answerIndex": 0,
+                "explanation": "The letter 'T' is completely silent in 'Listen' and must not be pronounced."
+              }
+            ],
+            "assessment": "Verify that the user does not pronounce the 't'.",
+            "homework": "Ka yi shiru na tsawon minti guda, sa'an fadi 'Listen' lokacin da ka ji wani sauti.",
+            "masteryCriteria": "Proper silent-t recognition.",
+            "estimatedDuration": "12 minutes",
+            "difficultyRating": "1.2/5"
+          },
+          {
+            "lessonNumber": 4,
+            "title": "How To Use Voice Learning",
+            "learningObjective": "Instruct the user on how to interact with the voice microphone.",
+            "vocabulary": [
+              {
+                "word": "Speak",
+                "hausa": "Yi magana",
+                "ipa": "/spiːk/",
+                "syllableBreakdown": "Speak",
+                "slowPronunciation": "Spik",
+                "commonHausaMistake": "Saying 'Es-pik' by adding an extra 'E' or 'I' as a prefix.",
+                "correctionTip": "Start with a direct hissing air 'Sss', then move directly to 'pik' without starting with an 'E' sound."
+              }
+            ],
+            "hausaExplanation": "A Nur al-Ilm za ka yi amfani da mic don yin magana. Lokacin da ka ga alamar kore na rubutun mic, danna shi sannan ka fadi kalmar cikin sauƙi.",
+            "englishExplanation": "Train the user on the action of using a microphone interface. Teach option mappings.",
+            "pronunciationGuide": "Form a continuous hiss 'Sss' then snap into the 'peek' high vowel ending.",
+            "aiTutorScript": {
+              "introduction": "Barka da hantsi! Yau za mu koyi yadda za muke amfani da muryoyinmu yayin karatu. Kalmarmu ita ce 'Speak' wato yi magana.",
+              "encouragement": "Masha Allah! Lafazinka yana da sanyaya zuciya.",
+              "corrections": "Maimaita: 'Sss-peak'. Kar ka sanya 'E' a farko.",
+              "achievements": "Yanzu ka san yadda zaka danna mic ka yi magana!",
+              "motivation": "Turanci yana baki, ba a zuciya ba. Kada ka ji tsoron kuskure."
+            },
+            "listeningExercise": "Hear a person tapping a microphone and speaking the word 'Speak'.",
+            "repeatAfterMeExercise": "Chime... now speak the word 'Speak'.",
+            "speakingPractice": "Press the microphone button on screen and say: 'Speak'.",
+            "conversationPractice": "Ustaz Nur: 'Please play and...' Learner: 'Speak!'",
+            "visualLearningSuggestions": "A glowing green microphone icon ready for user voice interactions.",
+            "quiz": [
+              {
+                "question": "What is the English word for 'Yi magana'?",
+                "hausaQuestion": "Wace kalmar Turanci ce ke nufin 'Yi magana'?",
+                "options": [
+                  "Speak",
+                  "Listen",
+                  "Welcome",
+                  "No"
+                ],
+                "answerIndex": 0,
+                "explanation": "'Speak' directly commands the action of talking or expressing through words."
+              }
+            ],
+            "assessment": "Ensure clean 'Sp' attack transition without 'Es' vocalization.",
+            "homework": "Practice saying 'Speak' clearly in front of the screen to lock in your foundation.",
+            "masteryCriteria": "Clean 'Sp' starting transition.",
+            "estimatedDuration": "10 minutes",
+            "difficultyRating": "1/5"
+          },
+          {
+            "lessonNumber": 5,
+            "title": "Your First English Sound",
+            "learningObjective": "Successfully articulate the most basic vowel and clear mouth action.",
+            "vocabulary": [
+              {
+                "word": "Ah",
+                "hausa": "Sautin bude baki",
+                "ipa": "/ɑː/",
+                "syllableBreakdown": "Ah",
+                "slowPronunciation": "Ahhh",
+                "commonHausaMistake": "Keeping the mouth shut too tight causing a swallowed sound.",
+                "correctionTip": "Properly open your jaw as if the doctor is checking your throat."
+              }
+            ],
+            "hausaExplanation": "Assalamu Alaikum! A wannan mataki na karshe na gidauniyar sifiri, za mu bude baki mu fitar da harafi mafi dadi 'Ah'. Gashi nan an rubuta shi, kuma abin dadi shi ne muna yawan fadin sa.",
+            "englishExplanation": "Focus purely on phonetic breathing and structural jaw dropping to remove vocal stiffness.",
+            "pronunciationGuide": "Drop your jaw flat, maintain wide cavity and exhale a pure, clear vowel.",
+            "aiTutorScript": {
+              "introduction": "Sannu kwarai! Yau babu kalma mai rikitarwa, kawai za mu bude baki mu hura sauti na asali: 'Ah!'. Mu tafi tare.",
+              "encouragement": "Wannan shi ne daidai! Bakinka ya fita lafiya laye.",
+              "corrections": "Bude bakinka sosai, kamar dakin jinya: 'Ah'.",
+              "achievements": "Madalla! Yanzu ka gama dukkan gidauniyar tabbaci na Sifiri!",
+              "motivation": "Yanzu ka san cewa Turanci yana da sauki, kuma zaka iya koyon ko'ina."
+            },
+            "listeningExercise": "Listen to a baby happily laughing and making the wide sound: 'Ah'.",
+            "repeatAfterMeExercise": "Let's say it together: 'Ah' (chime).",
+            "speakingPractice": "Release a deep, comfortable 'Ah' sound into the receiver.",
+            "conversationPractice": "Ustaz Nur: 'Open your mouth and say' Learner: 'Ah'",
+            "visualLearningSuggestions": "A big bold letter A on a chalk clean board with simple phonetic indicators.",
+            "quiz": [
+              {
+                "question": "What is the goal of producing the sound 'Ah'?",
+                "hausaQuestion": "Mene ne burin fitar da sautin 'Ah' a yau?",
+                "options": [
+                  "Bude baki tare da rage tsoro",
+                  "Koyan lissafi",
+                  "Rubuta wasika",
+                  "Goge saurare"
+                ],
+                "answerIndex": 0,
+                "explanation": "Opening the mouth and making the simple sound 'Ah' removes throat tightness and fear."
+              }
+            ],
+            "assessment": "Sustained vowel clear tracking output.",
+            "homework": "Ka duba madubi, bude bakinka, sa'an fadi 'Ah' cikin dadi da kwarin gwiwa.",
+            "masteryCriteria": "Open clear resonance for 2 full seconds.",
+            "estimatedDuration": "10 minutes",
+            "difficultyRating": "1/5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": "STAGE_1",
+    "levelTitle": "Listening Awareness",
+    "levelTitleHausa": "Saurare Da Gane Sauti",
+    "modules": [
+      {
+        "id": "m1_1",
+        "title": "Acoustic Ear Training",
+        "titleHausa": "Koyon Saurare Da Gano Kalmomi",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "Greetings & Warm Words",
+            "learningObjective": "Differentiate friendly greeting sounds by ear without looking at spellings.",
+            "vocabulary": [
+              {
+                "word": "Hello",
+                "hausa": "Sannu",
+                "ipa": "/həˈloʊ/",
+                "syllableBreakdown": "Hel-lo",
+                "slowPronunciation": "Heh-loh",
+                "commonHausaMistake": "Pronouncing heavy dropping as 'Elo'.",
+                "correctionTip": "Gently push warmth out with your breath before saying 'lo'."
+              }
+            ],
+            "hausaExplanation": "Assalamu Alaikum! A wannan matakin koyon sauraro, kada ku damu da yadda ake rubuta kalma. Kawai ku saurare ta a kunne sannan ku furta bayan Ustaz Nur.",
+            "englishExplanation": "Focus on the acoustic nature of conversational gateways. Avoid visual text stress.",
+            "pronunciationGuide": "Use a soft rising tone at the end as if you are talking over a calling device.",
+            "aiTutorScript": {
+              "introduction": "Sannunku! A matakin yanzu muna so kunnuwanku su saba da sautin Turanci. Saurari: 'Hello'. Haruffansa na da dadi idan suka fita a baki.",
+              "encouragement": "Babu shakka kunnuwanku suna da kaifi!",
+              "corrections": "Maimaita bayanmu: 'Hello'.",
+              "achievements": "Ka gane sautin gaisuwa ta farko a Turanci!",
+              "motivation": "Sauraro shi ne jigo na kowane harshe."
+            },
+            "listeningExercise": "Listen to three speakers greeting with different voices: 'Hello, Hello, Hello'.",
+            "repeatAfterMeExercise": "Repeat after the chime: 'Hello'.",
+            "speakingPractice": "Produce a warm greeting into the microphone.",
+            "conversationPractice": "Ustaz Nur: 'Hello my friend!' Learner: 'Hello!'",
+            "visualLearningSuggestions": "A graphic depicting audio sound waves travelling towards a clean ear.",
+            "quiz": [
+              {
+                "question": "What is the standard verbal response when someone says 'Hello' to you?",
+                "hausaQuestion": "Idan wani ya ce maka 'Hello!', wane amsa ya fi dacewa ka mayar masa?",
+                "options": [
+                  "Hello!",
+                  "No",
+                  "Listen",
+                  "Sorry"
+                ],
+                "answerIndex": 0,
+                "explanation": "Greeting a person who said 'Hello' with the same warm 'Hello' is standard politeness."
+              }
+            ],
+            "assessment": "Accurate syllable count replication in sound test.",
+            "homework": "Practice listening to children greet in English, and mock the hello sound.",
+            "masteryCriteria": "Replicate standard greet pitch and voice contour.",
+            "estimatedDuration": "15 minutes",
+            "difficultyRating": "1.5/5"
+          },
+          {
+            "lessonNumber": 2,
+            "title": "Vocal Yes and No",
+            "learningObjective": "Discern differences between affirmative 'Yes' and negative 'No' sounds.",
+            "vocabulary": [
+              {
+                "word": "Yes",
+                "hausa": "Eh / Haka ne",
+                "ipa": "/jes/",
+                "syllableBreakdown": "Yes",
+                "slowPronunciation": "Yess",
+                "commonHausaMistake": "Dragging the 'S' too long or soft like 'Yeh-sh'.",
+                "correctionTip": "Press tongue flat against your teeth for a crisp final 's'."
+              },
+              {
+                "word": "No",
+                "hausa": "A'a",
+                "ipa": "/noʊ/",
+                "syllableBreakdown": "No",
+                "slowPronunciation": "Noh",
+                "commonHausaMistake": "Shortening to a sudden cut-off without roundness.",
+                "correctionTip": "Keep the 'oh' sound slightly floating like a wave."
+              }
+            ],
+            "hausaExplanation": "Saurari yadda ake cewa Eh (Yes) da kuma A'a (No) a sautin Turanci. Wadannan sune ababen da muke amfani dasu kowane lokaci don yanke shawara.",
+            "englishExplanation": "Acoustically master yes/no confirmation sounds. Ensure soft and firm voice tones.",
+            "pronunciationGuide": "Produce clean dental 's' for 'Yes'. Hold the round open lips for 'No'.",
+            "aiTutorScript": {
+              "introduction": "Sannu aboki! Yau za mu raba tsakanin Eh da A'a. Sautin Yes da No bashi da wahala, amma yana bukatar kunne mai sauraro.",
+              "encouragement": "Furuci ne mai dadi da kwazo!",
+              "corrections": "Domin 'Yes', ka tabbatar sautin 's' a karshe ya fita ras. 'Yes'.",
+              "achievements": "Yanzu zaka iya bada amsa eh ko a'a cikin manyan mutane!",
+              "motivation": "Yanke shawara a kan abu shi ne mabudin tattaunawa."
+            },
+            "listeningExercise": "Hear two clear chimes, positive (Yes chime) and negative (No chime).",
+            "repeatAfterMeExercise": "Repeat: 'Yes' (chime)... 'No' (chime).",
+            "speakingPractice": "Speak yes or no as requested by the voice.",
+            "conversationPractice": "Ustaz Nur: 'Are you ready?' Learner: 'Yes!'",
+            "visualLearningSuggestions": "Green checkmark for yes and high contrast red crossmark for no.",
+            "quiz": [
+              {
+                "question": "What is the English word for 'A'a'?",
+                "hausaQuestion": "Wace kalma ce da Turanci dake nufin 'A'a'?",
+                "options": [
+                  "No",
+                  "Yes",
+                  "Hello",
+                  "Listen"
+                ],
+                "answerIndex": 0,
+                "explanation": "'No' represents immediate refusal or disagreement, matching 'A'a' in Hausa."
+              }
+            ],
+            "assessment": "Verify firm responses without confusing positive/negative tones.",
+            "homework": "Today practice answering home questions with simple 'Yes' and 'No' sound.",
+            "masteryCriteria": "Clean distinguishing of YES and NO voice inputs.",
+            "estimatedDuration": "15 minutes",
+            "difficultyRating": "1.5/5"
+          },
+          {
+            "lessonNumber": 3,
+            "title": "Thank You & Please",
+            "learningObjective": "Master gratitude and politeness sounds.",
+            "vocabulary": [
+              {
+                "word": "Thank you",
+                "hausa": "Na gode",
+                "ipa": "/θæŋk juː/",
+                "syllableBreakdown": "Thank you",
+                "slowPronunciation": "Tank yu",
+                "commonHausaMistake": "Pronouncing 'th' as hard 'T' or 'S' as 'Sank yu'.",
+                "correctionTip": "Put your teeth over your tongue slightly to exhale a soft 'Thhh' sound."
+              },
+              {
+                "word": "Please",
+                "hausa": "Don Allah",
+                "ipa": "/pliːz/",
+                "syllableBreakdown": "Please",
+                "slowPronunciation": "Pliz",
+                "commonHausaMistake": "Pronouncing dry 'Pilas' or 'Plis' with soft 's' instead of vibrating 'z'.",
+                "correctionTip": "Vibrate your throat slightly for the final 'z' in 'Please'."
+              }
+            ],
+            "hausaExplanation": "Harshen Turanci yana cike da ladabi. Lokacin da ka nemi abu muna cewa Please (Don Allah), idan kuma an taimaka mana muna cewa Thank you (Na gode).",
+            "englishExplanation": "Acoustic training on general politeness formulas. Address dental tongue placements.",
+            "pronunciationGuide": "Teeth over tongue for 'Thank'. Soft buzzing sound for 'Please'.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Yau kuma darasi ne na alkhairi da ladabi. Lokacin da kake son neman taimako, fadi 'Please'. Idan an baka, ce 'Thank you'.",
+              "encouragement": "Madalla! Gaskiyar magana muryarka tana da albarka.",
+              "corrections": "Sakar da harshenka kadan kafin 'Thank'. 'Thank... you'.",
+              "achievements": "Yanzu ka zama mai ladabi a yaren Turanci kowa yana son magana da kai!",
+              "motivation": "Ladabi yana bude kofofin alkhairi da yawa a cikin rayuwa."
+            },
+            "listeningExercise": "Listen to a soft chime and a child receiving a gift saying 'Thank you'.",
+            "repeatAfterMeExercise": "Repeat: 'Please' (chime)... 'Thank you' (chime).",
+            "speakingPractice": "Practice expressing politeness: 'Please, thank you'.",
+            "conversationPractice": "Ustaz Nur: 'Here is your water.' Learner: 'Thank you!'.",
+            "visualLearningSuggestions": "Two hands shaking gently with a heart shape above them.",
+            "quiz": [
+              {
+                "question": "If you want to politely ask for something, what do you say?",
+                "hausaQuestion": "Idan kana son bako ko aboki ya taimake ka da wani abu cikin ladabi, me za ka ce?",
+                "options": [
+                  "Please",
+                  "No",
+                  "Welcome",
+                  "I don't know"
+                ],
+                "answerIndex": 0,
+                "explanation": "'Please' is the absolute prefix of requests to depict gentle politeness."
+              }
+            ],
+            "assessment": "Verify that pronunciation incorporates the soft 'Th' and dental buzz 'z'.",
+            "homework": "Tell thank you to three people who assist you with chores today.",
+            "masteryCriteria": "Exhibiting correct phonetic cues.",
+            "estimatedDuration": "20 minutes",
+            "difficultyRating": "2/5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": "STAGE_2",
+    "levelTitle": "First Spoken Words",
+    "levelTitleHausa": "Kalmomi Da Ka Fi Bukata",
+    "modules": [
+      {
+        "id": "m2_1",
+        "title": "Everyday Objects & Basics",
+        "titleHausa": "Abubuwa Da Danginsu Na Gida",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "Food & Water Words",
+            "learningObjective": "Name and articulate major essential items: Water, Rice, and Bread.",
+            "vocabulary": [
+              {
+                "word": "Water",
+                "hausa": "Ruwa",
+                "ipa": "/ˈwɔː.tər/",
+                "syllableBreakdown": "Wa-ter",
+                "slowPronunciation": "Waa-tuh",
+                "commonHausaMistake": "Pronouncing heavy dry 'Ba-ta' or 'Waata' without fluid soft ending.",
+                "correctionTip": "Ensure the first syllable is rounded 'Wa' and the second is a relaxed 'ter'."
+              },
+              {
+                "word": "Rice",
+                "hausa": "Shinkafa",
+                "ipa": "/raɪs/",
+                "syllableBreakdown": "Rice",
+                "slowPronunciation": "Rais",
+                "commonHausaMistake": "Rolling the 'R' like in Hausa language too heavily.",
+                "correctionTip": "Curl your tongue behind your front teeth without letting the tip touch the roof of your mouth."
+              }
+            ],
+            "hausaExplanation": "Sannunku! A mataki na biyu na kiran sunayen abubuwa na kusa, za mu koyi kiran babban abincinmu na gida kamar ruwan sha (Water) da shinkafa (Rice).",
+            "englishExplanation": "Map absolute physical needs to verbal expressions with images.",
+            "pronunciationGuide": "Relax your lips to produce a soft flowing 'Water'. Soften the initial 'R' sound in 'Rice'.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Yau za mu shiga kicin na gida, mu koyi Kalmomin abinci. Fara da ruwan sha: 'Water', sa'an nan gari: 'Rice'.",
+              "encouragement": "Madalla! Koyo yana da dadi kwarai.",
+              "corrections": "Sanyaya 'R' a jikin 'Rice' ya zama kamar ruwa dake gudu: 'Rais'.",
+              "achievements": "Yanzu zaka iya kiran abincin ka a kowane shago ko na baki!",
+              "motivation": "Kalmomi sune bishiyar da zata samar da jimloli nan gaba."
+            },
+            "listeningExercise": "Listen to the pouring of water and three children saying: 'Water, Rice, Water'.",
+            "repeatAfterMeExercise": "Say: 'Water' (chime)... 'Rice' (chime).",
+            "speakingPractice": "Articulate the word for Uban abinci: 'Water'.",
+            "conversationPractice": "Ustaz Nur: 'What do you want?' Learner: 'Water!'",
+            "visualLearningSuggestions": "A clear glass of drinking water and a bowl of steaming clean rice.",
+            "quiz": [
+              {
+                "question": "What is the English word for 'Ruwa'?",
+                "hausaQuestion": "Wace kalmar Turanci ce ke nufin 'Ruwa'?",
+                "options": [
+                  "Water",
+                  "Rice",
+                  "Please",
+                  "Hello"
+                ],
+                "answerIndex": 0,
+                "explanation": "'Water' is the universal liquid drink, matching 'Ruwa' in Hausa."
+              }
+            ],
+            "assessment": "Verify clear production of 'Wa-ter' audio.",
+            "homework": "Tell someone in your home: 'Give me Water' or call water 'Water' today.",
+            "masteryCriteria": "Clean mapping of objects during visual cues.",
+            "estimatedDuration": "20 minutes",
+            "difficultyRating": "2/5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": "STAGE_3",
+    "levelTitle": "Survival English",
+    "levelTitleHausa": "Gajerun Jimloli Na Bukata",
+    "modules": [
+      {
+        "id": "m3_1",
+        "title": "Urgent Needs & Phrases",
+        "titleHausa": "Bayyana Bukata Da Neman Taimako",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "Expressing Basic Desires",
+            "learningObjective": "Speak complete short needs like asking for water or food confidently.",
+            "vocabulary": [
+              {
+                "word": "I want water",
+                "hausa": "Ina son ruwa",
+                "ipa": "/aɪ wɒnt ˈwɔː.tər/",
+                "syllableBreakdown": "I want wa-ter",
+                "slowPronunciation": "Ai wont waa-tuh",
+                "commonHausaMistake": "Dropping the ending 't' in 'want' or saying 'Ina son water'.",
+                "correctionTip": "Ensure a sharp tongue snap on 't' in 'want' before sliding directly to 'water'."
+              }
+            ],
+            "hausaExplanation": "Idan kana jin kishirwa, fadin 'Ina son ruwa' da Turanci shi ne: 'I want water'. Zamu tsaya don koyan tattaunawar biyan bukata.",
+            "englishExplanation": "Transition from dry isolated nouns to integrated complete request paths.",
+            "pronunciationGuide": "Ensure 'want' ends with a crisp stop consonant, followed by the fluid noun 'water'.",
+            "aiTutorScript": {
+              "introduction": "Maraba! Yau za mu fara gina babban gini: za mu hada gajerun jimloli don biyan bukatar zuciya. Fada bayanmu: 'I want water'.",
+              "encouragement": "Yayi asali sosai muryarku tana fita sarai!",
+              "corrections": "Sakar da sautin 'want' ya dace. Maimaita: 'I... want... water'.",
+              "achievements": "Masha Allah! Yanzu zaka iya nuna sha'awarka cikin dadi babu shakka!",
+              "motivation": "Jimla daya zata iya ceto rayuwarka idan babu Hausawa kusa daku."
+            },
+            "listeningExercise": "A dry traveler asking for support inside a local rest stop saying: 'I want water'."
+            ,"repeatAfterMeExercise": "Repeat carefully: 'I want water'.",
+            "speakingPractice": "Clearly speak the complete desire string: 'I want water'.",
+            "conversationPractice": "Ustaz Nur (Shop): 'What do you want?' Learner: 'I want water.'",
+            "visualLearningSuggestions": "A thirsty traveler pointing to a bottle of drinking container.",
+            "quiz": [
+              {
+                "question": "What is the translation of 'I want water' in Hausa?",
+                "hausaQuestion": "Fassarar 'I want water' da Hausa shi ne?",
+                "options": [
+                  "Ina son ruwa",
+                  "Bani son abinci",
+                  "Ina son gaisuwa",
+                  "Kaka kake"
+                ],
+                "answerIndex": 0,
+                "explanation": "'I want' means Ina so/Ina bukatar, while 'water' stands for ruwa."
+              }
+            ],
+            "assessment": "Evaluate whole sequence without unnatural spacing.",
+            "homework": "Ka fada wa kowa a gidanki yau 'I want water' idan kana jin khishirwa.",
+            "masteryCriteria": "Smooth phrasing connection accuracy.",
+            "estimatedDuration": "20 minutes",
+            "difficultyRating": "2.2/5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": "STAGE_4",
+    "levelTitle": "Everyday Conversations",
+    "levelTitleHausa": "Tattaunawa Ta Gaske",
+    "modules": [
+      {
+        "id": "m4_1",
+        "title": "Interactive Social Dialogues",
+        "titleHausa": "Hira Lokacin Haduwa Cikin Jama'a",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "At the Local Market",
+            "learningObjective": "Interact at local markets and negotiate prices with ease.",
+            "vocabulary": [
+              {
+                "word": "How much is this?",
+                "hausa": "Nawa ne wannan?",
+                "ipa": "/haʊ mʌtʃ ɪz ðɪs/",
+                "syllableBreakdown": "How much is this?",
+                "slowPronunciation": "Hau mach iz dis",
+                "commonHausaMistake": "Pronouncing 'much' as 'muki' or dropping 'th' in 'this' as 'dis'.",
+                "correctionTip": "Put the tip of your tongue slightly between your teeth for 'this' to sound excellent."
+              }
+            ],
+            "hausaExplanation": "Idan ka shiga kasuwar Kurmi ko Sabon Gari don sayen kaya, tambayar farashi da Turanci shi ne: 'How much is this?' Yau za mu koyi hira lokacin gudanar da ciniki.",
+            "englishExplanation": "Integrate financial inquiry structures into conversational roles.",
+            "pronunciationGuide": "Deliver a continuous melodic flow. Ensure 'much' ends with soft air and 'this' starts with dental buzz.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Yanzu lokaci ne na kasuwa. Don sayen kowane abu, lallai zaka tambayi 'How much is this?'. Mu tattauna yanzu.",
+              "encouragement": "Kwarewarku tana bamu sha'awa kowace rana!",
+              "corrections": "Maimaita: 'How much... is this?'. Furta 'M-U-C-H' da iska mai dadi a karshe.",
+              "achievements": "Madalla! Yanzu ka zama babban dan ciniki a dandalin kasuwanni!",
+              "motivation": "Kasuwa tana son mai magana da basira."
+            },
+            "listeningExercise": "Audit a quick market banter in Sabon Gari where prices of goods are being discussed.",
+            "repeatAfterMeExercise": "Listen to the merchant... Now ask: 'How much is this?'",
+            "speakingPractice": "State the financial inquiry clearly: 'How much is this?'.",
+            "conversationPractice": "Ustaz Nur (Seller): 'Hello customer.' Learner: 'Hello, how much is this?'",
+            "visualLearningSuggestions": "A bustling colorful African market scene with bags of grains.",
+            "quiz": [
+              {
+                "question": "If you want to know the price of a beautiful shirt, what do you ask?",
+                "hausaQuestion": "Idan kana son sanin kudin riga a shago, me kake cewa?",
+                "options": [
+                  "How much is this?",
+                  "I want water",
+                  "Thank you very much",
+                  "Welcome"
+                ],
+                "answerIndex": 0,
+                "explanation": "'How much is this?' is the globally acknowledged phrase to request prices."
+              }
+            ],
+            "assessment": "Verify natural inflections during inquiry triggers.",
+            "homework": "Ask the price of any household object from your sibling using 'How much is this?'.",
+            "masteryCriteria": "Negotiation speed rating of at least competent level.",
+            "estimatedDuration": "25 minutes",
+            "difficultyRating": "2.8/5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": "STAGE_5",
+    "levelTitle": "Reading Introduction",
+    "levelTitleHausa": "Danganta Sauti Da Rubutu",
+    "modules": [
+      {
+        "id": "m5_1",
+        "title": "Phonics & Word Recognition",
+        "titleHausa": "Hadin Alphabet Da Ganin Kalmomi",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "The Alphabet & Phonics Foundation",
+            "learningObjective": "Map the spoken word \"Water\" they already know to its written letters.",
+            "vocabulary": [
+              {
+                "word": "Water",
+                "hausa": "W-A-T-E-R (Ruwa)",
+                "ipa": "/ˈwɔː.tər/",
+                "syllableBreakdown": "W-a-t-e-r",
+                "slowPronunciation": "Waa-ter",
+                "commonHausaMistake": "Reading spelling literally without phonetic mapping.",
+                "correctionTip": "Understand that in English, letters combine to form specific sounds unlike pure literal spelling."
+              }
+            ],
+            "hausaExplanation": "Kun dade kuna fadin kalmar 'Water' da baki. A yau zamu ga yadda aka rubuta ta a takarda ko screen dinku: W-A-T-E-R. Dubi yadda haruffan suka hadu don samar da sautin da kuka saba dashi.",
+            "englishExplanation": "Establish sight-word connections to leverage preexisting verbal skills into reading competency.",
+            "pronunciationGuide": "Gaze at the letters while pronouncing the sound. Do not spell aloud during conversation.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Yau kuma babban lokaci ne. Za mu fara karatu! Kun gane kalmarmu ta da: 'Water'. Dubi yadda aka rubuta ta.",
+              "encouragement": "Kun gani? Ba da wuya yake ba sam!",
+              "corrections": "Kada ka karanta harafi-harafi yayin fada. Kawai kalli rubutun sannan ka ce: 'Water'.",
+              "achievements": "Ka yi nasarar karanta kalmarka ta farko a rubuce!",
+              "motivation": "Duk littafin duniya yana farawa ne daga kalmar da ka riga ka sani da baki."
+            },
+            "listeningExercise": "Listen to a voice spelling 'W-A-T-E-R' and then blending details into the word 'Water'.",
+            "repeatAfterMeExercise": "Look at the letters and say: 'Water'.",
+            "speakingPractice": "Pronounce 'Water' as you gaze at the written word on your screen.",
+            "conversationPractice": "Ustaz Nur: 'How do you spell the sound we drink?' Learner: 'W-A-T-E-R... Water!'",
+            "visualLearningSuggestions": "A clear, beautifully styled word card showing 'Water' with water droplets behind it.",
+            "quiz": [
+              {
+                "question": "Which letters are used to write 'Water'?",
+                "hausaQuestion": "Wadanne haruffa ne ake amfani da su wajen samar da kalmar 'Water'?",
+                "options": [
+                  "W - A - T - E - R",
+                  "H - E - L - L - O",
+                  "Y - E - S",
+                  "P - L - E - A - S - E"
+                ],
+                "answerIndex": 0,
+                "explanation": "W-A-T-E-R is the standard written string to map the acoustic sound of water."
+              }
+            ],
+            "assessment": "Verify sight recognition of 'Water' text.",
+            "homework": "Ka sami kofi ko gora, sannan ka rubuta 'Water' a kai da fensiri ka kalli rubutun.",
+            "masteryCriteria": "Immediate textual association verification.",
+            "estimatedDuration": "20 minutes",
+            "difficultyRating": "2.5/5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": "STAGE_6",
+    "levelTitle": "Writing Basics",
+    "levelTitleHausa": "Fara Karatun Rubutu",
+    "modules": [
+      {
+        "id": "m6_1",
+        "title": "Basic Typing & Copying",
+        "titleHausa": "Kofiyan Haruffa Da Rubuta Kalmomi",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "Copying & Typing Short Words",
+            "learningObjective": "Input key characters carefully and copy simple sentences from screens.",
+            "vocabulary": [
+              {
+                "word": "Write",
+                "hausa": "Rubuta",
+                "ipa": "/raɪt/",
+                "syllableBreakdown": "Write",
+                "slowPronunciation": "Rait",
+                "commonHausaMistake": "Pronouncing 'w' heavy sound at the start like 'Wirite'.",
+                "correctionTip": "Ignore the 'w' completely! It is a silent letter just like the 'T' in listen. Pronounce as 'Rait'."
+              }
+            ],
+            "hausaExplanation": "Yau za mu riki alkalami ko mu danna keyboard na wayoyinmu. Za mu kwafi kalmomin da muka saba fada da baki don su zama rubutu a rubuce. Kalmarmu ita ce 'Write'.",
+            "englishExplanation": "Train keyboard typing or handwriting actions. Ensure silent 'w' awareness.",
+            "pronunciationGuide": "Keep the starting 'w' silent. Produce a long high-i vowel sliding into 't'.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Yanzu lokacin rubutu ne. Kar ku huta, yanke zance daki-daki ne zai baku nasara. Kalmarmu ita ce 'Write'.",
+              "encouragement": "Babu shakka rubutun muryarka yana da dadi!",
+              "corrections": "Maimaita: 'Write'. Ka manta da 'W' a farko, kawai ce 'Rait'.",
+              "achievements": "Yanzu ka san yadda ake kiran rubutu cikin yaren Turanci daidai!",
+              "motivation": "Abin da aka rubuta ya tabbata."
+            },
+            "listeningExercise": "Listen to the sound of pen scratching on clean paper, and call 'Write'.",
+            "repeatAfterMeExercise": "Repeat: 'Write' (silent w).",
+            "speakingPractice": "State the action word: 'Write'.",
+            "conversationPractice": "Ustaz Nur: 'What do you do with a pencil?' Learner: 'I write!'",
+            "visualLearningSuggestions": "A stylish pencil drawing and scribbling words with animated glow.",
+            "quiz": [
+              {
+                "question": "Which letter is silent in the word 'Write'?",
+                "hausaQuestion": "Wane harafi ne baya fita a baki a farkon kalmar 'Write'?",
+                "options": [
+                  "letter W",
+                  "letter R",
+                  "letter I",
+                  "letter T"
+                ],
+                "answerIndex": 0,
+                "explanation": "The letter 'w' is silent at the start of 'Write' and must not be spoken as 'wi'."
+              }
+            ],
+            "assessment": "Verify that the user omits 'w' during voice evaluation.",
+            "homework": "Ka dauki takarda, ka kofi sentence 'I want water' tare da kula da yadda haruffan suke.",
+            "masteryCriteria": "Accurate copying and spelling identification.",
+            "estimatedDuration": "20 minutes",
+            "difficultyRating": "3/5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": "STAGE_7",
+    "levelTitle": "Functional English",
+    "levelTitleHausa": "Turanci Don Rayuwar Yau Da Kullum",
+    "modules": [
+      {
+        "id": "m7_1",
+        "title": "Hospital, Transit & Bank Environments",
+        "titleHausa": "Tattaunawa A Asibiti Da Manyan Gurare",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "At the Hospital: Explaining Health",
+            "learningObjective": "Express basic physical illnesses or request medical assistance eloquently.",
+            "vocabulary": [
+              {
+                "word": "I feel sick",
+                "hausa": "Ina jin rashin lafiya",
+                "ipa": "/aɪ fiːl sɪk/",
+                "syllableBreakdown": "I feel sick",
+                "slowPronunciation": "Ai fil sik",
+                "commonHausaMistake": "Pronouncing 'feel' as 'fil' with too short a vowel, or swallowing the 'k'.",
+                "correctionTip": "Stretch the 'ee' slightly as 'feeel' then release the 'k' in 'sick' cleanly."
+              }
+            ],
+            "hausaExplanation": "Idan baka da lafiya, zuwa asibiti zai bukaci ka fada wa likita damuwarka. Jin rashin lafiya ana fada da Turanci: 'I feel sick'. Zamu yi kokari mu koya yadda za a gudanar da wannan tattaunawa.",
+            "englishExplanation": "Acquire fundamental physical health descriptor statements to safeguard medical communication.",
+            "pronunciationGuide": "Extend the middle cheek smile vowel in 'feel' cleanly before executing a short crisp 'sick'.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Idan baka jin dadi, zaka fada wa likita ko nas: 'I feel sick'. Yau zamu tattauna a kan lafiya da kariya.",
+              "encouragement": "Allah ya baka lafiya! Sautinka yana da kaifi sosai.",
+              "corrections": "Tsawaita harafin 'feel' kadan. Kada kace 'Ai fil'. Ce 'Ai feee-l sick'.",
+              "achievements": "Yanzu zaka iya kare kanka ko iyalinka yayin rashin lafiya a asibiti!",
+              "motivation": "Maganar asibiti tana da matukar muhimmanci a kowane lokaci."
+            },
+            "listeningExercise": "Listen to a soft medical bell and doctor responding to an urgent voice prompt.",
+            "repeatAfterMeExercise": "Say with emergency care: 'I feel sick'.",
+            "speakingPractice": "Speak the medical assistance statement: 'I feel sick'.",
+            "conversationPractice": "Ustaz Nur (Doctor): 'What is the problem?' Learner: 'I feel sick.'" ,
+            "visualLearningSuggestions": "A clean hospital logo with a professional, caring doctor stethoscope.",
+            "quiz": [
+              {
+                "question": "If you are not feeling well at the clinic, what should you tell the receptionist?",
+                "hausaQuestion": "Idan baka jin dadi a asibiti, me ya kamata ka fada wa ma'aikacin wajen?",
+                "options": [
+                  "I feel sick",
+                  "I want water",
+                  "How much is this?",
+                  "Welcome to our school"
+                ],
+                "answerIndex": 0,
+                "explanation": "'I feel sick' is the default descriptive indicator for health distress."
+              }
+            ],
+            "assessment": "Verify that vowels are well balanced to denote proper emotional and vocal tone.",
+            "homework": "Practice simulating this conversation with a sibling behaving like a general doctor.",
+            "masteryCriteria": "Clean vowel extension of 'feel'.",
+            "estimatedDuration": "25 minutes",
+            "difficultyRating": "3.2/5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": "STAGE_8",
+    "levelTitle": "Workplace English",
+    "levelTitleHausa": "Turanci A Wajen Aiki",
+    "modules": [
+      {
+        "id": "m8_1",
+        "title": "Business & Workplace Skills",
+        "titleHausa": "Sadarwa Don Kwararru Da Masu Neman Aiki",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "Job Interview & Self Introduction",
+            "learningObjective": "Deliver self-introductions in simple workplace interview panels.",
+            "vocabulary": [
+              {
+                "word": "Tell me about yourself",
+                "hausa": "Bani labarin kanka",
+                "ipa": "/tel miː əˈbaʊt jɔːˈself/",
+                "syllableBreakdown": "Tell me a-bout your-self",
+                "slowPronunciation": "Tel mi abaut yorself",
+                "commonHausaMistake": "Dropping the ending 'lf' in 'yourself' completely as 'yorsel'.",
+                "correctionTip": "Blow soft wind for the final 'f' at the end of 'yourself' to present full focus."
+              }
+            ],
+            "hausaExplanation": "Idan ka nemi aiki a babban shago, ofis ko kamfani, tambaya ta farko dake da muhimmanci ita ce: 'Tell me about yourself' (Gaya min game da kanka). Zamu koyi yadda za mu kware wajen amsa.",
+            "englishExplanation": "Master interview evaluation techniques and clean verbal resume formatting statements.",
+            "pronunciationGuide": "Balance stress pattern across 'about' and 'yourself'. Release 'Tell me' smoothly.",
+            "aiTutorScript": {
+              "introduction": "Sannu aboki! Yau manyan mutane dake neman shugabanci zasu yi farin ciki. Kalmarmu ta yau ita ce mafi amfani a teburin neman aiki: 'Tell me about yourself'.",
+              "encouragement": "Faruci ne mai matukar ban sha'awa da girma!",
+              "corrections": "Fitarda iska kadan na harafin 'F' a karshe: 'Your-selFFFF'. Maimaita.",
+              "achievements": "Yanzu kun daukaka zuwa babban matakin neman arziki!",
+              "motivation": "Yarenka shi ne hasken fuskarka kafin a gwada basirarka."
+            },
+            "listeningExercise": "Review an office dialogue where a manager in Abuja reviews certificates of applicants.",
+            "repeatAfterMeExercise": "Repeat: 'Tell me about yourself' (chime).",
+            "speakingPractice": "Clearly say: 'Tell me about yourself' as requested by Ustaz Nur.",
+            "conversationPractice": "Ustaz Nur: 'Who are you?' Learner: 'Tell me about yourself...'",
+            "visualLearningSuggestions": "A corporate desk with folders and high quality credentials representing success.",
+            "quiz": [
+              {
+                "question": "What is the meaning of 'Tell me about yourself'?",
+                "hausaQuestion": "Mene ne fassarar 'Tell me about yourself' da Hausa?",
+                "options": [
+                  "Gaya min game da kanka",
+                  "Ina son in sayi kwallo",
+                  "Nawa ne kudin takarda",
+                  "Sai an jima"
+                ],
+                "answerIndex": 0,
+                "explanation": "'Tell me about yourself' commands a description of professional or personal background traits."
+              }
+            ],
+            "assessment": "Verify firm final consonant integrations.",
+            "homework": "Explain your background to the mirror using your name: 'My name is Amina, I want to write'.",
+            "masteryCriteria": "Professional self-assured audio metrics output.",
+            "estimatedDuration": "30 minutes",
+            "difficultyRating": "4/5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": "STAGE_9",
+    "levelTitle": "English Thinking",
+    "levelTitleHausa": "Gudanar Da Tunani Cikin Turanci",
+    "modules": [
+      {
+        "id": "m9_1",
+        "title": "Descriptive Storytelling",
+        "titleHausa": "Fara Rayawa Da Kwadaitar Da Tunani Cikin Turanci",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "Explaining Daily Activities",
+            "learningObjective": "Stop translation loops and express direct observations with visual imagery helper cues.",
+            "vocabulary": [
+              {
+                "word": "What did you do today?",
+                "hausa": "Mene ne ka yi yau?",
+                "ipa": "/wɒt dɪd juː duː təˈdeɪ/",
+                "syllableBreakdown": "What did you do to-day?",
+                "slowPronunciation": "Wot did yu du tudei",
+                "commonHausaMistake": "Pronouncing 'today' as 'todei' with strong heavy local 'o' quality.",
+                "correctionTip": "Shorten the 'to' prefix to sound like a brief 'tuh-day' for perfect accent."
+              }
+            ],
+            "hausaExplanation": "Za mu daina gudanar da fassara daga Hausa kowane lokaci kafin magana. Za mu horar da kwakwalwa don amsa kai tsaye da Turanci. Misali: 'What did you do today?' (Mene ne ka gudanar yau?).",
+            "englishExplanation": "Eradicate intermediate translation delay cycles. Drive visual visual-to-speech pathways.",
+            "pronunciationGuide": "Ensure 'did' is soft and 'today' is delivered as a brief 'tuh-day' rather than a heavy 'to-day'.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Yau kuma zamu yi kokarin tunani direct ba tare da fassara ta jinkiri ba. Idan na tambaye ka: 'What did you do today?', ka fito da abin da ka yi.",
+              "encouragement": "Allah ya zuba muku albarka, muryarku tana da gaske!",
+              "corrections": "Fadi 'tuh-day' cikin gajeren sauti na asali. 'What did you do tuh-day?'.",
+              "achievements": "Kun kashe matsalar jinkirin tunani tattaunawa gaba daya!",
+              "motivation": "Yaren da kake tunani da shi, shi ne yaren da kake magana dashi."
+            },
+            "listeningExercise": "Audit a father returning home asking his child about activities inside school grounds.",
+            "repeatAfterMeExercise": "Repeat carefully: 'What did you do today?'.",
+            "speakingPractice": "Register the inquiry phrase: 'What did you do today?'.",
+            "conversationPractice": "Ustaz Nur: 'I read my book. And you?' Learner: 'What did you do today?'",
+            "visualLearningSuggestions": "A graphic showing a brain thinking and sparking with yellow flash of lightning.",
+            "quiz": [
+              {
+                "question": "If you want to know about someone's daily activities, what should you ask?",
+                "hausaQuestion": "Idan kana son ka tambayi abokin ka abubuwan da ya aiwatar yau, me zaka ce?",
+                "options": [
+                  "What did you do today?",
+                  "How much is this?",
+                  "I want water",
+                  "I feel sick"
+                ],
+                "answerIndex": 0,
+                "explanation": "'What did you do today?' asks for a direct report of present-day actions."
+              }
+            ],
+            "assessment": "Detailed speech analysis of speed delays.",
+            "homework": "Ka tambayi abokinka yau 'What did you do today?' ka saurari dabi'arsa.",
+            "masteryCriteria": "Maximum delay under 1 full second.",
+            "estimatedDuration": "30 minutes",
+            "difficultyRating": "4.2/5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": "STAGE_10",
+    "levelTitle": "Fluency Mastery",
+    "levelTitleHausa": "Kammalawa Da Kwarewa Gaba Daya",
+    "modules": [
+      {
+        "id": "m10_1",
+        "title": "Complete Independent Fluency",
+        "titleHausa": "Zama Zakaran Tattaunawa Ta Turanci",
+        "lessons": [
+          {
+            "lessonNumber": 1,
+            "title": "Complete Free-Flow Conversation Review",
+            "learningObjective": "Converse independently without support frames or local translations in Hausa.",
+            "vocabulary": [
+              {
+                "word": "I am confident",
+                "hausa": "Ina da tabbaci",
+                "ipa": "/aɪ æm ˈkɒn.fɪ.dənt/",
+                "syllableBreakdown": "I am con-fi-dent",
+                "slowPronunciation": "Ai am kon-fi-dent",
+                "commonHausaMistake": "Dropping the closing 'nt' sound in 'confident' as 'konfiden'.",
+                "correctionTip": "Ensure tongue taps the roof of your mouth for the final 'nt' for absolute clarity."
+              }
+            ],
+            "hausaExplanation": "Madalla! Kun riga kun gama dukkan dandalinmu. Wannan darasi na karshe bita ne gaba daya na duk abin da muka koya daga sifiri. Ya kamata ku ce: 'I am confident' (Muna da tabbaci!).",
+            "englishExplanation": "Deliver a ultimate milestone synthesis check. Celebrate successful long-term language acquisition.",
+            "pronunciationGuide": "Combine 'I am' as a single run-on 'I-am' before producing the steady three syllables of 'con-fi-dent'.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Wannan ita ce kololuwar haske. Kun dade kuna koya daga ranar farko inda muka fara da 'Welcome'. Yau zaku ce: 'I am confident'!",
+              "encouragement": "Ku ne zakaru kwarai da gaske a kasan nan baki daya!",
+              "corrections": "Ka fitar da 'nt' na karshe da karfi don ya tabbatar da kwarewarka. 'Confident'.",
+              "achievements": "Madalla, madalla kwarai! Kun zama kwararru masu magana kamar ruwa!",
+              "motivation": "Yanzu babu inda zaka tsaya a fadin duniya baki daya. Hanyarku ta bude!"
+            },
+            "listeningExercise": "Review the grand cheering sound of crowds celebrating graduation milestones inside communities.",
+            "repeatAfterMeExercise": "Say with pride: 'I am confident'.",
+            "speakingPractice": "Speak clearly to register your ultimate status: 'I am confident'.",
+            "conversationPractice": "Ustaz Nur (Ustaz): 'Are you fluent in English?' Learner: 'Yes, I am confident!'",
+            "visualLearningSuggestions": "A glowing golden crown symbol indicating supreme success and graduation crown.",
+            "quiz": [
+              {
+                "question": "What is the meaning of 'I am confident' in Hausa?",
+                "hausaQuestion": "Fassarar 'I am confident' da Hausa shi ne?",
+                "options": [
+                  "Ina da tabbaci",
+                  "Ba zan iya magana ba",
+                  "Malami ya koka",
+                  "Bani son ilimi"
+                ],
+                "answerIndex": 0,
+                "explanation": "'I am confident' matches Ina da cikakken tabbaci a asali na biyan bukata."
+              }
+            ],
+            "assessment": "Verify clear, high level expression.",
+            "homework": "Ka nuna wa iyalinka Shaidar karatunka (Certificate) na Nur al-Ilm yau tare da dadi kwarai.",
+            "masteryCriteria": "Successful completion of all modules.",
+            "estimatedDuration": "40 minutes",
+            "difficultyRating": "4.8/5"
+          }
+        ]
+      }
+    ]
+  }
+]

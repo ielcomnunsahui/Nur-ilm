@@ -4,12 +4,17 @@
  */
 
 export enum LearningLevel {
-  LEVEL_0 = 'LEVEL_0', // No English Knowledge
-  LEVEL_1 = 'LEVEL_1', // First Words
-  LEVEL_2 = 'LEVEL_2', // Basic Sentences
-  LEVEL_3 = 'LEVEL_3', // Everyday Conversations
-  LEVEL_4 = 'LEVEL_4', // Reading & Writing
-  LEVEL_5 = 'LEVEL_5', // Fluent Communication
+  STAGE_0 = 'STAGE_0', // Orientation (Before English)
+  STAGE_1 = 'STAGE_1', // Listening Awareness
+  STAGE_2 = 'STAGE_2', // First Spoken Words
+  STAGE_3 = 'STAGE_3', // Survival English
+  STAGE_4 = 'STAGE_4', // Everyday Conversations
+  STAGE_5 = 'STAGE_5', // Reading Introduction
+  STAGE_6 = 'STAGE_6', // Writing Basics
+  STAGE_7 = 'STAGE_7', // Functional English
+  STAGE_8 = 'STAGE_8', // Workplace English
+  STAGE_9 = 'STAGE_9', // English Thinking
+  STAGE_10 = 'STAGE_10', // Fluency Mastery
 }
 
 export interface VocabularyWord {
@@ -20,6 +25,11 @@ export interface VocabularyWord {
   hausaHint: string; // e.g., "Ina son ruwa"
   imageUrl: string;
   category: string;
+  ipa?: string;
+  syllableBreakdown?: string;
+  slowPronunciation?: string;
+  commonHausaMistake?: string;
+  correctionTip?: string;
 }
 
 export interface QuizQuestion {
@@ -42,6 +52,27 @@ export interface Lesson {
   points: number;
   vocabulary: VocabularyWord[];
   quiz: QuizQuestion[];
+  learningObjective?: string;
+  hausaExplanation?: string;
+  englishExplanation?: string;
+  pronunciationGuide?: string;
+  aiTutorScript?: {
+    introduction: string;
+    encouragement: string;
+    corrections: string;
+    achievements: string;
+    motivation: string;
+  };
+  listeningExercise?: string;
+  repeatAfterMeExercise?: string;
+  speakingPractice?: string;
+  conversationPractice?: string;
+  visualLearningSuggestions?: string;
+  assessment?: string;
+  homework?: string;
+  masteryCriteria?: string;
+  estimatedDuration?: string;
+  difficultyRating?: string;
 }
 
 export interface UserProgress {
@@ -50,6 +81,7 @@ export interface UserProgress {
   streak: number;
   lastActiveDate: string; // YYYY-MM-DD
   completedLessons: string[]; // lessonIds
+  lessonProgress?: Record<string, number>; // lessonId -> percentage (0-100)
   unlockedLevels: LearningLevel[];
   badges: string[]; // badgeIds
   isPremium: boolean;

@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { 
-  Flame, BookOpen, Volume2, Mic, Users, HelpCircle, ArrowRight, ShieldCheck, Zap, Globe 
+  Flame, BookOpen, Volume2, Mic, Users, HelpCircle, ArrowRight, ShieldCheck, Zap, Globe, Smartphone 
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { speakText } from './AudioVoiceHelper';
@@ -13,11 +13,13 @@ import { speakText } from './AudioVoiceHelper';
 interface LandingPageProps {
   onStart: () => void;
   onSelectRole: (role: 'parent' | 'admin' | 'student') => void;
+  onInstall?: () => void;
 }
 
 export const LandingPage: React.FC<LandingPageProps> = ({
   onStart,
-  onSelectRole
+  onSelectRole,
+  onInstall
 }) => {
 
   const listenToSampleLesson = () => {
@@ -116,6 +118,18 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               <Volume2 className="w-4 h-4 text-[#D4A017] animate-pulse" />
               Saurari Samfurin Darasi (Sample audio)
             </button>
+
+            {onInstall && (
+              <button
+                id="btn-hero-pwa-install"
+                onClick={onInstall}
+                className="px-6 py-4 bg-amber-500 hover:bg-amber-600 text-emerald-950 rounded-full font-bold text-xs shadow-md flex items-center justify-center gap-2 border border-amber-400 cursor-pointer transition-all hover:scale-[1.01]"
+                title="Girka dandalin a kan wayarka salula"
+              >
+                <Smartphone className="w-4 h-4 text-emerald-950 animate-pulse" />
+                Girka App (Install Application)
+              </button>
+            )}
           </div>
 
           {/* Micro analytics banners */}

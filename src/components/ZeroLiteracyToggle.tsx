@@ -34,6 +34,8 @@ export const ZeroLiteracyToggle: React.FC<ZeroLiteracyToggleProps> = ({
       textToSpeak = "Barka da zuwa dandalin iyaye. A nan za ku iya duba ƙoƙari da ci-gaban karatun yaronku, duba makin da ya samu, sannan ku zazzage masa takardar shaidar karatu, wato satifikeet.";
     } else if (currentPageContext === 'admin') {
       textToSpeak = "Wannan shi ne sashen gudanarwa. A nan ne ake tsara sababbin darussa da duba ci-gaban dandalin gabaɗaya.";
+    } else if (currentPageContext === 'checkout') {
+      textToSpeak = "Barka da zuwa dandalin zaɓar tsarin biyan ku! A nan za ku iya buɗe dukkan darussan koyo na asali da na ci-gaba na dandalin Nur al-Ilm. Zaɓi tsarin da ya fi dacewa da ku, sannan ku danna maɓallin ci-gaba na koren launi. Idan kuna da lambar ragi ta kyauta, rubuta ta a ƙasa wato N U R biyu sifili biyu shida, sannan ku danna maɓallin Shigar domin buɗewa kyauta.";
     } else {
       textToSpeak = "Nur al-Ilm yana tare da kai koyaushe don koya maka Turanci cikin sauƙi da sauri. Danna kowane hoto ko maɓalli domin jin sautinsa a bayyane.";
     }

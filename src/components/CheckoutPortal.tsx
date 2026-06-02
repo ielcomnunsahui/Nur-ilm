@@ -91,7 +91,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
             <h3 className="font-bold text-sm tracking-wide flex items-center gap-1.5">
               Bude Dukkan Darussan Koyi (Premium)
               <button 
-                onClick={() => triggerAudio("Bude Dukkan Darussan Koyi")}
+                onClick={() => triggerAudio("Kun danna maɓallin Buɗe dukkan darussan koyon Turanci na premium. Wannan zai ba ku cikakken damar shiga dukkan rukununan dandalin Nur al-Ilm.")}
                 className="p-1 text-white hover:text-amber-300 rounded transition-colors"
                 title="Saurari Sauti"
               >
@@ -115,7 +115,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
               <h4 className="text-sm font-extrabold text-[#0F6B4B] flex items-center justify-center gap-2">
                 Zabi Tsarin Biyan ku
                 <button 
-                  onClick={() => triggerAudio("Zabi Tsarin Biyan ku")}
+                  onClick={() => triggerAudio("Zaɓi tsarin biyan ku da ya fi dacewa da ku. Kuna iya zaɓar biyan wata guda, watanni uku, ko kuma shekara guda cif.")}
                   className="p-1 text-[#0F6B4B] hover:text-[#D4A017] rounded"
                   title="Saurari Sauti"
                 >
@@ -142,7 +142,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
                   <span className="font-black text-sm text-emerald-900">NGN 1,500</span>
                 </button>
                 <button 
-                  onClick={() => triggerAudio("Biyan Wata Guda")} 
+                  onClick={() => triggerAudio("Biyan wata guda akan naira dubu ɗaya da ɗari biyor kawai domin samun damar yin amfani da dandalin a cikin wannan wata guda.")} 
                   className="absolute right-24 top-4 p-1 text-[#0F6B4B] hover:text-[#D4A017] rounded-full bg-emerald-100/30"
                   title="Saurari Wata Guda"
                 >
@@ -168,7 +168,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
                   <span className="font-black text-sm text-emerald-900">NGN 4,000</span>
                 </button>
                 <button 
-                  onClick={() => triggerAudio("Biyan Watanni Uku")} 
+                  onClick={() => triggerAudio("Biyan watanni uku akan naira dubu huɗu. Wannan yana ba ku damar duba dukkan darussa ba tare da yankewa ba, kuma kuna samun ragi na kashi goma sha ɗaya.")} 
                   className="absolute right-24 top-4 p-1 text-[#0F6B4B] hover:text-[#D4A017] rounded-full bg-emerald-100/30"
                   title="Saurari Watanni Uku"
                 >
@@ -191,7 +191,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
                   <span className="font-black text-sm text-emerald-900">NGN 12,000</span>
                 </button>
                 <button 
-                  onClick={() => triggerAudio("Biyan Shekara Guda")} 
+                  onClick={() => triggerAudio("Biyan shekara guda akan naira dubu sha biyu cif. Wannan shi ne zaɓi mafi kyau kuma mafi arha a gare ku na tsawon shekara guda gabaɗaya.")} 
                   className="absolute right-24 top-4 p-1 text-[#0F6B4B] hover:text-[#D4A017] rounded-full bg-emerald-100/30"
                   title="Saurari Shekara Guda"
                 >
@@ -205,7 +205,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
               <p className="font-bold text-emerald-950 mb-1 flex items-center gap-1.5">
                 Meye Amfanin Kasancewa Premium?
                 <button 
-                  onClick={() => triggerAudio("Meye Amfanin Kasancewa Premium?")}
+                  onClick={() => triggerAudio("Amfanin kasancewa premium ya haɗa da: tattaunawa ta musamman da Ustaz Nur ba tare da iyaka ba, saukar da darussa don amfani na offline, da kuma samun shaidar karatu ta musamman bayan ku kammala kullum.")}
                   className="p-1 text-[#0F6B4B] hover:text-[#D4A017] rounded"
                 >
                   <Volume2 className="w-3.5 h-3.5" />
@@ -231,7 +231,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
                 <div className="flex items-center gap-1.5">
                   <p className="font-bold text-amber-900 text-xs">Kuna da Lambar ragi? (Have a promo code?)</p>
                   <button 
-                    onClick={() => triggerAudio("Kuna da Lambar ragi?")}
+                    onClick={() => triggerAudio("Kuna da lambar ragi? Rubuta lambar ragi ta kyauta wato N U R biyu sifili biyu shida, sannan ku danna maɓallin Shigar domin buɗe dukkan ayyukan kyauta ba tare da biyan ko kwabo ba.")}
                     className="p-1 text-amber-800 hover:text-amber-950 rounded"
                   >
                     <Volume2 className="w-3.5 h-3.5" />
@@ -271,7 +271,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
               id="btn-continue-checkout"
               onClick={() => {
                 setStep('pay_method');
-                triggerAudio("Cigaba da Hanya");
+                triggerAudio("Cigaba da Hanya don zaɓar hanyar da za ku biya kuɗi ta katin banki.");
               }}
               className="w-full py-3.5 bg-[#0F6B4B] hover:bg-emerald-800 text-[#F8F6F0] rounded-xl font-bold font-sans text-xs tracking-wider uppercase transition-all shadow flex items-center justify-center gap-1.5"
             >
@@ -294,7 +294,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
             <h4 className="font-bold text-sm text-center text-[#0F6B4B] flex items-center justify-center gap-1.5">
               Hanyar Biyan Nigerian Paystack/Flutterwave
               <button 
-                onClick={() => triggerAudio("Hanyar Biyan Nigerian")}
+                onClick={() => triggerAudio("Zaɓi hanyar da kuke so ku tura kuɗi, ko dai ta hanyar Paystack ko kuma Flutterwave.")}
                 className="p-1 text-[#0F6B4B] hover:text-[#D4A017] rounded"
               >
                 <Volume2 className="w-4 h-4" />
@@ -331,7 +331,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
                 <span className="text-gray-700 flex items-center gap-1">
                   Abinda zaka biya (Total Due):
                   <button 
-                    onClick={() => triggerAudio("Abinda zaka biya")}
+                    onClick={() => triggerAudio("Kuɗin da za a cire a cikin katin bankinku.")}
                     className="p-1 text-[#0F6B4B] hover:text-[#D4A017] rounded"
                   >
                     <Volume2 className="w-3.5 h-3.5" />
@@ -347,7 +347,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
                 <label className="text-gray-600 font-semibold flex items-center gap-1">
                   Lambar Katin Bashi (Card Number Mock):
                   <button 
-                    onClick={() => triggerAudio("Lambar Katin Bashi")}
+                    onClick={() => triggerAudio("Shigar da lambobin katin bankinku a nan.")}
                     className="p-1 text-gray-500 hover:text-[#0F6B4B]"
                   >
                     <Volume2 className="w-3 h-3" />
@@ -368,7 +368,7 @@ export const CheckoutPortal: React.FC<CheckoutPortalProps> = ({
                 <label className="text-gray-600 font-semibold flex items-center gap-1">
                   Lambar Waya (Phone Pin):
                   <button 
-                    onClick={() => triggerAudio("Lambar Waya")}
+                    onClick={() => triggerAudio("Shigar da lambar wayarku na sirri domin kammala wannan tsari na biyan kuɗi.")}
                     className="p-1 text-gray-500 hover:text-[#0F6B4B]"
                   >
                     <Volume2 className="w-3 h-3" />
