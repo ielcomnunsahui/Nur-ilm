@@ -181,7 +181,7 @@
               "introduction": "Barka da hantsi! Yau za mu koyi yadda za muke amfani da muryoyinmu yayin karatu. Kalmarmu ita ce 'Speak' wato yi magana.",
               "encouragement": "Masha Allah! Lafazinka yana da sanyaya zuciya.",
               "corrections": "Maimaita: 'Sss-peak'. Kar ka sanya 'E' a farko.",
-              "achievements": "Yanzu ka san yadda zaka danna mic ka yi magana!",
+              "achievements": "Yanzu ka san yadda ake kiran rubutu cikin yaren Turanci daidai!",
               "motivation": "Turanci yana baki, ba a zuciya ba. Kada ka ji tsoron kuskure."
             },
             "listeningExercise": "Hear a person tapping a microphone and speaking the word 'Speak'.",
@@ -385,7 +385,7 @@
           {
             "lessonNumber": 3,
             "title": "Thank You & Please",
-            "learningObjective": "Master gratitude and politeness sounds.",
+            "learningObjective": "Master gratitude and politeness sounds by ear.",
             "vocabulary": [
               {
                 "word": "Thank you",
@@ -440,6 +440,65 @@
             "masteryCriteria": "Exhibiting correct phonetic cues.",
             "estimatedDuration": "20 minutes",
             "difficultyRating": "2/5"
+          },
+          {
+            "lessonNumber": 4,
+            "title": "Sorry & Excuse me",
+            "learningObjective": "Differentiate apologizing or seeking permission politely by ear.",
+            "vocabulary": [
+              {
+                "word": "Sorry",
+                "hausa": "Yi haƙuri",
+                "ipa": "/ˈsɒr.i/",
+                "syllableBreakdown": "Sor-ry",
+                "slowPronunciation": "Sah-ree",
+                "commonHausaMistake": "Vocalizing heavy 'Sor-ry' with deep gutteral 'r' or rolling like Hausa 'R'.",
+                "correctionTip": "Ensure the first syllable is light and rounded: 'Soh-ree'."
+              },
+              {
+                "word": "Excuse me",
+                "hausa": "Gafara dai / Don Allah bani hanya",
+                "ipa": "/ɪkˈskjuːz ˌmiː/",
+                "syllableBreakdown": "Ex-cuse me",
+                "slowPronunciation": "Ex-kyuz mi",
+                "commonHausaMistake": "Pronouncing 'Ekuskyus' as several pieces without the soft dental 'z' buzz.",
+                "correctionTip": "Make the 'cuse' part rhyme with 'news' with a vibrating 'z' sound: 'Ex-kyuz... me'."
+              }
+            ],
+            "hausaExplanation": "Idan ka yi kuskure ko ka taka wani ba da gangan ba, kace Sorry. Idan kana son wani ya ba ka hanya ko ka katse magana cikin ladabi, kace Excuse me. Saurari sautin sosai kamin fada.",
+            "englishExplanation": "Acoustically master conversational apologies and interjections.",
+            "pronunciationGuide": "Soften the double 'r' in 'Sorry'. Buzz the 's' in 'Excuse' like a 'z'.",
+            "aiTutorScript": {
+              "introduction": "Sannunku! A wannan darasin za mu koyi yadda ake neman afuwa ko katse magana cikin girmamawa. Sautin Sorry da Excuse me yana da matukar dadi a kunne.",
+              "encouragement": "Masha Allah! Haka muke so, lafazi mai cike da girmamawa.",
+              "corrections": "Maimaita: 'Ex-kyuz... mi'. Kar ka yi raga-raga da shi.",
+              "achievements": "Ka mallaki manyan kofofin zamantakewa a kasashen duniya gaba daya!",
+              "motivation": "Marar hakuri ba zai taba zama zakara a cikin kowane al'umma ba."
+            },
+            "listeningExercise": "Listen to a soft voice politely saying 'Excuse me' to pass through a crowd.",
+            "repeatAfterMeExercise": "Repeat carefully: 'Sorry' (chime)... 'Excuse me' (chime).",
+            "speakingPractice": "Speak both words clearly into the mic.",
+            "conversationPractice": "Ustaz Nur (knocks): 'Oh, sorry!' Learner: 'Excuse me!'",
+            "visualLearningSuggestions": "A person respectfully bowing their head or making space for passway.",
+            "quiz": [
+              {
+                "question": "What is the English word for 'Yi hakuri'?",
+                "hausaQuestion": "Wace kalmar Turanci ce ke nufin 'Yi haƙuri'?",
+                "options": [
+                  "Sorry",
+                  "Excuse me",
+                  "Yes",
+                  "Welcome"
+                ],
+                "answerIndex": 0,
+                "explanation": "'Sorry' is the direct and primary expression of regret or apology."
+              }
+            ],
+            "assessment": "Verify clear 'z' sound ending in 'Excuse me'.",
+            "homework": "Ka fada wa abokinka 'Excuse me' idan kana son wucewa ta gabansa yau.",
+            "masteryCriteria": "Accurate distinction and vocalization of apologies vs. requests.",
+            "estimatedDuration": "18 minutes",
+            "difficultyRating": "1.7/5"
           }
         ]
       }
@@ -477,23 +536,32 @@
                 "slowPronunciation": "Rais",
                 "commonHausaMistake": "Rolling the 'R' like in Hausa language too heavily.",
                 "correctionTip": "Curl your tongue behind your front teeth without letting the tip touch the roof of your mouth."
+              },
+              {
+                "word": "Bread",
+                "hausa": "Burodi / Gurasa",
+                "ipa": "/bred/",
+                "syllableBreakdown": "Bread",
+                "slowPronunciation": "Bred",
+                "commonHausaMistake": "Pronouncing heavy 'Biredi' with an insertion of 'i' in between.",
+                "correctionTip": "Keep the 'B' and 'r' connected immediately without any vowel vowel: 'Breeed'."
               }
             ],
-            "hausaExplanation": "Sannunku! A mataki na biyu na kiran sunayen abubuwa na kusa, za mu koyi kiran babban abincinmu na gida kamar ruwan sha (Water) da shinkafa (Rice).",
+            "hausaExplanation": "Sannunku! A mataki na biyu na kiran sunayen abubuwa na kusa, za mu koyi kiran babban abincinmu na gida kamar ruwan sha (Water), shinkafa (Rice), da kuma burodi (Bread).",
             "englishExplanation": "Map absolute physical needs to verbal expressions with images.",
-            "pronunciationGuide": "Relax your lips to produce a soft flowing 'Water'. Soften the initial 'R' sound in 'Rice'.",
+            "pronunciationGuide": "Relax your lips to produce a soft flowing 'Water'. Soften the initial 'R' sound in 'Rice'. Keep 'Bread' short and crisp.",
             "aiTutorScript": {
               "introduction": "Assalamu Alaikum! Yau za mu shiga kicin na gida, mu koyi Kalmomin abinci. Fara da ruwan sha: 'Water', sa'an nan gari: 'Rice'.",
               "encouragement": "Madalla! Koyo yana da dadi kwarai.",
               "corrections": "Sanyaya 'R' a jikin 'Rice' ya zama kamar ruwa dake gudu: 'Rais'.",
               "achievements": "Yanzu zaka iya kiran abincin ka a kowane shago ko na baki!",
-              "motivation": "Kalmomi sune bishiyar da zata samar da jimloli nan gaba."
+              "motivation": "Kalmori sune bishiyar da zata samar da jimloli nan gaba."
             },
-            "listeningExercise": "Listen to the pouring of water and three children saying: 'Water, Rice, Water'.",
-            "repeatAfterMeExercise": "Say: 'Water' (chime)... 'Rice' (chime).",
+            "listeningExercise": "Listen to the pouring of water and three children saying: 'Water, Rice, Bread'.",
+            "repeatAfterMeExercise": "Say: 'Water' (chime)... 'Rice' (chime)... 'Bread' (chime).",
             "speakingPractice": "Articulate the word for Uban abinci: 'Water'.",
             "conversationPractice": "Ustaz Nur: 'What do you want?' Learner: 'Water!'",
-            "visualLearningSuggestions": "A clear glass of drinking water and a bowl of steaming clean rice.",
+            "visualLearningSuggestions": "A clear glass of drinking water, a bowl of steaming clean rice, and a baked loaf of bread.",
             "quiz": [
               {
                 "question": "What is the English word for 'Ruwa'?",
@@ -501,7 +569,7 @@
                 "options": [
                   "Water",
                   "Rice",
-                  "Please",
+                  "Bread",
                   "Hello"
                 ],
                 "answerIndex": 0,
@@ -512,6 +580,142 @@
             "homework": "Tell someone in your home: 'Give me Water' or call water 'Water' today.",
             "masteryCriteria": "Clean mapping of objects during visual cues.",
             "estimatedDuration": "20 minutes",
+            "difficultyRating": "2/5"
+          },
+          {
+            "lessonNumber": 2,
+            "title": "My Family & Relatives",
+            "learningObjective": "Acknowledge and vocalize central family names: Father, Mother, and Baby.",
+            "vocabulary": [
+              {
+                "word": "Father",
+                "hausa": "Uba / Mahaifi / Baba",
+                "ipa": "/ˈfɑː.ðər/",
+                "syllableBreakdown": "Fa-ther",
+                "slowPronunciation": "Faa-thuh",
+                "commonHausaMistake": "Pronouncing the soft 'th' as hard 'D' or 'Pata' instead of 'Father'.",
+                "correctionTip": "Put your top teeth on your bottom lip for 'F', then slip your tongue under your teeth for 'ther'."
+              },
+              {
+                "word": "Mother",
+                "hausa": "Uwa / Mahaifiyya / Mama",
+                "ipa": "/ˈmʌð.ər/",
+                "syllableBreakdown": "Mo-ther",
+                "slowPronunciation": "Mah-thuh",
+                "commonHausaMistake": "Pronouncing 'Mada' with hard D, or 'Mota' instead of 'Mother'.",
+                "correctionTip": "The middle sound is identical to 'Father'. Pronounce with dental breath 'thuh'."
+              },
+              {
+                "word": "Baby",
+                "hausa": "Jiri / Jirin jariri / Yaro",
+                "ipa": "/ˈbeɪ.bi/",
+                "syllableBreakdown": "Ba-by",
+                "slowPronunciation": "Bey-bee",
+                "commonHausaMistake": "Pronouncing heavy 'Bibi' with flat English vowels.",
+                "correctionTip": "Ensure the first syllable has an active slide sound: 'Bey' followed by a clean 'bee'."
+              }
+            ],
+            "hausaExplanation": "Iyali sune gatan zama lafiya. A yau zamu koyi sunayen mutanen da suka fi kusa da mu: Father (Mahaifi), Mother (Mahaifiyya), da kuma Baby (Jariri).",
+            "englishExplanation": "Map family structure names to clear visual portraits and phonetics.",
+            "pronunciationGuide": "Use soft vibrating 'th' for Mother and Father. Use a cheerful sliding vowel for 'Baby'.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Yau kuma zamu yi maganar iyalanmu. Muna kaunar su ko? Fadi 'Father', sa'annan 'Mother', sannan jariri 'Baby'.",
+              "encouragement": "Masha Allah! Lafazinka cike yake da soyayyar iyali.",
+              "corrections": "Kada kace 'Fada' ko 'Mada'. Sanya harshenka tsakanin hakora: 'Fa-ther', 'Mo-ther'.",
+              "achievements": "Yanzu zaka iya kiran mutanen gidanka da kyakkyawan Turanci!",
+              "motivation": "Mahaifi da uwa sune asalin hasken rayuwar kowa."
+            },
+            "listeningExercise": "Listen to a happy baby laughing and parents talking in a quiet home environment.",
+            "repeatAfterMeExercise": "Listen to chime... Speak: 'Father' (chime)... 'Mother' (chime)... 'Baby' (chime).",
+            "speakingPractice": "Say 'Mother and Father' clearly into the voice recorder.",
+            "conversationPractice": "Ustaz Nur: 'Who loves you?' Learner: 'Mother and Father!'",
+            "visualLearningSuggestions": "A happy African family portrait under a cozy shelter.",
+            "quiz": [
+              {
+                "question": "What is the English word for 'Mahaifiya'?",
+                "hausaQuestion": "Wace kalmar Turanci ce ke nufin 'Mahaifiyya' ko 'Mama'?",
+                "options": [
+                  "Mother",
+                  "Father",
+                  "Baby",
+                  "Water"
+                ],
+                "answerIndex": 0,
+                "explanation": "'Mother' means Mama or Mahaifiyya in the family language."
+              }
+            ],
+            "assessment": "Verify the presence of soft 'th' instead of 'd' during father/mother voice tests.",
+            "homework": "Today, show your mother your screen and call her 'Mother', do same for Father.",
+            "masteryCriteria": "Accurate soft 'th' dental pronunciation.",
+            "estimatedDuration": "18 minutes",
+            "difficultyRating": "2.2/5"
+          },
+          {
+            "lessonNumber": 3,
+            "title": "Colors of Life",
+            "learningObjective": "Differentiate and name primary colors: Red, Blue, and Green.",
+            "vocabulary": [
+              {
+                "word": "Red",
+                "hausa": "Ja",
+                "ipa": "/red/",
+                "syllableBreakdown": "Red",
+                "slowPronunciation": "Red",
+                "commonHausaMistake": "Overly rolling the 'R' like a hard drum, or saying 'Redi'.",
+                "correctionTip": "Do not roll your tongue against the roof of your mouth. Just hold it soft and flat."
+              },
+              {
+                "word": "Blue",
+                "hausa": "Shuɗi",
+                "ipa": "/bluː/",
+                "syllableBreakdown": "Blue",
+                "slowPronunciation": "Blu",
+                "commonHausaMistake": "Saying 'Bulu' by splitting the starting blend with an extra 'u'.",
+                "correctionTip": "Make the 'Bl' sound together immediately, then slide directly into 'ooo': 'Blooo'."
+              },
+              {
+                "word": "Green",
+                "hausa": "Kore",
+                "ipa": "/ɡriːn/",
+                "syllableBreakdown": "Green",
+                "slowPronunciation": "Grin",
+                "commonHausaMistake": "Pronouncing with hard Hausa 'G' or rolling 'R' too heavily as 'Girin'.",
+                "correctionTip": "Connect 'G' and 'r' smoothly as 'Green' without adding an extra middle sound."
+              }
+            ],
+            "hausaExplanation": "Duniya tana da kyawawan launuka. Yau zamu koyi launukan da muka fi gani: Red (Ja) kamar wuta, Blue (Shuɗi) kamar sama, da kuma Green (Kore) kamar ganye.",
+            "englishExplanation": "Map visual colors to English names with direct oral sound replication.",
+            "pronunciationGuide": "Keep the 'r' sounds smooth in 'Red' and 'Green'. Ensure 'Blue' is a single syllable stream.",
+            "aiTutorScript": {
+              "introduction": "Barka da rana! Kalli launukan dake kewaye daku. Kalmar yau ta nuna canje-canje na launi: 'Red', 'Blue', da kuma 'Green'.",
+              "encouragement": "Masha Allah! Kunna dacewa da manyan idanu da lafazi mai kyau.",
+              "corrections": "Hada 'Bl' a hadu a 'Blue'. Kada kace 'Bulu'. Ce 'Blu'.",
+              "achievements": "Yanzu zaka iya nuna launin tufafin da kake so a shago!",
+              "motivation": "Launuka sune rayuwar dake bamu sha'awa kowace rana."
+            },
+            "listeningExercise": "Hear three bells of varying tones representing red, blue, and green colors.",
+            "repeatAfterMeExercise": "Repeat after the bell: 'Red' (chime)... 'Blue' (chime)... 'Green' (chime).",
+            "speakingPractice": "Explain the color of a green tree leaves: 'Green'.",
+            "conversationPractice": "Ustaz Nur (pointing to sky): 'What color is the sky?' Learner: 'Blue!'" ,
+            "visualLearningSuggestions": "Three animated splashes of red, blue, and green paint on the screen.",
+            "quiz": [
+              {
+                "question": "What is the English word for the color 'Ja'?",
+                "hausaQuestion": "Wace kalmar Turanci ce ke nufin launin 'Ja'?",
+                "options": [
+                  "Red",
+                  "Blue",
+                  "Green",
+                  "Mother"
+                ],
+                "answerIndex": 0,
+                "explanation": "'Red' is the universal identifier for the color Ja."
+              }
+            ],
+            "assessment": "Verify that 'Blue' and 'Green' do not contain inserted flat vowels in starting consonant blends.",
+            "homework": "Duba canjin haske a waje, ka fadi sunan kowane launin da ka gani da Turanci.",
+            "masteryCriteria": "Deliver single-syllable blends for 'Blue' and 'Green'.",
+            "estimatedDuration": "15 minutes",
             "difficultyRating": "2/5"
           }
         ]
@@ -541,11 +745,20 @@
                 "slowPronunciation": "Ai wont waa-tuh",
                 "commonHausaMistake": "Dropping the ending 't' in 'want' or saying 'Ina son water'.",
                 "correctionTip": "Ensure a sharp tongue snap on 't' in 'want' before sliding directly to 'water'."
+              },
+              {
+                "word": "I want food",
+                "hausa": "Ina son abinci",
+                "ipa": "/aɪ wɒnt fuːd/",
+                "syllableBreakdown": "I want food",
+                "slowPronunciation": "Ai wont fud",
+                "commonHausaMistake": "Saying 'Ah wan pud' by turning 'f' into a 'p'.",
+                "correctionTip": "Make a clear wind sound for 'f' like blowing out a candle: 'fffffood'."
               }
             ],
-            "hausaExplanation": "Idan kana jin kishirwa, fadin 'Ina son ruwa' da Turanci shi ne: 'I want water'. Zamu tsaya don koyan tattaunawar biyan bukata.",
+            "hausaExplanation": "Idan kana jin kishirwa ko yunwa, fadin 'Ina son ruwa' da Turanci shi ne: 'I want water'. Idan kuma abinci kake so, kace: 'I want food'. Zamu tsaya don koyan tattaunawar biyan bukata.",
             "englishExplanation": "Transition from dry isolated nouns to integrated complete request paths.",
-            "pronunciationGuide": "Ensure 'want' ends with a crisp stop consonant, followed by the fluid noun 'water'.",
+            "pronunciationGuide": "Ensure 'want' ends with a crisp stop consonant, followed by the fluid noun. Put teeth on lip for 'f' in 'food'.",
             "aiTutorScript": {
               "introduction": "Maraba! Yau za mu fara gina babban gini: za mu hada gajerun jimloli don biyan bukatar zuciya. Fada bayanmu: 'I want water'.",
               "encouragement": "Yayi asali sosai muryarku tana fita sarai!",
@@ -554,7 +767,7 @@
               "motivation": "Jimla daya zata iya ceto rayuwarka idan babu Hausawa kusa daku."
             },
             "listeningExercise": "A dry traveler asking for support inside a local rest stop saying: 'I want water'."
-            ,"repeatAfterMeExercise": "Repeat carefully: 'I want water'.",
+            ,"repeatAfterMeExercise": "Repeat carefully: 'I want water' (chime)... 'I want food' (chime).",
             "speakingPractice": "Clearly speak the complete desire string: 'I want water'.",
             "conversationPractice": "Ustaz Nur (Shop): 'What do you want?' Learner: 'I want water.'",
             "visualLearningSuggestions": "A thirsty traveler pointing to a bottle of drinking container.",
@@ -577,6 +790,56 @@
             "masteryCriteria": "Smooth phrasing connection accuracy.",
             "estimatedDuration": "20 minutes",
             "difficultyRating": "2.2/5"
+          },
+          {
+            "lessonNumber": 2,
+            "title": "Introducing Yourself",
+            "learningObjective": "Speak your name and identity clearly to new contacts.",
+            "vocabulary": [
+              {
+                "word": "My name is",
+                "hausa": "Suna na...",
+                "ipa": "/maɪ neɪm ɪz/",
+                "syllableBreakdown": "My name is",
+                "slowPronunciation": "Mai neym iz",
+                "commonHausaMistake": "Shortening 'name' to 'nem' with flat vowels, or pronouncing lazy 'is' as 'iss'.",
+                "correctionTip": "Slide through the 'a' sound in 'name': 'N-ey-m'."
+              }
+            ],
+            "hausaExplanation": "Idan ka hadu da bako, gaisa da shi sannan ka fada masa sunanka cikin sauki ta hanyar cewa: 'My name is [Sunanka]'. Wannan zai bude kofar abota da yarda.",
+            "englishExplanation": "Establish basic identity statement pattern to begin interactions.",
+            "pronunciationGuide": "Draw out 'My name' with a nice soft slide, ending with 'is' showing a vibrating 'z' sound.",
+            "aiTutorScript": {
+              "introduction": "Sannu dai! Yau kuma darasi ne na mutuntaka da gabatar da kai. Kalmarmu ita ce 'My name is'. Mu taba tare.",
+              "encouragement": "Barka dai kwarai! Muryarka tana nuna amana.",
+              "corrections": "Sanya sautin 'is' ya zama mai karkarwa kamar 'iz': 'My name iz'.",
+              "achievements": "Ka koyi yadda zaka fadi babban sunanka a gaban kowa da Turanci!",
+              "motivation": "Mutumin kirki yana alfahari da sunansa a kowane gari."
+            },
+            "listeningExercise": "A student stands up in a class and proudly introduces: 'My name is Amina'.",
+            "repeatAfterMeExercise": "Repeat: 'My name is Amina' (chime). Now say it with your own name.",
+            "speakingPractice": "Say 'My name is' followed by your real name.",
+            "conversationPractice": "Ustaz Nur: 'Hello! What is your name?' Learner: 'Hello! My name is...'",
+            "visualLearningSuggestions": "A clean visitor tag badge showing write-in name space.",
+            "quiz": [
+              {
+                "question": "What is the English phrase for 'Suna na'?",
+                "hausaQuestion": "Wace jimlar Turanci ce ke nufin 'Suna na'?",
+                "options": [
+                  "My name is",
+                  "I want water",
+                  "Thank you",
+                  "How much is this"
+                ],
+                "answerIndex": 0,
+                "explanation": "'My name is' translates directly to 'Suna na shi ne' to introduce oneself."
+              }
+            ],
+            "assessment": "Assess fluid connection between 'is' and learner's name.",
+            "homework": "Ka fada wa bako ko yayenka a cikin gida yau: 'My name is' sannan ka fadi sunanka.",
+            "masteryCriteria": "Clean slide spelling values on 'name' vowel.",
+            "estimatedDuration": "15 minutes",
+            "difficultyRating": "2/5"
           }
         ]
       }
@@ -641,6 +904,65 @@
             "masteryCriteria": "Negotiation speed rating of at least competent level.",
             "estimatedDuration": "25 minutes",
             "difficultyRating": "2.8/5"
+          },
+          {
+            "lessonNumber": 2,
+            "title": "How Are You?",
+            "learningObjective": "Inquire and respond about health and daily wellbeing.",
+            "vocabulary": [
+              {
+                "word": "How are you?",
+                "hausa": "Yaya kake? / Lafiyarku?",
+                "ipa": "/haʊ ɑːr juː/",
+                "syllableBreakdown": "How are you?",
+                "slowPronunciation": "Hau ah yu",
+                "commonHausaMistake": "Saying 'Hao are you' with extremely hard 'r' rolled or falling pitch.",
+                "correctionTip": "Keep the 'are' soft and silent-r: 'Hau... ah... yoo' with a gentle rising tone."
+              },
+              {
+                "word": "I am fine",
+                "hausa": "Ina lafiya",
+                "ipa": "/aɪ æm faɪn/",
+                "syllableBreakdown": "I am fine",
+                "slowPronunciation": "Ai am fain",
+                "commonHausaMistake": "Mumbling 'Fayin' with dropped final nasal sound 'n'.",
+                "correctionTip": "Make wide dental smile on 'fine' and touch tongue behind teeth to complete the 'n'."
+              }
+            ],
+            "hausaExplanation": "Idan ka hadu da aboki, gaisawa ta gari ita ce 'How are you?' (Yaya kake?). Shi kuma zai amsa maka 'I am fine' (Ina lafiya). Zamu yi wannan gaisuwa.",
+            "englishExplanation": "Master basic interactive health check-in conversational loops.",
+            "pronunciationGuide": "Keep a friendly melodic tone. Curve 'you' up nicely, and bite lip for 'fine'.",
+            "aiTutorScript": {
+              "introduction": "Sannu dai! Yau za mu koyi gaisuwa ta musamman na kyakkyawar gaba: 'How are you?' da kuma mafi dacen amsa 'I am fine'.",
+              "encouragement": "Masha Allah! Muryarka tana haskaka zukata.",
+              "corrections": "Maimaita bayanmu: 'How ah yoo?'. Kar ka ja harafin 'r' da karfi.",
+              "achievements": "Ka zama gwani gurin gaisawa da abokanka a kan titi!",
+              "motivation": "Gaisuwa tana cire kiyayya, tana samar da kauna ta musamman."
+            },
+            "listeningExercise": "Hear two old friends high-fiving on a quiet afternoon and greeting happily.",
+            "repeatAfterMeExercise": "Repeat: 'How are you?' (chime)... 'I am fine' (chime).",
+            "speakingPractice": "vocalize clear greetings into the device.",
+            "conversationPractice": "Ustaz Nur: 'Hello! How are you?' Learner: 'I am fine, thank you!'",
+            "visualLearningSuggestions": "Two friends drinking tea and smiling warmly under a shady tree.",
+            "quiz": [
+              {
+                "question": "What is the standard polite reply to 'How are you?'",
+                "hausaQuestion": "Idan wani ya tambaye ka 'How are you?', mene ne amsa mafi dacewa?",
+                "options": [
+                  "I am fine",
+                  "I want food",
+                  "Hello we write",
+                  "Speak excuse me"
+                ],
+                "answerIndex": 0,
+                "explanation": "'I am fine' is the globally polite answer to signal that you are doing well."
+              }
+            ],
+            "assessment": "Observe friendly rise-and-fall voice levels.",
+            "homework": "Ka tambayi abokinka yau 'How are you?' ka ji ko zai fada maka lafiyarsa.",
+            "masteryCriteria": "Melodic pitch movement without hard 'r' clipping.",
+            "estimatedDuration": "15 minutes",
+            "difficultyRating": "2/5"
           }
         ]
       }
@@ -658,8 +980,365 @@
         "lessons": [
           {
             "lessonNumber": 1,
-            "title": "The Alphabet & Phonics Foundation",
-            "learningObjective": "Map the spoken word \"Water\" they already know to its written letters.",
+            "title": "Phonics Alphabet A to I",
+            "learningObjective": "Complete phonetic guide mapping letters A to I directly using familiar concepts.",
+            "vocabulary": [
+              {
+                "word": "A (Apple)",
+                "hausa": "A (Sauƙaƙan 'Ah' - kamar Tufaha)",
+                "ipa": "/æ/",
+                "syllableBreakdown": "A-pple",
+                "slowPronunciation": "Ah-pul",
+                "commonHausaMistake": "Keeping the jaw stiff on 'A' and pronouncing hard 'Eppel'.",
+                "correctionTip": "Open your mouth wide like you are biting a juicy round fresh apple."
+              },
+              {
+                "word": "B (Ball)",
+                "hausa": "B (Sautin 'Beh' - kamar Kwallo)",
+                "ipa": "/b/",
+                "syllableBreakdown": "Ball",
+                "slowPronunciation": "Bohl",
+                "commonHausaMistake": "Saying flat 'Bal' instead of rounded English 'Bohl'.",
+                "correctionTip": "Round your lips completely as if you are blowing a gentle tiny bubble."
+              },
+              {
+                "word": "C (Cat)",
+                "hausa": "C (Sautin 'Keh' - kamar Kyanwa)",
+                "ipa": "/k/",
+                "syllableBreakdown": "Cat",
+                "slowPronunciation": "Kat",
+                "commonHausaMistake": "Pronouncing 'Sat' with an 'S' inside because of spelling visual.",
+                "correctionTip": "The letter C here sounds exactly like the letter K. Say 'Kat' with air."
+              },
+              {
+                "word": "D (Dog)",
+                "hausa": "D (Sautin 'Deh' - kamar Kare)",
+                "ipa": "/d/",
+                "syllableBreakdown": "Dog",
+                "slowPronunciation": "Dohg",
+                "commonHausaMistake": "Swallowing the 'D' and saying 'Doh' short.",
+                "correctionTip": "Let a small, soft voice bounce on your tongue tip for 'D'."
+              },
+              {
+                "word": "E (Egg)",
+                "hausa": "E (Sautin 'Eh' - kamar Kwai)",
+                "ipa": "/e/",
+                "syllableBreakdown": "Egg",
+                "slowPronunciation": "Ehg",
+                "commonHausaMistake": "Pronouncing 'Igg' with high 'i' vowel.",
+                "correctionTip": "Keep your lips open sideways, resting flat: 'Eh... g'."
+              },
+              {
+                "word": "F (Fish)",
+                "hausa": "F (Sautin 'Fff' - kamar Kifi)",
+                "ipa": "/f/",
+                "syllableBreakdown": "Fish",
+                "slowPronunciation": "Fish",
+                "commonHausaMistake": "Saying 'Pish' by using hard 'P' instead of blowing wind.",
+                "correctionTip": "Do not touch your lips together! Place upper teeth on lower lip to blow air: 'Ffff'."
+              },
+              {
+                "word": "G (Goat)",
+                "hausa": "G (Sautin 'Geh' - kamar Akuya)",
+                "ipa": "/ɡ/",
+                "syllableBreakdown": "Goat",
+                "slowPronunciation": "Goht",
+                "commonHausaMistake": "Pronouncing as soft 'Jot' incorrectly.",
+                "correctionTip": "Make a hard sound from the back of your throat: 'G-oht'."
+              },
+              {
+                "word": "H (Hat)",
+                "hausa": "H (Sautin 'Heh' - kamar Hula)",
+                "ipa": "/h/",
+                "syllableBreakdown": "Hat",
+                "slowPronunciation": "Hat",
+                "commonHausaMistake": "Dropping the beginning breath and saying 'At'.",
+                "correctionTip": "Exhale deep warm air from your throat as if you are laughing 'Hahaha'."
+              },
+              {
+                "word": "I (Ink)",
+                "hausa": "I (Sautin 'Ih' - kamar Tawada)",
+                "ipa": "/ɪ/",
+                "syllableBreakdown": "Ink",
+                "slowPronunciation": "Ingk",
+                "commonHausaMistake": "Using a long, stretched 'Eee' sound instead of short flat 'Ih'.",
+                "correctionTip": "Keep the sound short and direct. Just drop your tongue flat inside."
+              }
+            ],
+            "hausaExplanation": "Assalamu Alaikum! Karatu da rubutu sun dade suna zama dadi idan mu hada baki da idanu. A yau zamu koyi haruffan farko na Alphabet daga A zuwa I lafiya laye.",
+            "englishExplanation": "Establish comprehensive phonic foundation from A to I with focus on letter-to-sound translation.",
+            "pronunciationGuide": "Emphasize correct starting dental/consonant alignment for each letter with simple visuals.",
+            "aiTutorScript": {
+              "introduction": "Sannu aboki! Yanzu za mu shiga duniyar karatu! Mu fara da Alphabet tun daga A, B, har zuwa I. Zan koyar da kai daki-daki.",
+              "encouragement": "Kwarewarka tana fita da sauri muna alfahari da kai!",
+              "corrections": "Domin 'Fish', danna hakora a kan lebe. 'Fff-ish', kar kace 'Pish'.",
+              "achievements": "Ka mallaki babban muryoyin asali tara na harshen Turanci!",
+              "motivation": "Kowane babban dutse yana farawa da kananan duwatsu na asali."
+            },
+            "listeningExercise": "Hear each letter spelled out followed by their clean phonics representations.",
+            "repeatAfterMeExercise": "Repeat: 'A - Apple' (chime)... 'B - Ball' (chime)... 'C - Cat' (chime)... 'F - Fish' (chime).",
+            "speakingPractice": "Speak the letters and words clearly into the mic.",
+            "conversationPractice": "Ustaz Nur: 'What letter sits on Fish?' Learner: 'Letter F!'",
+            "visualLearningSuggestions": "Gorgeous display showing letter icons and animal icons next to each other.",
+            "quiz": [
+              {
+                "question": "What sound does the letter 'C' make in 'Cat'?",
+                "hausaQuestion": "Wane sauti ne harafin 'C' yake bayarwa a kalmar 'Cat'?",
+                "options": [
+                  "K sound as in 'Kat'",
+                  "S sound as in 'Sat'",
+                  "Ch sound as in 'Chat'",
+                  "B sound as in 'Bat'"
+                ],
+                "answerIndex": 0,
+                "explanation": "In 'Cat', the letter 'C' sounds exactly like 'K' in Hausa."
+              }
+            ],
+            "assessment": "Verify that the learner differentiates dental 'F' from 'P'.",
+            "homework": "Today, look at items in your house starting with A, B, C and call them out.",
+            "masteryCriteria": "Clean recognition of the nine initial alphabet blocks.",
+            "estimatedDuration": "25 minutes",
+            "difficultyRating": "2/5"
+          },
+          {
+            "lessonNumber": 2,
+            "title": "Phonics Alphabet J to R",
+            "learningObjective": "Map the starting sounds of letters J to R with visual representation and examples.",
+            "vocabulary": [
+              {
+                "word": "J (Jug)",
+                "hausa": "J (Sautin 'Jeh' - kamar Kofin Ruwa)",
+                "ipa": "/dʒ/",
+                "syllableBreakdown": "Jug",
+                "slowPronunciation": "Jog",
+                "commonHausaMistake": "Pronouncing dry 'Zog' without the 'd' boundary impact.",
+                "correctionTip": "Push your teeth together slightly to make a strong 'Jhh' sound."
+              },
+              {
+                "word": "K (Key)",
+                "hausa": "K (Sautin 'Keh' - kamar Makulli)",
+                "ipa": "/kiː/",
+                "syllableBreakdown": "Key",
+                "slowPronunciation": "Kee",
+                "commonHausaMistake": "Swallowing the air at the start of 'K'.",
+                "correctionTip": "Puff out a small gasp of air from the throat: 'K-ee'."
+              },
+              {
+                "word": "L (Lion)",
+                "hausa": "L (Sautin 'Leh' - kamar Zaki)",
+                "ipa": "/l/",
+                "syllableBreakdown": "Li-on",
+                "slowPronunciation": "Lai-on",
+                "commonHausaMistake": "Pronouncing weak flat 'Rayon' by rolling tongue as 'R'.",
+                "correctionTip": "Place your tongue tip flat against the roof of your mouth behind your front teeth: 'Llll-aion'."
+              },
+              {
+                "word": "M (Milk)",
+                "hausa": "M (Sautin 'Mmm' - kamar Madara)",
+                "ipa": "/m/",
+                "syllableBreakdown": "Milk",
+                "slowPronunciation": "Milk",
+                "commonHausaMistake": "Dropping the ending 'k' and saying 'Mil'.",
+                "correctionTip": "Press your lips flat together as if saying something tastes delicious: 'Mmmm-ilk' with a clean ending 'k' click."
+              },
+              {
+                "word": "N (Nest)",
+                "hausa": "N (Sautin 'Nnn' - kamar Gidan Tsuntsu)",
+                "ipa": "/n/",
+                "syllableBreakdown": "Nest",
+                "slowPronunciation": "Nest",
+                "commonHausaMistake": "Muddling 'Nest' into 'Nes' without final 't' sound.",
+                "correctionTip": "Touch tongue against your gums and release with a sharp clear snap 't'."
+              },
+              {
+                "word": "O (Onion)",
+                "hausa": "O (Sautin 'Oh' - kamar Albasa)",
+                "ipa": "/ˈʌn.jən/",
+                "syllableBreakdown": "On-ion",
+                "slowPronunciation": "Un-yon",
+                "commonHausaMistake": "Reading literally as 'Oni-on' with two heavy 'o' vowel sounds.",
+                "correctionTip": "The spelling is tricky, but the sound starts with 'U' like 'Un-yon'. Keep it natural."
+              },
+              {
+                "word": "P (Pen)",
+                "hausa": "P (Sautin 'Peh' - kamar Alkalami)",
+                "ipa": "/pen/",
+                "syllableBreakdown": "Pen",
+                "slowPronunciation": "Pen",
+                "commonHausaMistake": "Pronouncing 'Fen' by using 'F' wind sound instead of lip popping 'P'.",
+                "correctionTip": "Press your lips together, blow a tiny puff of air directly to pop: 'P-en'."
+              },
+              {
+                "word": "Q (Queen)",
+                "hausa": "Q (Sautin 'Kuh' - kamar Sarauniya)",
+                "ipa": "/kwiːn/",
+                "syllableBreakdown": "Queen",
+                "slowPronunciation": "Kwin",
+                "commonHausaMistake": "Saying flat 'Kwin' without roundness.",
+                "correctionTip": "Round your lips completely for 'Kw' followed by high stretched 'een': 'Kweeeen'."
+              },
+              {
+                "word": "R (Rice)",
+                "hausa": "R (Sautin 'Reh' - kamar Shinkafa)",
+                "ipa": "/raɪs/",
+                "syllableBreakdown": "Rice",
+                "slowPronunciation": "Rais",
+                "commonHausaMistake": "Tapping your tongue against gums causing a rolled drum 'R' sound.",
+                "correctionTip": "Pull tongue backward in space. The tip must never hit the roof of mouth during 'Rice'."
+              }
+            ],
+            "hausaExplanation": "Sannunku! A yau za mu ɗora daga inda muka tsaya. Za mu koyi haruffa tara na gaba masu daɗin tsara sauti, daga J zuwa R.",
+            "englishExplanation": "Master intermediate alphabet blocks J to R, focusing on the pop sound of P and soft curl of R.",
+            "pronunciationGuide": "Differentiate P popping from F wind sounds, and keep the English R unrolled.",
+            "aiTutorScript": {
+              "introduction": "Maraba da safe! Yau kuma zamu ci gaba da ganin haruffan rubutunmu na shahararru. Kalmomin yau sune J zuwa R.",
+              "encouragement": "Masha Allah! Ina jin dadin rera sautin bakinka.",
+              "corrections": "Domin 'Pen', hada baki ka harba iska: 'P-en'. Kada kace 'Fen'.",
+              "achievements": "Yanzu ka riga ka wuce rabin babban tafiyar karatu!",
+              "motivation": "A hankali, za a ga cewa rubutun Turanci zai canja zuwa abokin hira."
+            },
+            "listeningExercise": "Hear speakers spelling letters J, L, M, P, R in clear, sharp audio prompts.",
+            "repeatAfterMeExercise": "Say with pop energy: 'J - Jug' (chime)... 'L - Lion' (chime)... 'P - Pen' (chime)... 'R - Rice' (chime).",
+            "speakingPractice": "Register pronunciation of middle alphabet sequences cleanly.",
+            "conversationPractice": "Ustaz Nur: 'Duba, nuna min makulli da Turanci.' Learner: 'Key! K - E - Y!'",
+            "visualLearningSuggestions": "Glinting animated letters of J to R with visual cards on display.",
+            "quiz": [
+              {
+                "question": "What is the correct way to start the word 'Pen'?",
+                "hausaQuestion": "Wace hanyar ce ta fi dacewa wajen fitar da harafi na farko a kalmar 'Pen'?",
+                "options": [
+                  "Pop lips with air (P)",
+                  "Blow air through teeth (F)",
+                  "Vocalize throat sound (G)",
+                  "Soft nasal hum (M)"
+                ],
+                "answerIndex": 0,
+                "explanation": "'Pen' starts with a popping 'P' shape, not a windy 'F'."
+              }
+            ],
+            "assessment": "Verify that learners do not muddle 'P' with 'F'.",
+            "homework": "Today, practice saying 'POP PEN' to keep your lip muscles trained.",
+            "masteryCriteria": "Successfully separate popping 'P' from blowing 'F'.",
+            "estimatedDuration": "20 minutes",
+            "difficultyRating": "2.2/5"
+          },
+          {
+            "lessonNumber": 3,
+            "title": "Phonics Alphabet S to Z",
+            "learningObjective": "Conclude the phonic alphabet mapping from S to Z with direct descriptions.",
+            "vocabulary": [
+              {
+                "word": "S (Sun)",
+                "hausa": "S (Sautin 'Sss' - kamar Rana)",
+                "ipa": "/sʌn/",
+                "syllableBreakdown": "Sun",
+                "slowPronunciation": "San",
+                "commonHausaMistake": "Adding an 'E' or 'I' prefix as 'Es-san' or pronouncing too soft.",
+                "correctionTip": "Hiss air through your front teeth like a snake without starting with a vowel: 'Sssss-an'."
+              },
+              {
+                "word": "T (Tea)",
+                "hausa": "T (Sautin 'Teh' - kamar Shayi)",
+                "ipa": "/tiː/",
+                "syllableBreakdown": "Tea",
+                "slowPronunciation": "Tee",
+                "commonHausaMistake": "Saying heavy 'Ti' without dental air.",
+                "correctionTip": "Tap the tongue behind front teeth and blow a sharp breath: 'T-ee'."
+              },
+              {
+                "word": "U (Umbrella)",
+                "hausa": "U (Sautin 'Ah' - kamar Laima)",
+                "ipa": "/ʌmˈbrel.ə/",
+                "syllableBreakdown": "Um-brel-la",
+                "slowPronunciation": "Um-bre-la",
+                "commonHausaMistake": "Pronouncing 'Yum-brela' with a leading visual Y sound.",
+                "correctionTip": "The starting U sound is a simple open 'U' short sound like 'Uh-m'."
+              },
+              {
+                "word": "V (Van)",
+                "hausa": "V (Sautin 'Vvv' - kamar Karamar Mota)",
+                "ipa": "/væn/",
+                "syllableBreakdown": "Van",
+                "slowPronunciation": "Van",
+                "commonHausaMistake": "Saying 'Fan' with blowing air (F) instead of throat rumble (V).",
+                "correctionTip": "Touch top teeth to bottom lip, then vibrate your throat to rumble: 'Vvvvan'."
+              },
+              {
+                "word": "W (Water)",
+                "hausa": "W (Sautin 'Weh' - kamar Ruwa)",
+                "ipa": "/ˈwɔː.tər/",
+                "syllableBreakdown": "Wa-ter",
+                "slowPronunciation": "Waa-ter",
+                "commonHausaMistake": "Dropping the rounded lip shape completely.",
+                "correctionTip": "Start with extremely tight lips as if whistling, then release nicely to 'Wa-ter'."
+              },
+              {
+                "word": "X (X-ray)",
+                "hausa": "X (Sautin 'Eks' - kamar Hoton Naman Jiki)",
+                "ipa": "/ˈeks.reɪ/",
+                "syllableBreakdown": "X-ray",
+                "slowPronunciation": "Eks-rey",
+                "commonHausaMistake": "Saying 'Ere' or swallowing 'ks'.",
+                "correctionTip": "Exhale with a flat 'E' and follow immediately with a sharp snake hiss: 'Eks... rey'."
+              },
+              {
+                "word": "Y (Yellow)",
+                "hausa": "Y (Sautin 'Yeh' - kamar Rawaya)",
+                "ipa": "/ˈjel.oʊ/",
+                "syllableBreakdown": "Yel-low",
+                "slowPronunciation": "Yeh-loh",
+                "commonHausaMistake": "Dropping the 'Y' and saying 'Eloh' incorrectly.",
+                "correctionTip": "Lift your tongue body high in the mouth to make a strong 'Y' start, then direct to 'ell-oh'."
+              },
+              {
+                "word": "Z (Zebra)",
+                "hausa": "Z (Sautin 'Zzz' - kamar Doki Mai Layuka)",
+                "ipa": "/ˈziː.brə/",
+                "syllableBreakdown": "Ze-bra",
+                "slowPronunciation": "Zee-bra",
+                "commonHausaMistake": "Making clean 'S' sound like 'Sebra' without vibrating your cord.",
+                "correctionTip": "Keep teeth closed and vibrate your throat heavily to sound like a flying fly: 'Zzzzee-bra'."
+              }
+            ],
+            "hausaExplanation": "Gafara dai! Yau za mu kammala manyan Alphabet duka ashirin da shida da fatan rabuwa lafiya. Za mu ga haruffan karshe daga S zuwa Z, sannan mu duba dukkan manyan haruffa a screen.",
+            "englishExplanation": "Conclude the full twenty-six alphabet blocks. Train throat rumble V/Z vs soft breath S/F.",
+            "pronunciationGuide": "Perform strong vibratory tests for V and Z. Teach smooth snake hiss on S.",
+            "aiTutorScript": {
+              "introduction": "Assalamu Alaikum! Yau kuma gagarumin rana ne, zamu kammala dukkan bango na Alphabet. Fara da S kamar 'Sun', sannan mu gaisa da Z mai layuka 'Zebra'.",
+              "encouragement": "Furuci ne mai dadi da kwazo, kana haskawa!",
+              "corrections": "Domin 'Zebra', vibrate your throat: 'Zzzzee-bra'. Kar kace 'Sebra'.",
+              "achievements": "Madalla! Yanzu ka mallaki dukkan haruffa ashirin da shida a matakin farko na karatu!",
+              "motivation": "Yanzu babu wani rubutu da zai baka tsoro a cikin dandalin Turanci kowane iri."
+            },
+            "listeningExercise": "Hear the full sequence from S to Z spelled out with sound cards.",
+            "repeatAfterMeExercise": "Repeat carefully: 'S - Sun' (chime)... 'V - Van' (chime)... 'W - Water' (chime)... 'Z - Zebra' (chime).",
+            "speakingPractice": "Release the last sequence into the interactive voice prompt.",
+            "conversationPractice": "Ustaz Nur: 'What letter sits at the end of the alphabet?' Learner: 'Letter Z! Zebra!'",
+            "visualLearningSuggestions": "A glowing board displaying the full 26 letters from A to Z radiating colorful stars.",
+            "quiz": [
+              {
+                "question": "What is the key sound difference between 'Sun' (S) and 'Zebra' (Z)?",
+                "hausaQuestion": "Mene ne babban banbanci tsakanin furucin harafin 'S' a 'Sun' da kuma 'Z' a 'Zebra'?",
+                "options": [
+                  "Z vibrates the throat, S is just blowing air",
+                  "S vibrates the throat, Z is just air",
+                  "Both sounds are completely identical",
+                  "One is spoken with lips rounded"
+                ],
+                "answerIndex": 0,
+                "explanation": "Z relies on vocal cord vibration (buzzing), while S is voiceless hiss of air."
+              }
+            ],
+            "assessment": "Verify throat vibration on Z sounds.",
+            "homework": "Ka kalli layukan zebra ka rera sautin 'Zzzz' tsawon dakika biyar a gida yau.",
+            "masteryCriteria": "Vocal cord vibration activation.",
+            "estimatedDuration": "20 minutes",
+            "difficultyRating": "2.2/5"
+          },
+          {
+            "lessonNumber": 4,
+            "title": "Word Sight Reading",
+            "learningObjective": "Map the spoken words we already know by sound like Water to written letters.",
             "vocabulary": [
               {
                 "word": "Water",
@@ -769,6 +1448,56 @@
             "masteryCriteria": "Accurate copying and spelling identification.",
             "estimatedDuration": "20 minutes",
             "difficultyRating": "3/5"
+          },
+          {
+            "lessonNumber": 2,
+            "title": "Sentence Construction & Typing",
+            "learningObjective": "Formulate basic complete sentences from scrambled digital keyboard prompts.",
+            "vocabulary": [
+              {
+                "word": "I want rice",
+                "hausa": "Ina son shinkafa",
+                "ipa": "/aɪ wɒnt raɪs/",
+                "syllableBreakdown": "I want rice",
+                "slowPronunciation": "Ai wont rais",
+                "commonHausaMistake": "Dropping the ending 't' or spelling with bad spacing.",
+                "correctionTip": "Ensure spacing between 'I', 'want', and 'rice' is distinct on screen."
+              }
+            ],
+            "hausaExplanation": "Yau zamu tafi wani babban mataki: za mu rubuta cikakkiyar jimla da kanmu! Za mu danna haruffa a jere don daidaita kowace kalma: 'I' sannan 'want' sannan 'rice'.",
+            "englishExplanation": "Integrate keyboard typing layouts with dynamic phrase assembly skills.",
+            "pronunciationGuide": "Keep a steady rhythm while spelling. Avoid running space bars together.",
+            "aiTutorScript": {
+              "introduction": "Abokina! Gurgujewa ya kare, yau za mu haɗa manyan jimloli. Za mu koyi rubuta 'I want rice'. Bari mu danna tare.",
+              "encouragement": "Madalla! Yatsunku suna da matukar sauri da basira.",
+              "corrections": "Kula da 'space' a tsakanin kalmomin. Fadi: 'I... want... rice'.",
+              "achievements": "Ka yi rubutun cikakken jimla a harshen Turanci lafiya!",
+              "motivation": "Idan kana iya rubutawa, to babu shakka kana iya sadarwa ta kowane irin wasiƙa."
+            },
+            "listeningExercise": "Listen to typewriter keyboard clicks and clear chimes indicating correct spellings.",
+            "repeatAfterMeExercise": "Say and locate on keyboard: 'I want rice' (chime).",
+            "speakingPractice": "State the sentence clearly to initiate typing sequence.",
+            "conversationPractice": "Ustaz Nur (orders): 'Please write what you want to eat.' Learner: 'I want rice!'",
+            "visualLearningSuggestions": "An elegant animated phone screen showing letters appearing in active green glow.",
+            "quiz": [
+              {
+                "question": "What is the correct order of words to write 'Ina son shinkafa'?",
+                "hausaQuestion": "Wane tsari ne ya dace wajen tsara kalmomin 'Ina son shinkafa'?",
+                "options": [
+                  "I want rice",
+                  "Rice want I",
+                  "I rice want",
+                  "Want rice I"
+                ],
+                "answerIndex": 0,
+                "explanation": "Subject-Verb-Object rule requires: I (Ina) + want (son) + rice (shinkafa)."
+              }
+            ],
+            "assessment": "Verify space and letter alignment of key input values.",
+            "homework": "Type 'I want rice' in your app's chat and send it to Ustaz Nur today.",
+            "masteryCriteria": "Letter-for-letter keyboard input accuracy.",
+            "estimatedDuration": "22 minutes",
+            "difficultyRating": "3/5"
           }
         ]
       }
@@ -797,11 +1526,20 @@
                 "slowPronunciation": "Ai fil sik",
                 "commonHausaMistake": "Pronouncing 'feel' as 'fil' with too short a vowel, or swallowing the 'k'.",
                 "correctionTip": "Stretch the 'ee' slightly as 'feeel' then release the 'k' in 'sick' cleanly."
+              },
+              {
+                "word": "I have a headache",
+                "hausa": "Ina jin ciwon kai",
+                "ipa": "/aɪ hæv ə ˈhed.eɪk/",
+                "syllableBreakdown": "I have a head-ache",
+                "slowPronunciation": "Ai hav a hed-eyk",
+                "commonHausaMistake": "Pronouncing 'headache' as 'head-aki' because of visual literal interpretation.",
+                "correctionTip": "The ending letters 'ache' wave together as 'eyk' (like baking cake). Say 'Hed... eyk'."
               }
             ],
             "hausaExplanation": "Idan baka da lafiya, zuwa asibiti zai bukaci ka fada wa likita damuwarka. Jin rashin lafiya ana fada da Turanci: 'I feel sick'. Zamu yi kokari mu koya yadda za a gudanar da wannan tattaunawa.",
             "englishExplanation": "Acquire fundamental physical health descriptor statements to safeguard medical communication.",
-            "pronunciationGuide": "Extend the middle cheek smile vowel in 'feel' cleanly before executing a short crisp 'sick'.",
+            "pronunciationGuide": "Extend the middle cheek smile vowel in 'feel' cleanly before executing a short crisp 'sick'. End 'headache' on 'eyk'.",
             "aiTutorScript": {
               "introduction": "Assalamu Alaikum! Idan baka jin dadi, zaka fada wa likita ko nas: 'I feel sick'. Yau zamu tattauna a kan lafiya da kariya.",
               "encouragement": "Allah ya baka lafiya! Sautinka yana da kaifi sosai.",
@@ -810,22 +1548,22 @@
               "motivation": "Maganar asibiti tana da matukar muhimmanci a kowane lokaci."
             },
             "listeningExercise": "Listen to a soft medical bell and doctor responding to an urgent voice prompt.",
-            "repeatAfterMeExercise": "Say with emergency care: 'I feel sick'.",
+            "repeatAfterMeExercise": "Say with emergency care: 'I feel sick' (chime)... 'I have a headache' (chime).",
             "speakingPractice": "Speak the medical assistance statement: 'I feel sick'.",
-            "conversationPractice": "Ustaz Nur (Doctor): 'What is the problem?' Learner: 'I feel sick.'" ,
+            "conversationPractice": "Ustaz Nur (Doctor): 'What is the problem?' Learner: 'I feel sick. I have a headache.'" ,
             "visualLearningSuggestions": "A clean hospital logo with a professional, caring doctor stethoscope.",
             "quiz": [
               {
-                "question": "If you are not feeling well at the clinic, what should you tell the receptionist?",
-                "hausaQuestion": "Idan baka jin dadi a asibiti, me ya kamata ka fada wa ma'aikacin wajen?",
+                "question": "What is the correct English phrase for 'Ina jin ciwon kai'?",
+                "hausaQuestion": "Wace kalma ce da Turanci don fadin 'Ina jin ciwon kai'?",
                 "options": [
-                  "I feel sick",
+                  "I have a headache",
                   "I want water",
-                  "How much is this?",
-                  "Welcome to our school"
+                  "I feel blue",
+                  "How much is this"
                 ],
                 "answerIndex": 0,
-                "explanation": "'I feel sick' is the default descriptive indicator for health distress."
+                "explanation": "'headache' literally maps to 'ciwon kai', used with 'I have a' to denote presence."
               }
             ],
             "assessment": "Verify that vowels are well balanced to denote proper emotional and vocal tone.",
@@ -833,6 +1571,56 @@
             "masteryCriteria": "Clean vowel extension of 'feel'.",
             "estimatedDuration": "25 minutes",
             "difficultyRating": "3.2/5"
+          },
+          {
+            "lessonNumber": 2,
+            "title": "Money & Banking Basics",
+            "learningObjective": "Complete common money transactions and direct teller requests.",
+            "vocabulary": [
+              {
+                "word": "Where is the teller?",
+                "hausa": "Ina mai bayar da kuɗi?",
+                "ipa": "/weər ɪz ðə ˈtel.ər/",
+                "syllableBreakdown": "Where is the tel-ler?",
+                "slowPronunciation": "Wer iz da tel-luh",
+                "commonHausaMistake": "Dropping the ending 'er' sound or saying 'Wia lists' incorrectly.",
+                "correctionTip": "Ensure a round soft 'Wer' starting sound, followed by dental soft 'the' and crisp 'teller'."
+              }
+            ],
+            "hausaExplanation": "Idan kaje banki don ajiye ko cire kudi, zaka hadu da ma'aikata daban-daban. Mutumin dake bayar da kudi ana kiransa 'Teller'. Tambayar inda yake shi ne: 'Where is the teller?'.",
+            "englishExplanation": "Acquire spatial navigation and direct request structures inside financial institutions.",
+            "pronunciationGuide": "Emphasize rising question pitch 'Where...'. Connect words together smoothly.",
+            "aiTutorScript": {
+              "introduction": "Barka dai aboki! Kudinka yana da muhimmanci. Idan kaje banki, danna mic ka koyi neman mai bayar da kudi: 'Where is the teller?'.",
+              "encouragement": "Muryarka tana fitar da babban ikon kudi!",
+              "corrections": "Vibrate 'Where' cleanly. Say 'Wer... iz... da... tel-luh'.",
+              "achievements": "Ka zama gwani wajen zirga-zirga a cikin bankunan kudi kowane gari!",
+              "motivation": "Aka ce kudi na neman mai magana da basira don kariya."
+            },
+            "listeningExercise": "Audit typical crowd murmuring in bank line and cashier counting cash notes.",
+            "repeatAfterMeExercise": "Repeat carefully: 'Where is the teller?' (chime).",
+            "speakingPractice": "Speak the bank inquiry sequence into the receiver.",
+            "conversationPractice": "Ustaz Nur (Guard): 'Welcome. How can I help you?' Learner: 'Where is the teller?'",
+            "visualLearningSuggestions": "An active safe deposit design or cash teller station representation.",
+            "quiz": [
+              {
+                "question": "What is the English word for 'Mai bayar da kudi' inside a bank?",
+                "hausaQuestion": "Mene ne sunan ma'aikacin dake karba ko bayar da kudi a cikin banki da Turanci?",
+                "options": [
+                  "Teller",
+                  "Doctor",
+                  "Baby",
+                  "Water"
+                ],
+                "answerIndex": 0,
+                "explanation": "'Teller' is the standard financial counter staff handling money."
+              }
+            ],
+            "assessment": "Verify that question tone is clearly expressed through elevated end pitch.",
+            "homework": "Ka tambayi yayanka inda ya ajiye kudin cefane ta amfani da 'Where is...' a yau.",
+            "masteryCriteria": "Proper rise in question-base pitch.",
+            "estimatedDuration": "20 minutes",
+            "difficultyRating": "3/5"
           }
         ]
       }
@@ -871,32 +1659,32 @@
               "encouragement": "Faruci ne mai matukar ban sha'awa da girma!",
               "corrections": "Fitarda iska kadan na harafin 'F' a karshe: 'Your-selFFFF'. Maimaita.",
               "achievements": "Yanzu kun daukaka zuwa babban matakin neman arziki!",
-              "motivation": "Yarenka shi ne hasken fuskarka kafin a gwada basirarka."
+              "motivation": "Yarenka shi ne makamin samun girmamawa a gaban masu kudi."
             },
-            "listeningExercise": "Review an office dialogue where a manager in Abuja reviews certificates of applicants.",
-            "repeatAfterMeExercise": "Repeat: 'Tell me about yourself' (chime).",
-            "speakingPractice": "Clearly say: 'Tell me about yourself' as requested by Ustaz Nur.",
-            "conversationPractice": "Ustaz Nur: 'Who are you?' Learner: 'Tell me about yourself...'",
-            "visualLearningSuggestions": "A corporate desk with folders and high quality credentials representing success.",
+            "listeningExercise": "Listen to a formal business office chime and interviewer clearing throat for dialogue.",
+            "repeatAfterMeExercise": "Repeat formal trigger request: 'Tell me about yourself' (chime).",
+            "speakingPractice": "vocalize the interviewer's question to model clean pronunciation.",
+            "conversationPractice": "Ustaz Nur (Interviewer): 'Welcome! Tell me about yourself.' Learner: 'My name is Amina, I can speak English.'",
+            "visualLearningSuggestions": "A sleek modern office chair and welcoming conference table.",
             "quiz": [
               {
-                "question": "What is the meaning of 'Tell me about yourself'?",
-                "hausaQuestion": "Mene ne fassarar 'Tell me about yourself' da Hausa?",
+                "question": "What does an interviewer expect when they say 'Tell me about yourself'?",
+                "hausaQuestion": "Mene ne ake nufi idan aka tambaye ka 'Tell me about yourself' a wurin neman aiki?",
                 "options": [
-                  "Gaya min game da kanka",
-                  "Ina son in sayi kwallo",
-                  "Nawa ne kudin takarda",
-                  "Sai an jima"
+                  "To give a brief personal/professional introduction",
+                  "To ask for water",
+                  "To say goodbye immediately",
+                  "To complain about headache"
                 ],
                 "answerIndex": 0,
-                "explanation": "'Tell me about yourself' commands a description of professional or personal background traits."
+                "explanation": "This statement is the universal icebreaker for personal presentation."
               }
             ],
-            "assessment": "Verify firm final consonant integrations.",
-            "homework": "Explain your background to the mirror using your name: 'My name is Amina, I want to write'.",
-            "masteryCriteria": "Professional self-assured audio metrics output.",
+            "assessment": "Verify that learner does not drop the 'f' sound in 'yourself'.",
+            "homework": "Practice repeating 'My name is [name], I can speak English' in front of your mirror.",
+            "masteryCriteria": "Clean execution of double ending consonants.",
             "estimatedDuration": "30 minutes",
-            "difficultyRating": "4/5"
+            "difficultyRating": "3.5/5"
           }
         ]
       }
@@ -905,62 +1693,62 @@
   {
     "level": "STAGE_9",
     "levelTitle": "English Thinking",
-    "levelTitleHausa": "Gudanar Da Tunani Cikin Turanci",
+    "levelTitleHausa": "Tunani Ba Tare Da Fassara Ba",
     "modules": [
       {
         "id": "m9_1",
         "title": "Descriptive Storytelling",
-        "titleHausa": "Fara Rayawa Da Kwadaitar Da Tunani Cikin Turanci",
+        "titleHausa": "Gano Siffar Abu Da Kawo Labari",
         "lessons": [
           {
             "lessonNumber": 1,
             "title": "Explaining Daily Activities",
-            "learningObjective": "Stop translation loops and express direct observations with visual imagery helper cues.",
+            "learningObjective": "Acquire rapid speech triggering habits, describing basic scene visuals immediately without translation delay.",
             "vocabulary": [
               {
-                "word": "What did you do today?",
-                "hausa": "Mene ne ka yi yau?",
-                "ipa": "/wɒt dɪd juː duː təˈdeɪ/",
-                "syllableBreakdown": "What did you do to-day?",
-                "slowPronunciation": "Wot did yu du tudei",
-                "commonHausaMistake": "Pronouncing 'today' as 'todei' with strong heavy local 'o' quality.",
-                "correctionTip": "Shorten the 'to' prefix to sound like a brief 'tuh-day' for perfect accent."
+                "word": "I see a school",
+                "hausa": "Ina ganin makaranta",
+                "ipa": "/aɪ siː ə skuːl/",
+                "syllableBreakdown": "I see a school",
+                "slowPronunciation": "Ai si a skul",
+                "commonHausaMistake": "Adding an 'E' to school as 'Es-kul' or shortening 'see' flat.",
+                "correctionTip": "Do not add an 'E' at start of 'school'. Smoothly slide snake air 'S' into 'kul'."
               }
             ],
-            "hausaExplanation": "Za mu daina gudanar da fassara daga Hausa kowane lokaci kafin magana. Za mu horar da kwakwalwa don amsa kai tsaye da Turanci. Misali: 'What did you do today?' (Mene ne ka gudanar yau?).",
-            "englishExplanation": "Eradicate intermediate translation delay cycles. Drive visual visual-to-speech pathways.",
-            "pronunciationGuide": "Ensure 'did' is soft and 'today' is delivered as a brief 'tuh-day' rather than a heavy 'to-day'.",
+            "hausaExplanation": "Mafi yawan mutane sukan tsaya suna fassara kalmomi daga Hausa zuwa Turanci a zuciya kafin su yi magana. Wannan kuskure ne dake kawo jinkiri. A yau zamu kalli hoto, mu fadi abin da muka gani kai tsaye: 'I see a school'.",
+            "englishExplanation": "Train instant visual-concept matching routes to promote pure immersion and cognitive fluency.",
+            "pronunciationGuide": "Attack 'school' cleanly with continuous S hiss without vowel additions. Keep 'see' long and bright.",
             "aiTutorScript": {
-              "introduction": "Assalamu Alaikum! Yau kuma zamu yi kokarin tunani direct ba tare da fassara ta jinkiri ba. Idan na tambaye ka: 'What did you do today?', ka fito da abin da ka yi.",
-              "encouragement": "Allah ya zuba muku albarka, muryarku tana da gaske!",
-              "corrections": "Fadi 'tuh-day' cikin gajeren sauti na asali. 'What did you do tuh-day?'.",
-              "achievements": "Kun kashe matsalar jinkirin tunani tattaunawa gaba daya!",
-              "motivation": "Yaren da kake tunani da shi, shi ne yaren da kake magana dashi."
+              "introduction": "Barka dai! Babban sirrin sani shi ne daina fassara a rano. Kalli screen din yanzu! Idan ka ga makaranta, fadi: 'I see a school'.",
+              "encouragement": "Wannan shi ne jigon hasken da muke nema!",
+              "corrections": "Maimaita: 'I see a... Sss-chool'. Kar kace 'Eskey' ko 'Es-kul'.",
+              "achievements": "Kun kashe tsoron fassara gaba daya a cikin tunaninku!",
+              "motivation": "Yaron da ya san yadda za ya tattauna kai tsaye shi ne sarkin magana."
             },
-            "listeningExercise": "Audit a father returning home asking his child about activities inside school grounds.",
-            "repeatAfterMeExercise": "Repeat carefully: 'What did you do today?'.",
-            "speakingPractice": "Register the inquiry phrase: 'What did you do today?'.",
-            "conversationPractice": "Ustaz Nur: 'I read my book. And you?' Learner: 'What did you do today?'",
-            "visualLearningSuggestions": "A graphic showing a brain thinking and sparking with yellow flash of lightning.",
+            "listeningExercise": "Listen to school bells ringing and children reading in a classroom.",
+            "repeatAfterMeExercise": "Look at the screen visual and repeat: 'I see a school' (chime).",
+            "speakingPractice": "Explain the classroom landscape: 'I see a school'.",
+            "conversationPractice": "Ustaz Nur: 'Look at the picture. What do you see?' Learner: 'I see a school.'",
+            "visualLearningSuggestions": "A graphic showing a brightly lit schoolhouse under an shining orange sun.",
             "quiz": [
               {
-                "question": "If you want to know about someone's daily activities, what should you ask?",
-                "hausaQuestion": "Idan kana son ka tambayi abokin ka abubuwan da ya aiwatar yau, me zaka ce?",
+                "question": "How do you bypass slow inner translation when you see a house?",
+                "hausaQuestion": "Yaya zaka daina jinkirin fassara a zuciya idan ka ga babban gida?",
                 "options": [
-                  "What did you do today?",
-                  "How much is this?",
-                  "I want water",
-                  "I feel sick"
+                  "Say what you see immediately in English: 'I see a house'",
+                  "Translate to Hausa first, then search word-for-word",
+                  "Keep quiet and do not speak",
+                  "Say Sorry and Excuse me"
                 ],
                 "answerIndex": 0,
-                "explanation": "'What did you do today?' asks for a direct report of present-day actions."
+                "explanation": "Thinking directly in English bypasses mental translations to make your speech fast."
               }
             ],
-            "assessment": "Detailed speech analysis of speed delays.",
-            "homework": "Ka tambayi abokinka yau 'What did you do today?' ka saurari dabi'arsa.",
-            "masteryCriteria": "Maximum delay under 1 full second.",
-            "estimatedDuration": "30 minutes",
-            "difficultyRating": "4.2/5"
+            "assessment": "Verify low latencies in speech responses (trigger time less than 1.5s).",
+            "homework": "Ka duba waje, sannan ka fadi abin da ka gani kai tsaye: 'I see water' ko 'I see bread'.",
+            "masteryCriteria": "Low speaking latency with zero visual pauses.",
+            "estimatedDuration": "20 minutes",
+            "difficultyRating": "3.8/5"
           }
         ]
       }
@@ -969,62 +1757,62 @@
   {
     "level": "STAGE_10",
     "levelTitle": "Fluency Mastery",
-    "levelTitleHausa": "Kammalawa Da Kwarewa Gaba Daya",
+    "levelTitleHausa": "Gwanancewa Da Shaidar Karatu",
     "modules": [
       {
         "id": "m10_1",
         "title": "Complete Independent Fluency",
-        "titleHausa": "Zama Zakaran Tattaunawa Ta Turanci",
+        "titleHausa": "Samun Kyawawan Lambobin Girma",
         "lessons": [
           {
             "lessonNumber": 1,
             "title": "Complete Free-Flow Conversation Review",
-            "learningObjective": "Converse independently without support frames or local translations in Hausa.",
+            "learningObjective": "Demonstrate high-capacity fluency across all interactive lifelike situations.",
             "vocabulary": [
               {
-                "word": "I am confident",
-                "hausa": "Ina da tabbaci",
-                "ipa": "/aɪ æm ˈkɒn.fɪ.dənt/",
-                "syllableBreakdown": "I am con-fi-dent",
-                "slowPronunciation": "Ai am kon-fi-dent",
-                "commonHausaMistake": "Dropping the closing 'nt' sound in 'confident' as 'konfiden'.",
-                "correctionTip": "Ensure tongue taps the roof of your mouth for the final 'nt' for absolute clarity."
+                "word": "I can speak English confidently",
+                "hausa": "Zan iya magana da Turanci da kwarin gwiwa",
+                "ipa": "/aɪ kæn spiːk ˈɪŋ.ɡlɪʃ ˈkɒn.fɪ.dənt.li/",
+                "syllableBreakdown": "I can speak Eng-lish con-fi-dent-ly",
+                "slowPronunciation": "Ai kan spik Ing-lish kon-fi-dent-li",
+                "commonHausaMistake": "Saying 'Ah kan' or dropping nasal ending in 'confidently'.",
+                "correctionTip": "Keep the transitions between 'speak' and 'English' fluid and clean."
               }
             ],
-            "hausaExplanation": "Madalla! Kun riga kun gama dukkan dandalinmu. Wannan darasi na karshe bita ne gaba daya na duk abin da muka koya daga sifiri. Ya kamata ku ce: 'I am confident' (Muna da tabbaci!).",
-            "englishExplanation": "Deliver a ultimate milestone synthesis check. Celebrate successful long-term language acquisition.",
-            "pronunciationGuide": "Combine 'I am' as a single run-on 'I-am' before producing the steady three syllables of 'con-fi-dent'.",
+            "hausaExplanation": "Alhamdulillah! Kun kai kololuwa na hasken dandalin Nur al-Ilm! Yau za mu raba dukkan manyan sakamako. Za mu gudanar da tattaunawa ta hadaka na mintuna kadan a kan dukkan abubuwan da muka koya tun daga sifiri.",
+            "englishExplanation": "Perform comprehensive oral capstone check to activate certification status.",
+            "pronunciationGuide": "Produce confident, continuous conversational phrases. Breathe easy and connect thoughts.",
             "aiTutorScript": {
-              "introduction": "Assalamu Alaikum! Wannan ita ce kololuwar haske. Kun dade kuna koya daga ranar farko inda muka fara da 'Welcome'. Yau zaku ce: 'I am confident'!",
-              "encouragement": "Ku ne zakaru kwarai da gaske a kasan nan baki daya!",
-              "corrections": "Ka fitar da 'nt' na karshe da karfi don ya tabbatar da kwarewarka. 'Confident'.",
-              "achievements": "Madalla, madalla kwarai! Kun zama kwararru masu magana kamar ruwa!",
-              "motivation": "Yanzu babu inda zaka tsaya a fadin duniya baki daya. Hanyarku ta bude!"
+              "introduction": "Assalamu Alaikum wa rahmatullah! Wannan babban murna ne gare mu baki daya. Ka isa karshen hasken ilimi! Fito da muryarka cike da kwarin gwigwa: 'I can speak English confidently!'.",
+              "encouragement": "Masha Allah! Ina kusa da ku muna sanya maku albarka kowace rana!",
+              "corrections": "Lafazinku yanzu ya zama kusan daidai da kowane kwararre a duniya. Barka da nasara!",
+              "achievements": "Kun kammala dukkan dandalin hasken Nur al-Ilm lafiya laye!",
+              "motivation": "Hasken yau ya zama abokin tafiyarka na karshe. Sai an jima abokinmu!"
             },
-            "listeningExercise": "Review the grand cheering sound of crowds celebrating graduation milestones inside communities.",
-            "repeatAfterMeExercise": "Say with pride: 'I am confident'.",
-            "speakingPractice": "Speak clearly to register your ultimate status: 'I am confident'.",
-            "conversationPractice": "Ustaz Nur (Ustaz): 'Are you fluent in English?' Learner: 'Yes, I am confident!'",
-            "visualLearningSuggestions": "A glowing golden crown symbol indicating supreme success and graduation crown.",
+            "listeningExercise": "Listen to a soft celebratory sound with crowd clapping and Ustaz Nur congratulating you.",
+            "repeatAfterMeExercise": "Repeat proudly: 'I can speak English confidently!' (chime).",
+            "speakingPractice": "Speak the absolute capstone statement to lock in your victory.",
+            "conversationPractice": "Ustaz Nur: 'Are you ready to change the world?' Learner: 'I can speak English confidently!'",
+            "visualLearningSuggestions": "A sparkling certificate of completion displaying user active name with golden crown.",
             "quiz": [
               {
-                "question": "What is the meaning of 'I am confident' in Hausa?",
-                "hausaQuestion": "Fassarar 'I am confident' da Hausa shi ne?",
+                "question": "What is the true golden rule of Nur al-Ilm?",
+                "hausaQuestion": "Mene ne babban jigon dandalin Nur al-Ilm da kuka bi don samun nasara?",
                 "options": [
-                  "Ina da tabbaci",
-                  "Ba zan iya magana ba",
-                  "Malami ya koka",
-                  "Bani son ilimi"
+                  "Listening first, Speaking second, then Conversations, Reading & Writing last",
+                  "Alphabet first, Grammar rules, Memorizing spelling sheets",
+                  "Only reading silent letters while keeping mouth shut always",
+                  "Doing mock visual tasks without repeating audio"
                 ],
                 "answerIndex": 0,
-                "explanation": "'I am confident' matches Ina da cikakken tabbaci a asali na biyan bukata."
+                "explanation": "Nur al-Ilm focuses on natural listening and speaking first before ever introducing academic spelling."
               }
             ],
-            "assessment": "Verify clear, high level expression.",
-            "homework": "Ka nuna wa iyalinka Shaidar karatunka (Certificate) na Nur al-Ilm yau tare da dadi kwarai.",
-            "masteryCriteria": "Successful completion of all modules.",
-            "estimatedDuration": "40 minutes",
-            "difficultyRating": "4.8/5"
+            "assessment": "Verify that speech matches normal speed ratios under fluent standards.",
+            "homework": "Ka danna wajen Lambar Shaidar Karatu sannan ka sauke certificate dinka na girmamawa!",
+            "masteryCriteria": "Full autonomous conversation capability.",
+            "estimatedDuration": "30 minutes",
+            "difficultyRating": "5/5"
           }
         ]
       }

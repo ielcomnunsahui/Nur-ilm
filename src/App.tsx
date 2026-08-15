@@ -13,7 +13,7 @@ import confetti from 'canvas-confetti';
 
 // Models, views, databases and assets
 import { LearningLevel, Lesson, UserProgress } from './types';
-import { LESSONS, BADGES } from './data';
+import { LESSONS, BADGES, REAL_WORLD_MISSIONS, VOICE_PERSONAS } from './data';
 import { speakText } from './components/AudioVoiceHelper';
 import { downloadLessonForOffline, getDownloadedLessonIds, deleteDownloadedLesson } from './utils/offlineHelper';
 
@@ -927,6 +927,92 @@ export default function App() {
                       </button>
                     </div>
                   )}
+
+                  {/* Voice Personas Card */}
+                  <div className="bg-white p-5 rounded-xl border border-emerald-900/5 shadow-sm space-y-3">
+                    <div className="flex items-center justify-between">
+                      <h4 className="font-bold text-xs uppercase text-[#0F6B4B]">Malaman Murya (Voice Tutors)</h4>
+                      <button 
+                        onClick={() => setActiveView('chat')}
+                        className="text-[10px] text-[#D4A017] font-bold hover:underline flex items-center gap-0.5"
+                      >
+                        Yi Hira <ChevronRight className="w-3 h-3" />
+                      </button>
+                    </div>
+                    <p className="text-[11px] text-gray-500 font-sans">Koyi Turanci da sautin malamai mabanbanta domin gwanancewa:</p>
+                    <div className="space-y-2">
+                      {VOICE_PERSONAS.map((p) => (
+                        <div 
+                          key={p.id}
+                          onClick={() => {
+                            setActiveView('chat');
+                            speakText(`Sannu! Ni ne ${p.name}.`, 'ha-NG', {
+                              rate: p.speakingRate,
+                              pitch: p.pitch,
+                              gender: p.voiceGender
+                            });
+                          }}
+                          className="flex items-center justify-between p-2 rounded-lg bg-gray-50 hover:bg-emerald-50 border border-gray-150 hover:border-emerald-200 cursor-pointer transition-all"
+                        >
+                          <div className="flex items-center gap-2">
+                            <span className="text-lg">
+                              {p.id === 'ustaz' && '👳‍♂️'}
+                              {p.id === 'amina' && '👩‍🏫'}
+                              {p.id === 'musa' && '🛒'}
+                              {p.id === 'ibrahim' && '👨‍⚕️'}
+                              {p.id === 'hafsat' && '🧕'}
+                            </span>
+                            <div>
+                              <p className="text-xs font-bold text-gray-900 leading-tight">{p.name}</p>
+                              <p className="text-[10px] text-gray-500">{p.roleHausa}</p>
+                            </div>
+                          </div>
+                          <span className="text-[10px] font-mono text-[#D4A017] font-bold uppercase">{p.role}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Real-World Missions Widget */}
+                  <div className="bg-gradient-to-br from-emerald-900 to-emerald-950 p-5 rounded-xl text-white shadow-sm space-y-3">
+                    <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                      <h4 className="font-bold text-xs uppercase text-[#D4A017] flex items-center gap-1.5">
+                        <span>🎯</span> Ayyukan Rayuwa (Missions)
+                      </h4>
+                      <span className="text-[10px] bg-emerald-800 text-emerald-200 px-2 py-0.5 rounded-full font-mono">
+                        {REAL_WORLD_MISSIONS.length} Ayyuka
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-emerald-150 font-sans">
+                      Ayyukan gwaji a kasuwa, asibiti, tasha da ofis:
+                    </p>
+                    <div className="space-y-2">
+                      {REAL_WORLD_MISSIONS.slice(0, 3).map((mission) => (
+                        <div 
+                          key={mission.id}
+                          className="p-2.5 rounded-lg bg-white/5 border border-white/10 space-y-1 hover:bg-white/10 transition-all"
+                        >
+                          <div className="flex items-center justify-between">
+                            <span className="text-xs font-bold text-amber-300">{mission.titleHausa}</span>
+                            <span className="text-[9px] text-[#D4A017] font-mono font-bold">+{mission.rewardXp} XP</span>
+                          </div>
+                          <p className="text-[10px] text-gray-300 font-sans">{mission.instructionHausa}</p>
+                          <div className="pt-1 flex items-center justify-between text-[9px] text-emerald-300">
+                            <span className="capitalize">{mission.verificationType.replace('_', ' ')}</span>
+                            <button 
+                              onClick={() => {
+                                setActiveView('chat');
+                                speakText(`Mu fara aikin: ${mission.titleHausa}. ${mission.instructionHausa}`, 'ha-NG');
+                              }}
+                              className="text-amber-300 font-bold hover:underline flex items-center gap-0.5"
+                            >
+                              Fara aiki <ChevronRight className="w-2.5 h-2.5" />
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
 
                   {/* Quick badges cabinet */}
                   <div className="bg-white p-5 rounded-xl border border-emerald-900/5 shadow-sm space-y-4">

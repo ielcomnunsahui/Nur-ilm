@@ -5,11 +5,12 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { 
-  Mic, MicOff, Send, MessageSquareText, Sparkles, Volume2, ArrowLeft, RotateCcw, Award 
+  Mic, MicOff, Send, MessageSquareText, Sparkles, Volume2, ArrowLeft, RotateCcw, Award, Users 
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { speakText, isSpeechRecognitionSupported, startSpeechRecognition } from './AudioVoiceHelper';
-import { ChatMessage, UserProgress } from '../types';
+import { ChatMessage, UserProgress, VoicePersona } from '../types';
+import { VOICE_PERSONAS } from '../data';
 
 interface UstazNurChatProps {
   progress: UserProgress;
@@ -22,6 +23,8 @@ export const UstazNurChat: React.FC<UstazNurChatProps> = ({
   onAddXp,
   onGoBack
 }) => {
+  const [selectedPersona, setSelectedPersona] = useState<VoicePersona>(VOICE_PERSONAS[0]);
+
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: 'init_1',
@@ -56,7 +59,34 @@ export const UstazNurChat: React.FC<UstazNurChatProps> = ({
 
   // Speech helper to auto-run on zero literacy
   const autoPlaySpeech = (text: string) => {
-    speakText(text, 'ha-NG');
+    speakText(text, 'ha-NG', {
+      rate: selectedPersona.speakingRate,
+      pitch: selectedPersona.pitch,
+      gender: selectedPersona.voiceGender
+    });
+  };
+
+  const handleSelectPersona = (persona: VoicePersona) => {
+    setSelectedPersona(persona);
+    const welcomeByPersona: Record<string, string> = {
+      ustaz: "Assalamu Alaikum! Ni ne Ustaz Nur. A hankali zamu bi kowane sauti da ma'ana.",
+      amina: "Barka da yini! Ni ce Malama Amina. Zan taimake ka da furuci a bayyane da Turancin asibiti.",
+      musa: "Sannu abokina! Ni ne Musa dan kasuwar Kurmi. Bari mu koyi ciniki da lissafin kudi!",
+      ibrahim: "Barka! Ni ne Dr. Ibrahim. Zan koya maka yadda ake bayyana ciwo da neman magani a asibiti.",
+      hafsat: "Sannu dana/yata! Hajiya Hafsat ce. Kar ka ji tsoro ko kunya, Turanci abu ne mai sauki."
+    };
+    const newMsg: ChatMessage = {
+      id: `p_switch_${Date.now()}`,
+      sender: 'ustaz',
+      text: welcomeByPersona[persona.id] || `Barka da zuwa! Ni ne ${persona.name}.`,
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    };
+    setMessages(prev => [...prev, newMsg]);
+    speakText(newMsg.text, 'ha-NG', {
+      rate: persona.speakingRate,
+      pitch: persona.pitch,
+      gender: persona.voiceGender
+    });
   };
 
   useEffect(() => {
@@ -90,7 +120,8 @@ export const UstazNurChat: React.FC<UstazNurChatProps> = ({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           messages: [...messages, studentMsg],
-          userProfile: progress
+          userProfile: progress,
+          personaId: selectedPersona.id
         })
       });
 
@@ -110,9 +141,14 @@ export const UstazNurChat: React.FC<UstazNurChatProps> = ({
         }
 
         setMessages(prev => [...prev, ustazMsg]);
+        speakText(data.result.text, 'ha-NG', {
+          rate: selectedPersona.speakingRate,
+          pitch: selectedPersona.pitch,
+          gender: selectedPersona.voiceGender
+        });
       }
     } catch (error) {
-      console.error("Error talking to Ustaz Nur:", error);
+      console.error("Error talking to AI Tutor:", error);
     } finally {
       setIsLoading(false);
     }
@@ -208,7 +244,7 @@ export const UstazNurChat: React.FC<UstazNurChatProps> = ({
   };
 
   return (
-    <div id="ustaz-nur-chat-container" className="flex flex-col h-[650px] bg-[#F8F6F0] rounded-2xl shadow-lg border border-emerald-900/10 overflow-hidden">
+    <div id="ustaz-nur-chat-container" className="flex flex-col h-[680px] bg-[#F8F6F0] rounded-2xl shadow-lg border border-emerald-900/10 overflow-hidden">
       {/* Upper header */}
       <div className="bg-[#0F6B4B] p-4 flex items-center justify-between text-[#F8F6F0] border-b border-[#D4A017]/30">
         <div className="flex items-center gap-3">
@@ -220,10 +256,14 @@ export const UstazNurChat: React.FC<UstazNurChatProps> = ({
             <ArrowLeft className="w-6 h-6" />
           </button>
           
-          {/* pulsating avatar of Ustaz Nur */}
+          {/* Persona Avatar */}
           <div className="relative">
-            <div className="w-11 h-11 bg-white border-2 border-[#D4A017] rounded-full flex items-center justify-center text-xl overflow-hidden">
-              👳‍♂️
+            <div className="w-11 h-11 bg-white border-2 border-[#D4A017] rounded-full flex items-center justify-center text-xl overflow-hidden shadow">
+              {selectedPersona.id === 'ustaz' && '👳‍♂️'}
+              {selectedPersona.id === 'amina' && '👩‍🏫'}
+              {selectedPersona.id === 'musa' && '🛒'}
+              {selectedPersona.id === 'ibrahim' && '👨‍⚕️'}
+              {selectedPersona.id === 'hafsat' && '🧕'}
             </div>
             {isRecording && (
               <span className="absolute bottom-0 right-0 flex h-3.5 w-3.5">
@@ -233,24 +273,55 @@ export const UstazNurChat: React.FC<UstazNurChatProps> = ({
             )}
           </div>
           <div>
-            <h3 className="font-bold text-base tracking-wide flex items-center gap-1.5">
-              USTAZ NUR <span className="text-xs bg-emerald-800 text-[#D4A017] px-2 py-0.5 rounded-full border border-[#D4A017]/50 font-normal">AI Malam</span>
+            <h3 className="font-bold text-base tracking-wide flex items-center gap-1.5 uppercase">
+              {selectedPersona.name} <span className="text-[11px] bg-emerald-800 text-[#D4A017] px-2 py-0.5 rounded-full border border-[#D4A017]/50 font-normal">AI Malam</span>
             </h3>
             <p className="text-xs text-emerald-100 flex items-center gap-1">
               <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse inline-block"></span>
-              A shirye yake ya taimake ka
+              {selectedPersona.roleHausa}
             </p>
           </div>
         </div>
 
         <button 
           id="toggle-speak-instantly"
-          onClick={() => autoPlaySpeech("Barka da kokari! Ina ji da ku.")}
+          onClick={() => autoPlaySpeech(`Barka da kokari! Ni ne ${selectedPersona.name}. Ina ji da ku.`)}
           className="p-2 text-yellow-400 hover:text-yellow-350 rounded-full hover:bg-emerald-800/40"
           title="Play Introduction Voice"
         >
           <Volume2 className="w-6 h-6" />
         </button>
+      </div>
+
+      {/* Multi-Persona Selector Bar */}
+      <div id="persona-selector-bar" className="bg-emerald-950/80 px-4 py-2 flex items-center gap-2 overflow-x-auto border-b border-[#D4A017]/20 scrollbar-none">
+        <span className="text-[10px] uppercase font-bold text-[#D4A017] flex items-center gap-1 shrink-0">
+          <Users className="w-3.5 h-3.5" />
+          Zabi Malam:
+        </span>
+        {VOICE_PERSONAS.map((p) => {
+          const isSelected = p.id === selectedPersona.id;
+          return (
+            <button
+              key={p.id}
+              onClick={() => handleSelectPersona(p)}
+              className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+                isSelected 
+                  ? 'bg-[#D4A017] text-[#1A1A1A] shadow font-bold scale-105' 
+                  : 'bg-emerald-900/60 text-emerald-200 hover:bg-emerald-800/80 border border-emerald-700/40'
+              }`}
+            >
+              <span>
+                {p.id === 'ustaz' && '👳‍♂️'}
+                {p.id === 'amina' && '👩‍🏫'}
+                {p.id === 'musa' && '🛒'}
+                {p.id === 'ibrahim' && '👨‍⚕️'}
+                {p.id === 'hafsat' && '🧕'}
+              </span>
+              <span>{p.name}</span>
+            </button>
+          );
+        })}
       </div>
 
       {/* Target homework panel */}

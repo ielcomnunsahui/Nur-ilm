@@ -38,40 +38,55 @@ try {
 
 // ---------------- USER STUDY & COURSE UTILITIES ----------------
 
-// 1. Ustaz Nur Interactive AI Tutor Endpoint
+// 1. Interactive Multi-Persona AI Tutor Endpoint
 app.post("/api/gemini/tutor", async (req, res) => {
-  const { messages, userProfile } = req.body;
+  const { messages, userProfile, personaId = 'ustaz' } = req.body;
   const recentUserMessage = messages[messages.length - 1];
 
+  let personaRole = "Ustaz Nur (نور العلم), a patient, wise, and encouraging Hausa-speaking elder English tutor.";
+  if (personaId === 'amina') {
+    personaRole = "Malama Amina, a patient female teacher and clinic nurse who speaks clear, polite Hausa and teaches both general phonetics and healthcare English.";
+  } else if (personaId === 'musa') {
+    personaRole = "Musa the Trader, an energetic Kano Kurmi Market merchant who teaches practical trade negotiation, bargaining, numbers, and street-smart English.";
+  } else if (personaId === 'ibrahim') {
+    personaRole = "Dr. Ibrahim, a calm physician who helps Hausa speakers describe symptoms, understand medical instructions, and speak to healthcare providers in English.";
+  } else if (personaId === 'hafsat') {
+    personaRole = "Hajiya Hafsat, a warm community mother who encourages adults, women, and traders to learn English without shame or fear.";
+  }
+
   const systemInstruction = `
-    You are Ustaz Nur (نور العلم), a patient, encouraging, and kind Hausa-speaking English tutor.
-    Your target audience is native Hausa speakers who cannot read or write English, may have limited offline school education, and are learning primarily through listening, repetition, and speech.
+    You are ${personaRole}
+    Your target audience is native Hausa speakers who cannot read or write English, may have limited school education, and are learning primarily through listening, repetition, and speech.
     
-    GUIDELINES:
-    1. Always reply in clear, friendly Hausa.
-    2. Translate and explain the English concepts in Hausa.
-    3. Keep English sentences short and simple.
-    4. Provide phonetic hints so they can easily repeat after you (e.g., Water -> Wa-tar).
-    5. Be extremely encouraging. Use words like "Masha Allah!", "Gashi nan kun kusa!", "Barka da kokari!"
-    6. If they ask how to say something in English (e.g., "Yaya zan ce ina son ruwa?"), translate it, break down the sounds, and tell them to repeat.
+    PEDAGOGICAL SLA GUIDELINES:
+    1. Always reply in warm, authentic, clear Hausa.
+    2. Provide a direct, high-utility English target phrase (1-4 words) for them to repeat.
+    3. Provide phonetic breakdown specifically tailored for Hausa sound patterns (e.g., P/F lip separation, soft /θ/ tongue bite, consonant cluster ungluing).
+    4. Be extremely encouraging with authentic Northern Nigerian praises ("Masha Allah!", "Barka da kokari!", "Gashi nan kun kusa!").
     
     You MUST respond with a valid JSON object matching this schema:
     {
-      "text": "The full textual reply to displayed in Hausa and spoken.",
-      "englishTarget": "An optional single English word or short phrase they should repeat right now (e.g. 'I want water' or 'Thank you'). Leave empty if it's general conversation.",
-      "hausaExplanation": "A short, crystal-clear explanation of the rule or word in popular Hausa.",
-      "pronunciationHint": "Syllable pronunciation assist for the englishTarget (e.g. 'Ai want wah-tur')."
+      "text": "The full spoken message in natural Hausa.",
+      "englishTarget": "A short English phrase/word they must repeat right now.",
+      "hausaExplanation": "A short, crystal-clear explanation of the meaning in popular Hausa.",
+      "pronunciationHint": "Syllable pronunciation guide tailored for Hausa speakers (e.g. 'Ai want wah-tur')."
     }
   `;
 
   if (!ai) {
-    // Elegant fallback simulator when Gemini API Key is missing, ensuring zero crash
+    // High quality fallback simulator per persona
     const prompt = recentUserMessage ? recentUserMessage.text.toLowerCase() : "";
     let mockResult = {
-      text: "Masha Allah! Sannu da kokari. Ni ne Ustaz Nur, zan taimake ka ka koyi Turanci daki-daki.",
-      englishTarget: "Hello",
-      hausaExplanation: "Hello ana amfani da ita wajen yi wa mutum sallama ko gaisuwa na asali a Turanci, wato Sannu.",
-      pronunciationHint: "Heh-loh"
+      text: personaId === 'musa' 
+        ? "Assalamu Alaikum abokina! Kasuwa ta bude. Bari mu koyi yadda ake tambayar kudin kaya: 'How much is this?'"
+        : personaId === 'amina'
+        ? "Barka da zuwa! Ni ce Malama Amina. Kar ka damu, zamu koyi lafazin kowace kalma a hankali: 'Good morning'."
+        : "Masha Allah! Sannu da kokari. Ni ne Ustaz Nur, zan taimake ka ka koyi Turanci daki-daki.",
+      englishTarget: personaId === 'musa' ? "How much is this?" : "Good morning",
+      hausaExplanation: personaId === 'musa' 
+        ? "'How much is this?' yana nufin 'Nawa ne wannan?' a kasuwa."
+        : "'Good morning' shine gaisuwar safe na girmamawa.",
+      pronunciationHint: personaId === 'musa' ? "Hao mach iz dhis?" : "Gud mor-ning"
     };
 
     if (prompt.includes("ruwa") || prompt.includes("water")) {
@@ -81,26 +96,19 @@ app.post("/api/gemini/tutor", async (req, res) => {
         hausaExplanation: "'I want' yana nufin 'Ina so', sai 'water' kuma yana nufin 'Ruwa'.",
         pronunciationHint: "Ai want wah-tur"
       };
-    } else if (prompt.includes("gaisuwa") || prompt.includes("morning") || prompt.includes("sannu")) {
+    } else if (prompt.includes("kasuwa") || prompt.includes("price") || prompt.includes("kudi")) {
       mockResult = {
-        text: "Gaisuwa ta safiya ita ce 'Good morning', wato ina kwana na girmamawa.",
-        englishTarget: "Good morning",
-        hausaExplanation: "'Good' yana nufin 'Na gari/Kyau', sai 'morning' yana nufin 'Safe'.",
-        pronunciationHint: "Gud mor-ning"
+        text: "A kasuwa zaka ce 'Please reduce the price' wato don Allah a yi ragi!",
+        englishTarget: "Reduce the price",
+        hausaExplanation: "'Reduce' yana nufin 'Rage', 'the price' kuma 'Farashi'.",
+        pronunciationHint: "Ree-dyus dhi prais"
       };
-    } else if (prompt.includes("littafi") || prompt.includes("book")) {
+    } else if (prompt.includes("asibiti") || prompt.includes("ciwo") || prompt.includes("doctor")) {
       mockResult = {
-        text: "Littafi a Turanci shine 'Book'. Furta shi a hankali.",
-        englishTarget: "Book",
-        hausaExplanation: "'Book' shine littafi na karatu ko rubutu.",
-        pronunciationHint: "Buk"
-      };
-    } else if (prompt.trim() !== "") {
-      mockResult = {
-        text: `Na ji abinda kace. A matsayinka na mai koyo, bari mu gwada wannan jimla mai sauki: 'Thank you'. Sannan zamu cigaba!`,
-        englishTarget: "Thank you",
-        hausaExplanation: "'Thank you' shine hanyar cewa 'Na gode' a Turanci bayan an yi maka alheri.",
-        pronunciationHint: "Thangk yoo"
+        text: "Idan kana jin zazzabi ko ciwon kai, zaka ce: 'I have a headache'.",
+        englishTarget: "I have a headache",
+        hausaExplanation: "'Headache' shine ciwon kai. Fadi 'hed-eyk'.",
+        pronunciationHint: "Ai hav a hed-eyk"
       };
     }
 
@@ -109,6 +117,7 @@ app.post("/api/gemini/tutor", async (req, res) => {
 
   try {
     const formattedPrompt = JSON.stringify({
+      persona: personaId,
       history: messages.map((m: any) => `${m.sender === 'student' ? 'Student' : 'Tutor'}: ${m.text}`),
       latestStudentInput: recentUserMessage ? recentUserMessage.text : "Hi"
     });
@@ -139,10 +148,10 @@ app.post("/api/gemini/tutor", async (req, res) => {
     console.error("Gemini Error:", error);
     return res.json({
       result: {
-        text: "Haba dai, akwai matsalar sadarwa kadan. Amma Ustaz Nur yana nan tare da kai! Mu gwada cewa: 'Welcome'.",
-        englishTarget: "Welcome",
-        hausaExplanation: "'Welcome' yana nufin 'Barka da zuwa'.",
-        pronunciationHint: "Wel-kum"
+        text: "Masha Allah, ci gaba da kokari! Maimaita wannan kalma:",
+        englishTarget: "Thank you",
+        hausaExplanation: "'Thank you' yana nufin 'Na gode'.",
+        pronunciationHint: "Thangk yoo"
       }
     });
   }
