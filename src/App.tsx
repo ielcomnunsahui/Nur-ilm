@@ -6,7 +6,7 @@
 import { useState, useEffect } from 'react';
 import { 
   Flame, Award, Sparkles, BookOpen, Volume2, Crown, MessageSquareText, ShieldAlert, Download, Check, Trash2, Wifi, WifiOff, Smartphone,
-  ChevronDown, ChevronUp, Lock, Play, ChevronRight
+  ChevronDown, ChevronUp, Lock, Play, ChevronRight, Settings, EyeOff, Mic
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import confetti from 'canvas-confetti';
@@ -125,6 +125,7 @@ import { ParentDashboard } from './components/ParentDashboard';
 import { AdminDashboard } from './components/AdminDashboard';
 import { CheckoutPortal } from './components/CheckoutPortal';
 import { CustomLessonIcon } from './components/CustomLessonIcon';
+import { SettingsModal } from './components/SettingsModal';
 
 export default function App() {
   const [activeView, setActiveView] = useState<'landing' | 'dashboard' | 'chat' | 'certificate' | 'parent' | 'admin'>('landing');
@@ -137,6 +138,7 @@ export default function App() {
   const [isInstallable, setIsInstallable] = useState(false);
   const [showPwaModal, setShowPwaModal] = useState(false);
   const [expandedLevel, setExpandedLevel] = useState<string | null>(LearningLevel.STAGE_0);
+  const [showSettings, setShowSettings] = useState(false);
 
   // Load downloaded offline lessons list, connectivity, and SW status
   useEffect(() => {
@@ -500,6 +502,17 @@ export default function App() {
                 </span>
               )}
 
+              {/* Settings / Voice Personas Button */}
+              <button
+                id="header-settings-btn"
+                onClick={() => setShowSettings(true)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-800/90 hover:bg-emerald-700 text-amber-300 border border-emerald-600/60 cursor-pointer transition-all shadow-sm font-bold text-xs"
+                title="Saitin Murya da Kayan Aiki (Voice & Audio Settings)"
+              >
+                <Settings className="w-3.5 h-3.5 text-amber-400" />
+                <span className="hidden sm:inline font-bold">Saitin Murya</span>
+              </button>
+
               {/* Roles Quick-Switch widget */}
               <select
                 id="header-role-switcher"
@@ -581,6 +594,14 @@ export default function App() {
                   >
                     <MessageSquareText className="w-4 h-4" />
                     Hira da Ustaz Nur (AI Tutor)
+                  </button>
+                  <button
+                    id="btn-dashboard-voice-settings"
+                    onClick={() => setShowSettings(true)}
+                    className="flex items-center gap-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-400/40 px-5 py-3 rounded-full font-bold text-xs transition-all"
+                  >
+                    <Settings className="w-4 h-4 text-amber-400" />
+                    Saitin Murya {progress.voiceOnlyMode && <span className="bg-amber-400 text-emerald-950 text-[10px] font-black px-1.5 py-0.5 rounded-full">Sauti Kawai</span>}
                   </button>
                   <button
                     id="btn-dashboard-scertificate"
@@ -1056,6 +1077,7 @@ export default function App() {
                 onDownload={() => handleDownloadLesson(activeLesson)}
                 onAddXp={handleAddXp}
                 onUpdateProgress={handleUpdateLessonProgress}
+                onUpdateUserProgress={(updated) => setProgress(prev => ({ ...prev, ...updated }))}
                 onClose={() => setActiveLesson(null)}
               />
             </motion.div>
@@ -1310,6 +1332,19 @@ export default function App() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Voice Selection & Settings Modal */}
+      <SettingsModal 
+        isOpen={showSettings}
+        progress={progress}
+        onClose={() => setShowSettings(false)}
+        onUpdateProgress={(updated) => {
+          setProgress(prev => ({
+            ...prev,
+            ...updated
+          }));
+        }}
+      />
     </div>
   );
 }

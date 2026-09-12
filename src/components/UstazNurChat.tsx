@@ -23,7 +23,13 @@ export const UstazNurChat: React.FC<UstazNurChatProps> = ({
   onAddXp,
   onGoBack
 }) => {
-  const [selectedPersona, setSelectedPersona] = useState<VoicePersona>(VOICE_PERSONAS[0]);
+  const [selectedPersona, setSelectedPersona] = useState<VoicePersona>(() => {
+    if (progress.preferredVoicePersona) {
+      const found = VOICE_PERSONAS.find(p => p.id === progress.preferredVoicePersona);
+      if (found) return found;
+    }
+    return VOICE_PERSONAS[0];
+  });
 
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
@@ -73,7 +79,9 @@ export const UstazNurChat: React.FC<UstazNurChatProps> = ({
       amina: "Barka da yini! Ni ce Malama Amina. Zan taimake ka da furuci a bayyane da Turancin asibiti.",
       musa: "Sannu abokina! Ni ne Musa dan kasuwar Kurmi. Bari mu koyi ciniki da lissafin kudi!",
       ibrahim: "Barka! Ni ne Dr. Ibrahim. Zan koya maka yadda ake bayyana ciwo da neman magani a asibiti.",
-      hafsat: "Sannu dana/yata! Hajiya Hafsat ce. Kar ka ji tsoro ko kunya, Turanci abu ne mai sauki."
+      hafsat: "Sannu dana/yata! Hajiya Hafsat ce. Kar ka ji tsoro ko kunya, Turanci abu ne mai sauki.",
+      bello: "Sannu! Ni ne Brother Bello. Mu koyi Turancin mota, hanya da wayar salula cikin hanzari!",
+      sarah: "Hello! Ni ce Sister Sarah. Zan nuna muku daddadan lafazi na Turancin duniya a saukake."
     };
     const newMsg: ChatMessage = {
       id: `p_switch_${Date.now()}`,

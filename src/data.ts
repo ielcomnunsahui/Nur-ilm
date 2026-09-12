@@ -61,6 +61,28 @@ export const VOICE_PERSONAS: VoicePersona[] = [
     voiceGender: 'female',
     speakingRate: 0.9,
     pitch: 1.05,
+  },
+  {
+    id: 'bello',
+    name: 'Brother Bello',
+    role: 'Tech & Transport Youth Guide',
+    roleHausa: 'Matashin Jagoran Fasaha & Direba',
+    avatarUrl: 'bello',
+    bioHausa: 'Yana koya muku Turancin tafiye-tafiye, wayar salula, da tattaunawar matasa.',
+    voiceGender: 'male',
+    speakingRate: 1.0,
+    pitch: 1.0,
+  },
+  {
+    id: 'sarah',
+    name: 'Sister Sarah',
+    role: 'International English Specialist',
+    roleHausa: 'Kwararriyar Furuci ta Duniya',
+    avatarUrl: 'sarah',
+    bioHausa: 'Tana koya muku bayyanannen furucin Turanci na duniya cikin nutsuwa da hikima.',
+    voiceGender: 'female',
+    speakingRate: 0.88,
+    pitch: 1.15,
   }
 ];
 

@@ -131,6 +131,8 @@ export interface UserProgress {
   name: string;
   role: 'student' | 'parent' | 'admin';
   zeroLiteracyMode: boolean;
+  voiceOnlyMode: boolean; // Voice-Only mode: simplifies UI and hides text displays in lessons for pure auditory processing
+  preferredVoicePersona?: VoicePersonaId;
 }
 
 export interface Badge {

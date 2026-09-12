@@ -5,11 +5,12 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { 
-  Volume2, Mic, Check, X, Award, ChevronRight, ChevronLeft, BookOpen, Sparkles, Download, HelpCircle, Star, Heart, User, Sparkle
+  Volume2, Mic, Check, X, Award, ChevronRight, ChevronLeft, BookOpen, Sparkles, Download, HelpCircle, Star, Heart, User, Sparkle, EyeOff, Eye
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import confetti from 'canvas-confetti';
-import { Lesson, UserProgress } from '../types';
+import { Lesson, UserProgress, VoicePersona } from '../types';
+import { VOICE_PERSONAS } from '../data';
 import { speakText, startSpeechRecognition, stopAllSpeech } from './AudioVoiceHelper';
 import { CustomLessonIcon } from './CustomLessonIcon';
 
@@ -20,6 +21,7 @@ interface LessonPracticeProps {
   onDownload?: () => void;
   onAddXp: (xp: number, coins: number, completedLessonId: string) => void;
   onUpdateProgress?: (lessonId: string, percentage: number) => void;
+  onUpdateUserProgress?: (updated: Partial<UserProgress>) => void;
   onClose: () => void;
 }
 
@@ -30,8 +32,20 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
   onDownload,
   onAddXp,
   onUpdateProgress,
+  onUpdateUserProgress,
   onClose
 }) => {
+  // Voice Persona Configuration
+  const activePersona: VoicePersona = (progress.preferredVoicePersona 
+    ? VOICE_PERSONAS.find(p => p.id === progress.preferredVoicePersona) 
+    : null) || VOICE_PERSONAS[0];
+
+  const personaVoiceOpts = {
+    rate: activePersona.speakingRate,
+    pitch: activePersona.pitch,
+    gender: activePersona.voiceGender
+  };
+
   // Main workflow steps mirroring natural language learning
   // - intro: Welcome and Learning Objective
   // - drill: Interactive Vocab Loop (Hear -> Understand -> Recognize -> Repeat -> Speak)
@@ -45,6 +59,7 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
   const [currentVocabIndex, setCurrentVocabIndex] = useState(0);
   const [drillSubStep, setDrillSubStep] = useState<number>(0); // 0: Hear, 1: Understand, 2: Recognize, 3: Repeat, 4: Speak
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [isVoiceOnly, setIsVoiceOnly] = useState<boolean>(progress.voiceOnlyMode ?? false);
   
   // Tracking progress for parents and indicators
   useEffect(() => {
@@ -94,7 +109,7 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
       setTutorExpression('speaking');
       const introTxt = lesson.aiTutorScript?.introduction || 
         `Assalamu Alaikum! Sannun ku da zuwa. Yau za mu fara koyon darasin: "${lesson.titleHausa}". Kada ku damu, daki-daki za mu tafi tare. Danna maɓallin kore na ƙasa don mu fara.`;
-      speakText(introTxt, 'ha-NG');
+      speakText(introTxt, 'ha-NG', personaVoiceOpts);
       setTimeout(() => setTutorExpression('smiling'), 8000);
     } else if (activeStep === 'drill') {
       const activeVocab = lesson.vocabulary[currentVocabIndex];
@@ -107,9 +122,9 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
         switch(drillSubStep) {
           case 0: // HEAR
             setTutorExpression('speaking');
-            speakText(`Mataki na farko: Saurari sautin wannan kalma da kyau. Kar ka damu da haruffanta tukunna, kawai ka bude kunnuwanka ka saurara.`, 'ha-NG');
+            speakText(`Mataki na farko: Saurari sautin wannan kalma da kyau. Kar ka damu da haruffanta tukunna, kawai ka bude kunnuwanka ka saurara.`, 'ha-NG', personaVoiceOpts);
             setTimeout(() => {
-              speakText(activeVocab.english, 'en-US');
+              speakText(activeVocab.english, 'en-US', personaVoiceOpts);
               setTutorExpression('smiling');
             }, 6000);
             break;
@@ -123,40 +138,40 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
               (activeVocab.correctionTip 
                 ? `Ga shawara ta gari: ${activeVocab.correctionTip}` 
                 : "");
-            speakText(meaningText, 'ha-NG');
+            speakText(meaningText, 'ha-NG', personaVoiceOpts);
             break;
             
           case 2: // RECOGNIZE (Visual association)
             setTutorExpression('smiling');
-            speakText(`Kalli hoton dake gabanka. Wannan shi ne abinda kalmar take nufi. A harshen Turanci, ana kiranta her: "${activeVocab.english}".`, 'ha-NG');
+            speakText(`Kalli hoton dake gabanka. Wannan shi ne abinda kalmar take nufi. A harshen Turanci, ana kiranta her: "${activeVocab.english}".`, 'ha-NG', personaVoiceOpts);
             break;
             
           case 3: // REPEAT
             setTutorExpression('speaking');
-            speakText(`Yanzu kuma, lokaci ne na maimaitawa. Zan fara fada sannan ka biyo ni. Saurara: "${activeVocab.english}". Maza fada yanzu!`, 'ha-NG');
+            speakText(`Yanzu kuma, lokaci ne na maimaitawa. Zan fara fada sannan ka biyo ni. Saurara: "${activeVocab.english}". Maza fada yanzu!`, 'ha-NG', personaVoiceOpts);
             break;
             
           case 4: // SPEAK
             setTutorExpression('listening');
-            speakText(`Madalla sosai! Yanzu kuma danna hoton jan makirufo, sannan ka furta kalmar daki-daki domin mu ji yadda kake fada.`, 'ha-NG');
+            speakText(`Madalla sosai! Yanzu kuma danna hoton jan makirufo, sannan ka furta kalmar daki-daki domin mu ji yadda kake fada.`, 'ha-NG', personaVoiceOpts);
             break;
         }
       }
     } else if (activeStep === 'conversation') {
       setTutorExpression('speaking');
       const convoIntro = `Yanzu mun shiga rukunin amfani da kalmomin a rayuwa. Saurari wannan gajeren tattaunawa, sannan za mu tattauna tare.`;
-      speakText(convoIntro, 'ha-NG');
+      speakText(convoIntro, 'ha-NG', personaVoiceOpts);
       setTimeout(() => {
         if (lesson.conversationPractice) {
-          speakText(lesson.conversationPractice, 'ha-NG');
+          speakText(lesson.conversationPractice, 'ha-NG', personaVoiceOpts);
         }
       }, 5000);
     } else if (activeStep === 'reinforcement') {
       setTutorExpression('explaining');
-      speakText(`Sake karfafa ilimi! Bari mu tabbatar wadannan kalmomi sun zauna da kyau a kwakwalwar ka ya zama sannan.`, 'ha-NG');
+      speakText(`Sake karfafa ilimi! Bari mu tabbatar wadannan kalmomi sun zauna da kyau a kwakwalwar ka ya zama sannan.`, 'ha-NG', personaVoiceOpts);
     } else if (activeStep === 'quiz') {
       setTutorExpression('smiling');
-      speakText(`Masha Allah! Yanzu mun shiga rukunin jarrabawa na wasa na darasi. Saurari kowace tambaya daki daki sannan ka zaba daidai.`, 'ha-NG');
+      speakText(`Masha Allah! Yanzu mun shiga rukunin jarrabawa na wasa na darasi. Saurari kowace tambaya daki daki sannan ka zaba daidai.`, 'ha-NG', personaVoiceOpts);
       setTimeout(() => {
         readQuizQuestionOutLoud();
       }, 5000);
@@ -169,7 +184,7 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
       });
       const finishText = lesson.aiTutorScript?.achievements || 
         `Gwarzo mai kokari! Masha Allah, ka kammala wannan darasi gaba daya. Allah ya albarkaci karatunka. Ka samu maki da tsabar kudi! Ka kiyaye aikin gida da nake baka.`;
-      speakText(finishText, 'ha-NG');
+      speakText(finishText, 'ha-NG', personaVoiceOpts);
     }
   }, [activeStep, currentVocabIndex, drillSubStep]);
 
@@ -190,12 +205,12 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
   const readQuizQuestionOutLoud = () => {
     if (!activeQuestion) return;
     setTutorExpression('speaking');
-    speakText(activeQuestion.questionAudioText || activeQuestion.questionText, 'ha-NG');
+    speakText(activeQuestion.questionAudioText || activeQuestion.questionText, 'ha-NG', personaVoiceOpts);
     setTimeout(() => {
-      speakText("Zabi sune:", 'ha-NG');
+      speakText("Zabi sune:", 'ha-NG', personaVoiceOpts);
       activeQuestion.options.forEach((opt, idx) => {
         setTimeout(() => {
-          speakText(`Zabi na ${idx + 1}: ${opt}`, 'en-US');
+          speakText(`Zabi na ${idx + 1}: ${opt}`, 'en-US', personaVoiceOpts);
         }, (idx + 1) * 2000);
       });
     }, 3000);
@@ -229,11 +244,11 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
             if (data.result.pronunciation >= 75) {
               setTutorExpression('cheering');
               const congrats = lesson.aiTutorScript?.encouragement || "Masha Allah! Madalla, lafazi yayi kyau kwarai da gaske!";
-              speakText(congrats, 'ha-NG');
+              speakText(congrats, 'ha-NG', personaVoiceOpts);
             } else {
               setTutorExpression('explaining');
               const feedback = data.result.coachingTip || "Kusan daidai, amma ka sake sake gwadawa daki-daki.";
-              speakText(feedback, 'ha-NG');
+              speakText(feedback, 'ha-NG', personaVoiceOpts);
             }
           }
         } catch (error) {
@@ -297,12 +312,12 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
     if (optionIdx === activeQuestion.correctOptionIndex) {
       setQuizScore(prev => prev + 1);
       setTutorExpression('cheering');
-      speakText("Masha Allah! Gaskiya ne, haka yake ko da yaushe!", 'ha-NG');
+      speakText("Masha Allah! Gaskiya ne, haka yake ko da yaushe!", 'ha-NG', personaVoiceOpts);
     } else {
       setTutorExpression('explaining');
-      speakText("A'a, ba haka ba ne. Saurari bayani don ruko.", 'ha-NG');
+      speakText("A'a, ba haka ba ne. Saurari bayani don ruko.", 'ha-NG', personaVoiceOpts);
       setTimeout(() => {
-        speakText(activeQuestion.explanation, 'ha-NG');
+        speakText(activeQuestion.explanation, 'ha-NG', personaVoiceOpts);
       }, 3000);
     }
   };
@@ -329,14 +344,14 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
     if (!lesson.conversationPractice) return;
     setTutorExpression('speaking');
     setRolePlayTurn('teacher');
-    speakText(`Saurara da kyau. Wannan shi ne Ustaz dake gaishe ku. Ina cewa: "Hello!"`, 'ha-NG');
+    speakText(`Saurara da kyau. Wannan shi ne Ustaz dake gaishe ku. Ina cewa: "Hello!"`, 'ha-NG', personaVoiceOpts);
     
     setTimeout(() => {
-      speakText("Hello!", 'en-US');
+      speakText("Hello!", 'en-US', personaVoiceOpts);
       setRolePlayTurn('student');
       setTimeout(() => {
         setTutorExpression('listening');
-        speakText(`Yanzu lokacin ka ne na amsawa a matsayin dalibi. Danna jan hoton makirufo ka ce mafi dacewa: Hello!`, 'ha-NG');
+        speakText(`Yanzu lokacin ka ne na amsawa a matsayin dalibi. Danna jan hoton makirufo ka ce mafi dacewa: Hello!`, 'ha-NG', personaVoiceOpts);
       }, 2000);
     }, 5000);
   };
@@ -348,7 +363,7 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
   const handleTapWordReinforce = (item: { id: string, type: 'en' | 'ha', label: string }) => {
     if (selectedWordId === null) {
       setSelectedWordId(item.id);
-      speakText(item.label, item.type === 'en' ? 'en-US' : 'ha-NG');
+      speakText(item.label, item.type === 'en' ? 'en-US' : 'ha-NG', personaVoiceOpts);
     } else {
       const matchCandidate = selectedWordId;
       setSelectedWordId(null);
@@ -356,9 +371,9 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
       // Check for identical ID but different item object elements
       if (matchCandidate.split('_')[0] === item.id.split('_')[0] && matchCandidate !== item.id) {
         setMatchedPairs(prev => [...prev, item.id.split('_')[0]]);
-        speakText("Madalla! Kun hada daidai.", 'ha-NG');
+        speakText("Madalla! Kun hada daidai.", 'ha-NG', personaVoiceOpts);
       } else {
-        speakText("A'a, basu dace ba. Maza duba sauran.", 'ha-NG');
+        speakText("A'a, basu dace ba. Maza duba sauran.", 'ha-NG', personaVoiceOpts);
       }
     }
   };
@@ -369,33 +384,84 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
       {/* Mentor Header Status bar */}
       <div className="bg-[#0D5C3A] p-5 text-white flex items-center justify-between border-b-2 border-amber-400">
         <div className="flex items-center gap-3">
-          {/* Malam Avatar representation */}
+          {/* Persona Avatar representation */}
           <div className="relative">
             <div className="w-12 h-12 bg-emerald-800 rounded-full border-2 border-amber-400 flex items-center justify-center text-2xl shadow-md overflow-hidden animate-bounce-slow">
-              {tutorExpression === 'smiling' && '👳‍♂️'}
-              {tutorExpression === 'speaking' && '🗣️'}
-              {tutorExpression === 'explaining' && '👨‍🏫'}
-              {tutorExpression === 'listening' && '👂'}
-              {tutorExpression === 'cheering' && '🌟'}
+              {activePersona.id === 'amina' ? '👩‍🏫' :
+               activePersona.id === 'musa' ? '👨‍💼' :
+               activePersona.id === 'ibrahim' ? '👨‍⚕️' :
+               activePersona.id === 'hafsat' ? '🧕' :
+               activePersona.id === 'bello' ? '🧑‍🔧' :
+               activePersona.id === 'sarah' ? '👩‍💼' :
+               (tutorExpression === 'smiling' ? '👳‍♂️' :
+                tutorExpression === 'speaking' ? '🗣️' :
+                tutorExpression === 'explaining' ? '👨‍🏫' :
+                tutorExpression === 'listening' ? '👂' : '🌟')}
             </div>
             <span className="absolute bottom-0 right-0 h-3.5 w-3.5 bg-green-500 rounded-full border-2 border-[#0D5C3A]" />
           </div>
           <div>
             <p className="text-[10px] text-amber-400 font-extrabold uppercase tracking-widest flex items-center gap-1">
-              <Sparkle className="w-3.5 h-3.5 text-amber-400 fill-amber-400" /> Malam Nur, Ustaz & Aboki
+              <Sparkle className="w-3.5 h-3.5 text-amber-400 fill-amber-400" /> {activePersona.name} ({activePersona.roleHausa})
             </p>
             <h3 className="font-black text-sm text-emerald-50 leading-snug">{lesson.title}</h3>
           </div>
         </div>
         
-        <button 
-          id="btn-lesson-back"
-          onClick={onClose}
-          className="text-xs font-bold text-emerald-100 hover:text-white bg-emerald-900/50 border border-emerald-800 px-4 py-2 rounded-full transition-all"
-        >
-          Koma Baya
-        </button>
+        <div className="flex items-center gap-2">
+          {/* Quick Voice-Only toggle button in header */}
+          <button
+            id="btn-lesson-voice-only-toggle"
+            onClick={() => {
+              const newVal = !isVoiceOnly;
+              setIsVoiceOnly(newVal);
+              if (onUpdateUserProgress) {
+                onUpdateUserProgress({ voiceOnlyMode: newVal });
+              }
+              speakText(
+                newVal 
+                  ? "An kunna yanayin Sauti Kawai. An boye rubutun Turanci don ka dogara kacokam kan kunnenka." 
+                  : "An dawo da rubutu a allon karatu.",
+                'ha-NG',
+                personaVoiceOpts
+              );
+            }}
+            className={`text-[11px] font-black px-3 py-1.5 rounded-full border flex items-center gap-1.5 transition-all shadow-sm ${
+              isVoiceOnly
+                ? 'bg-amber-400 text-emerald-950 border-amber-300 ring-2 ring-amber-300/40 animate-pulse'
+                : 'bg-emerald-900/60 text-emerald-200 hover:text-white border-emerald-700/60 hover:bg-emerald-800'
+            }`}
+            title="Yanayin Sauti Kawai (Toggle Voice-Only Mode: Hide Text)"
+          >
+            {isVoiceOnly ? <EyeOff className="w-3.5 h-3.5 text-emerald-950" /> : <Eye className="w-3.5 h-3.5" />}
+            <span>{isVoiceOnly ? 'Sauti Kawai (ON)' : 'Sauti Kawai'}</span>
+          </button>
+
+          <button 
+            id="btn-lesson-back"
+            onClick={onClose}
+            className="text-xs font-bold text-emerald-100 hover:text-white bg-emerald-900/50 border border-emerald-800 px-4 py-2 rounded-full transition-all"
+          >
+            Koma Baya
+          </button>
+        </div>
       </div>
+
+      {/* Voice-Only Mode active indicator badge if turned on */}
+      {isVoiceOnly && (
+        <div className="bg-gradient-to-r from-amber-500/20 via-amber-400/25 to-emerald-900/20 px-4 py-2 border-b border-amber-400/30 flex items-center justify-between text-xs text-amber-950">
+          <div className="flex items-center gap-2 font-black">
+            <EyeOff className="w-4 h-4 text-amber-700 animate-pulse" />
+            <span>Yanayin Sauti Kawai: An boye rubutu don horar da kunnenka 🎧</span>
+          </div>
+          <button
+            onClick={() => speakText("A cikin yanayin sauti kawai, an boye rubutun Turanci domin kwakwalwarka ta koya ta hanyar sauraron kunne kawai.", 'ha-NG')}
+            className="text-[10px] font-bold text-[#9A6E1A] hover:underline"
+          >
+            🔊 Menene wannan?
+          </button>
+        </div>
+      )}
 
       {/* 11 Steps Progress Stepper bar indicators */}
       <div className="bg-emerald-950/20 px-4 py-2 border-b border-emerald-900/5 flex items-center justify-between">
@@ -471,7 +537,7 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
                 <h2 className="text-2xl font-black text-emerald-950 px-2 leading-tight flex items-center justify-center gap-2">
                   <span>{lesson.titleHausa}</span>
                   <button 
-                    onClick={() => speakText(lesson.titleHausa, 'ha-NG')}
+                    onClick={() => speakText(lesson.titleHausa, 'ha-NG', personaVoiceOpts)}
                     className="p-1.5 text-[#0D5C3A] hover:bg-emerald-50 rounded-full transition-all"
                     title="Saurari Sauti"
                   >
@@ -515,10 +581,10 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
 
                 <button
                   id="btn-play-welcome-again"
-                  onClick={() => speakText(lesson.aiTutorScript?.introduction || lesson.descriptionHausa, 'ha-NG')}
+                  onClick={() => speakText(lesson.aiTutorScript?.introduction || lesson.descriptionHausa, 'ha-NG', personaVoiceOpts)}
                   className="bg-white border text-emerald-950 p-3.5 rounded-full hover:bg-gray-50 transition-all font-bold text-xs flex items-center justify-center gap-1.5"
                 >
-                  <Volume2 className="w-4 h-4 text-[#D4A017]" /> Sake Sauraron Ustaz Nur
+                  <Volume2 className="w-4 h-4 text-[#D4A017]" /> Sake Sauraron Muryar Malam
                 </button>
 
                 <button
@@ -575,7 +641,7 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
                         <p className="text-xs text-gray-400">Danna maɓallin da ke ƙasa don sauraron daddaɗan sauti.</p>
                       </div>
                       <button
-                        onClick={() => speakText(activeVocab.english, 'en-US')}
+                        onClick={() => speakText(activeVocab.english, 'en-US', personaVoiceOpts)}
                         className="bg-[#D4A017] hover:bg-yellow-600 text-[#1A1A1A] px-6 py-3.5 rounded-full font-black text-xs shadow-md border-2 border-[#D4A017] flex items-center justify-center gap-1.5 mx-auto"
                       >
                         <Volume2 className="w-4 h-4 text-[#1A1A1A]" /> Saurari lafazin Turanci
@@ -634,19 +700,33 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
                       </div>
                       <div className="space-y-1">
                         <p className="text-xs text-gray-400 font-bold">Sau na farko, gano yadda ake fada:</p>
-                        <h2 className="text-3xl font-extrabold tracking-tight text-[#0D5C3A]">{activeVocab.english}</h2>
-                        <p className="text-xs text-gray-500 italic mt-1 font-mono">"{activeVocab.pronunciationHint}"</p>
+                        {isVoiceOnly ? (
+                          <div className="py-2.5 px-4 bg-amber-500/10 border-2 border-dashed border-amber-400/40 rounded-2xl max-w-xs mx-auto">
+                            <p className="text-xs font-bold text-amber-900 flex items-center justify-center gap-1.5">
+                              <EyeOff className="w-4 h-4 text-amber-700" />
+                              <span>[An Boye Rubutu - Sauti Kawai]</span>
+                            </p>
+                            <p className="text-[11px] text-amber-800/80 font-medium pt-1">
+                              Saurari sauti da kunnenka ka maimaita
+                            </p>
+                          </div>
+                        ) : (
+                          <>
+                            <h2 className="text-3xl font-extrabold tracking-tight text-[#0D5C3A]">{activeVocab.english}</h2>
+                            <p className="text-xs text-gray-500 italic mt-1 font-mono">"{activeVocab.pronunciationHint}"</p>
+                          </>
+                        )}
                       </div>
                       
                       <div className="flex gap-2.5 justify-center pt-2">
                         <button
-                          onClick={() => speakText(activeVocab.english, 'en-US')}
+                          onClick={() => speakText(activeVocab.english, 'en-US', personaVoiceOpts)}
                           className="bg-[#D4A017] hover:bg-yellow-600 text-[#1A1A1A] px-5 py-2.5 rounded-full font-bold text-xs"
                         >
                           Saurari Sautin (Listen)
                         </button>
                         <button
-                          onClick={() => speakText(`Yadda ake fada a hankali shine: ${activeVocab.slowPronunciation || activeVocab.english}`, 'ha-NG')}
+                          onClick={() => speakText(`Yadda ake fada a hankali shine: ${activeVocab.slowPronunciation || activeVocab.english}`, 'ha-NG', personaVoiceOpts)}
                           className="bg-white border text-gray-700 px-5 py-2.5 rounded-full font-bold text-xs"
                         >
                           Saurari Hankali (Slow)
@@ -660,8 +740,22 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
                     <div className="space-y-4 w-full">
                       <div className="space-y-1">
                         <p className="text-xs text-gray-400">Furta yanzu:</p>
-                        <h2 className="text-3xl font-black text-emerald-950">{activeVocab.english}</h2>
-                        <p className="text-xs text-gray-400 font-mono">Yadda ake fada: {activeVocab.pronunciationHint}</p>
+                        {isVoiceOnly ? (
+                          <div className="py-2.5 px-4 bg-amber-500/10 border-2 border-dashed border-amber-400/40 rounded-2xl max-w-xs mx-auto">
+                            <p className="text-xs font-bold text-amber-900 flex items-center justify-center gap-1.5">
+                              <EyeOff className="w-4 h-4 text-amber-700" />
+                              <span>[An Boye Rubutu - Sauti Kawai]</span>
+                            </p>
+                            <p className="text-[11px] text-amber-800/80 font-medium pt-1">
+                              Furta kalmar da ka ji a kunne
+                            </p>
+                          </div>
+                        ) : (
+                          <>
+                            <h2 className="text-3xl font-black text-emerald-950">{activeVocab.english}</h2>
+                            <p className="text-xs text-gray-400 font-mono">Yadda ake fada: {activeVocab.pronunciationHint}</p>
+                          </>
+                        )}
                       </div>
 
                       <div className="relative w-20 h-20 mx-auto pt-2">
@@ -961,9 +1055,15 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
                 <p className="text-[15px] font-black text-emerald-950 font-sans leading-relaxed">
                   {activeQuestion.questionAudioText || activeQuestion.questionText}
                 </p>
-                <p className="text-xs font-mono text-emerald-800/70 py-1 bg-emerald-500/5 rounded-lg border border-dashed text-center">
-                  {activeQuestion.questionText}
-                </p>
+                {!isVoiceOnly ? (
+                  <p className="text-xs font-mono text-emerald-800/70 py-1 bg-emerald-500/5 rounded-lg border border-dashed text-center">
+                    {activeQuestion.questionText}
+                  </p>
+                ) : (
+                  <p className="text-[11px] text-amber-700/80 font-bold py-1 bg-amber-500/10 rounded-lg border border-dashed text-center">
+                    🎧 Saurari sauti don amsa tambaya
+                  </p>
+                )}
               </div>
 
               {/* Quiz option list */}
@@ -985,23 +1085,41 @@ export const LessonPractice: React.FC<LessonPracticeProps> = ({
                   }
 
                   return (
-                    <button
-                      id={`quiz-opt-${idx}`}
-                      key={idx}
-                      disabled={hasSelected}
-                      onClick={() => handleOptionSelect(idx)}
-                      className={`w-full text-left p-4.5 rounded-2xl border-2 transition-all flex items-center justify-between gap-3 text-xs font-bold leading-normal cursor-pointer ${optionClass}`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <span className="h-7 w-7 rounded-lg bg-gray-100/70 font-mono text-gray-400 text-xs font-black flex items-center justify-center">
-                          {String.fromCharCode(65 + idx)}
-                        </span>
-                        {option}
-                      </div>
-                      
-                      {hasSelected && isCorrect && <Check className="w-5 h-5 text-green-600 shrink-0" />}
-                      {hasSelected && isSelected && !isCorrect && <X className="w-5 h-5 text-red-550 shrink-0" />}
-                    </button>
+                    <div key={idx} className="relative flex items-center gap-2">
+                      <button
+                        id={`quiz-opt-${idx}`}
+                        disabled={hasSelected}
+                        onClick={() => handleOptionSelect(idx)}
+                        className={`w-full text-left p-4.5 rounded-2xl border-2 transition-all flex items-center justify-between gap-3 text-xs font-bold leading-normal cursor-pointer ${optionClass}`}
+                      >
+                        <div className="flex items-center gap-3">
+                          <span className="h-7 w-7 rounded-lg bg-gray-100/70 font-mono text-gray-400 text-xs font-black flex items-center justify-center shrink-0">
+                            {String.fromCharCode(65 + idx)}
+                          </span>
+                          {isVoiceOnly && !hasSelected ? (
+                            <span className="text-gray-500 italic">Zabi na {idx + 1} (Saurari Sauti)</span>
+                          ) : (
+                            <span>{option}</span>
+                          )}
+                        </div>
+                        
+                        {hasSelected && isCorrect && <Check className="w-5 h-5 text-green-600 shrink-0" />}
+                        {hasSelected && isSelected && !isCorrect && <X className="w-5 h-5 text-red-550 shrink-0" />}
+                      </button>
+
+                      {/* Quick Audio play button for illiterate learners */}
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          speakText(option, 'en-US', personaVoiceOpts);
+                        }}
+                        className="p-3 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-2xl text-emerald-800 shrink-0 transition-colors"
+                        title="Saurari wannan zabi da sauti"
+                      >
+                        <Volume2 className="w-4 h-4 text-emerald-700" />
+                      </button>
+                    </div>
                   );
                 })}
               </div>
